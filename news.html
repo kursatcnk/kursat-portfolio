@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com https://formsubmit.co; frame-src 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta name="view-transition" content="same-origin"/>
+<meta name="theme-color" content="#00ff8c"/>
+<link rel="manifest" href="manifest.webmanifest"/>
+<link rel="apple-touch-icon" href="assets/img/pwa/icon-192.png"/>
+<meta content="Kürşatcan Çankaroğlu" name="author"/>
+<meta content="Kürşatcan Çankaroğlu — Web geliştirici. Modern, hızlı ve dönüşüm odaklı web siteleri/arayüzler geliştiriyorum. Tasarım, geliştirme ve yayına alma sürecini uçtan uca yürütür; ihtiyaç oldukça iyileştirir ve destek veririm." name="description"/>
+<title>Kürşatcan Çankaroğlu | Yazılar</title>
+<link href="assets/img/favicon.svg" rel="shortcut icon"/>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/css/all.min.css" rel="stylesheet"/>
+<link href="assets/css/animate.css" rel="stylesheet"/>
+<link href="assets/css/magnific-popup.css" rel="stylesheet"/>
+<link href="assets/css/meanmenu.css" rel="stylesheet"/>
+<link href="assets/css/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="assets/css/nice-select.css" rel="stylesheet"/>
+<link href="assets/css/color.css" rel="stylesheet"/>
+<link href="assets/css/main.css?v=37" rel="stylesheet"/>
+<link href="assets/css/custom.css?v=59" rel="stylesheet">
+<link href="assets/css/enhancements.css?v=69" rel="stylesheet"/>
+</link></head>
+<body class="body-color">
+<!-- Ben burada sayfanın en üstünde scroll ilerleme çizgisini ekliyorum. -->
+<div aria-hidden="true" class="scroll-progress"></div>
+<div class="preloader" id="preloader">
+<div class="animation-preloader">
+<div class="spinner">
+</div>
+<div class="txt-loading">
+<span class="letters-loading" data-text-preloader="Y">Y</span>
+<span class="letters-loading" data-text-preloader="Ü">Ü</span>
+<span class="letters-loading" data-text-preloader="K">K</span>
+<span class="letters-loading" data-text-preloader="L">L</span>
+<span class="letters-loading" data-text-preloader="E">E</span>
+<span class="letters-loading" data-text-preloader="N">N</span>
+<span class="letters-loading" data-text-preloader="İ">İ</span>
+<span class="letters-loading" data-text-preloader="Y">Y</span>
+<span class="letters-loading" data-text-preloader="O">O</span>
+<span class="letters-loading" data-text-preloader="R">R</span>
+</div>
+<p class="text-center"><span class="d-block">Yükleniyor...</span><small class="d-block">Kürşatcan Çankaroğlu</small></p>
+</div>
+<div class="loader">
+<div class="row">
+<div class="col-3 loader-section section-left">
+<div class="bg"></div>
+</div>
+<div class="col-3 loader-section section-left">
+<div class="bg"></div>
+</div>
+<div class="col-3 loader-section section-right">
+<div class="bg"></div>
+</div>
+<div class="col-3 loader-section section-right">
+<div class="bg"></div>
+</div>
+</div>
+</div>
+</div>
+<button class="back-to-top" id="back-top">
+<i class="fa-regular fa-arrow-up"></i>
+</button>
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
+<div class="fix-area">
+<div class="offcanvas__info">
+<div class="offcanvas__wrapper">
+<div class="offcanvas__content">
+<div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+<div class="offcanvas__logo">
+<a href="index.html">
+<img alt="logo-img" src="assets/img/logo/logo-white.svg"/>
+</a>
+</div>
+<div class="offcanvas__close">
+<button>
+<i class="fas fa-times"></i>
+</button>
+</div>
+</div>
+<p class="text d-none d-xl-block">
+                        İhtiyacınızı hızlıca netleştirip, sürdürülebilir bir çözüm planı çıkarırım. Temiz kod, güvenlik ve performans önceliğimdir.
+                    </p>
+<div class="mobile-menu fix mb-3"></div>
+<div class="offcanvas__contact">
+<h4>İletişim Bilgileri</h4>
+<ul>
+<li class="d-flex align-items-center">
+<div class="offcanvas__contact-icon">
+<i class="fal fa-map-marker-alt"></i>
+</div>
+<div class="offcanvas__contact-text">
+<a href="#" target="_blank">Türkiye • Uzaktan / Hibrit</a>
+</div>
+</li>
+<li class="d-flex align-items-center">
+<div class="offcanvas__contact-icon mr-15">
+<i class="fal fa-envelope"></i>
+</div>
+<div class="offcanvas__contact-text">
+<a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
+</div>
+</li>
+<li class="d-flex align-items-center">
+<div class="offcanvas__contact-icon mr-15">
+<i class="fal fa-clock"></i>
+</div>
+<div class="offcanvas__contact-text">
+<a href="#" target="_blank">Pzt-Cuma, 09:00 - 18:00</a>
+</div>
+</li>
+</ul>
+<div class="header-button mt-4 text-center">
+<a class="theme-btn" href="contact.html">
+                                Ön Görüşme <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="social-icon d-flex align-items-center">
+<a href="#"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+<a href="#"><i class="fab fa-medium"></i></a>
+<a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="offcanvas__overlay"></div>
+<header class="header-1" id="header-sticky">
+<div class="container-fluid">
+<div class="mega-menu-wrapper">
+<div class="header-main">
+<div class="logo">
+<a class="header-logo" href="index.html">
+<img alt="logo-img" src="assets/img/logo/logo.svg"/>
+</a>
+<div class="logo-2">
+<a href="index.html">
+<img alt="" src="assets/img/logo/logo.svg"/>
+</a>
+</div>
+</div>
+<div class="mean__menu-wrapper">
+<div class="main-menu">
+<nav id="mobile-menu">
+<ul>
+<li class="active">
+<a class="border-none" href="index.html">Anasayfa</a>
+</li>
+<li>
+<a href="about.html">Hakkımda</a>
+</li>
+<li>
+<a href="certificates.html">Sertifikalar</a>
+</li>
+<li><a href="service.html">Hizmetler</a></li>
+<li><a href="portfolio.html">Projeler</a></li>
+<li><a href="news.html">Yazılar</a></li>
+<li>
+<a href="faq.html">SSS</a>
+</li>
+<li>
+<a href="contact.html">İletişim</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="header-right d-flex justify-content-end align-items-center">
+<a class="theme-btn" href="contact.html"> Teklif Al
+                            <i class="fa-solid fa-arrow-right"></i>
+</a>
+<div class="header__hamburger d-xl-none my-auto">
+<div class="sidebar__toggle">
+<i class="fas fa-bars"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(assets/img/breadcrumb/bg.jpg);">
+<div class="star-shape float-bob-x">
+<img alt="img" src="assets/img/shape/star.png"/>
+</div>
+<div class="container">
+<div class="row">
+<div class="page-heading">
+<h2>Yazılar</h2>
+<ul class="breadcrumb-list">
+<li>
+<a href="index.html">Anasayfa</a>
+</li>
+<li><i class="fa-solid fa-angle-right"></i></li>
+<li class="active">Yazılar</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="news-section news-1 section-padding section-bg kc-posts-section">
+  <div class="container">
+    <div class="kc-posts-head">
+      <div class="section-title-area">
+        <div class="section-sub-title wow fadeInUp" data-wow-delay="0.3s">
+          <span>Arşiv</span>
+        </div>
+        <h2 class="section-title wow fadeInUp" data-wow-delay="0.5s">
+          <span class="text-color-2">Yazılarım</span>
+        </h2>
+        <p class="wow fadeInUp" data-wow-delay="0.6s">Tamamı kendi notlarım. Arayın, filtreleyin, detayları tek tıklamayla görüntüleyin.</p>
+      </div>
+
+      <div class="kc-posts-toolbar" data-kc-reveal>
+        <div class="kc-input">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="kc-posts-search" type="text" placeholder="Ara: JWT, Tasarım, Google görünürlüğü..." aria-label="Yazılarda ara" />
+        </div>
+        <div class="kc-selects">
+          <select id="kc-posts-category" aria-label="Kategori seç">
+            <option value="all">Tümü</option>
+          </select>
+          <select id="kc-posts-sort" aria-label="Sıralama seç">
+            <option value="new" selected>En yeni</option>
+            <option value="old">En eski</option>
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRID (JS doldurur) -->
+    <div class="row g-4" id="kc-posts-grid" aria-live="polite"></div>
+
+    <div id="kc-posts-empty" class="kc-posts-empty" style="display:none;">
+      <div class="kc-empty-card" data-kc-reveal>
+        <div class="kc-empty-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3 style="margin:0 0 6px; font-weight:1000;">Eşleşen yazı bulunamadı</h3>
+        <p style="margin:0; opacity:.82; font-weight:650;">Arama terimini kısaltın veya farklı bir kategori deneyin.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer-section footer-1 fix section-bg-2 fix">
+<div class="random-shape float-bob-y">
+<img alt="img" src="assets/img/shape/random-shape.png"/>
+</div>
+<div class="star-shape float-bob-x">
+<img alt="img" src="assets/img/shape/star.png"/>
+</div>
+<div class="container">
+<div class="footer-widget-wrapper">
+<div class="row g-0">
+<div class="col-lg-6">
+<div class="row">
+<div class="col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>Hizmetler</h4>
+</div>
+<div class="content">
+<p>Türkiye • Uzaktan / Hibrit</p>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>İletişim</h4>
+</div>
+<div class="content">
+<a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a> <br/>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="footer-social">
+<h4>Sosyal: </h4>
+<ul class="socials-icon">
+<li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-medium"></i></a></li>
+<li><a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="row justify-content-between footer-right-margin">
+<div class="col-lg-5 col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>Hızlı Linkler</h4>
+</div>
+<ul class="list-items">
+<li><a href="about.html">Hakkımda</a></li>
+<li><a href="service.html">Hizmetler</a></li>
+<li><a href="portfolio.html">Projeler</a></li>
+<li><a href="news.html">Yazılar</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-5 col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>Hizmetler</h4>
+</div>
+<ul class="list-items">
+<li><a href="service-details.html">Kurumsal Web Sitesi</a></li>
+<li><a href="service-details.html">Web Uygulama &amp; Panel</a></li>
+<li><a href="service-details.html">Performans</a></li>
+<li><a href="service-details.html">API &amp; Entegrasyon</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-bottom-wrapper">
+<p>
+                        © <span>Kürşatcan Çankaroğlu</span>
+</p>
+<a class="footer-logo" href="index.html">
+<img alt="img" src="assets/img/logo/logo-white.svg"/>
+</a>
+<ul class="footer-list">
+<li>Kullanım Şartları</li>
+<li>Gizlilik Politikası</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/viewport.jquery.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery.waypoints.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/typed.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/posts.data.js"></script>
+<script src="assets/js/custom.js?v=59"></script>
+
+<script src="assets/js/enhancements.js?v=69"></script>
+</body>
+</html>

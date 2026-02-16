@@ -1,0 +1,130 @@
+/*
+  Kürşat Portfolyo — UI/JS İyileştirmeleri (Backend yok)
+  Amaç: içerik eklemeden, akıcılık + premium etkileşim + performans.
+*/
+
+/* View Transitions (destekleyen tarayıcılarda sayfa geçişleri daha yumuşak) */
+@supports (view-transition-name: root) {
+  :root { view-transition-name: root; }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 320ms;
+    animation-timing-function: cubic-bezier(.2,.8,.2,1);
+  }
+  ::view-transition-old(root) { animation-name: k-fade-out; }
+  ::view-transition-new(root) { animation-name: k-fade-in; }
+}
+
+@keyframes k-fade-in { from { opacity: .0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes k-fade-out { from { opacity: 1; transform: translateY(0); } to { opacity: .0; transform: translateY(-6px); } }
+
+/* Scroll ile görünür olunca “premium” bir fade-up */
+.k-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 600ms cubic-bezier(.2,.8,.2,1), transform 600ms cubic-bezier(.2,.8,.2,1);
+  will-change: opacity, transform;
+}
+.k-reveal.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Kart tilt/hover temeli */
+.k-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 240ms cubic-bezier(.2,.8,.2,1);
+}
+.k-tilt.k-tilt-active { transition: none; }
+
+/* Magnetic buton temeli */
+.k-magnetic {
+  will-change: transform;
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* Canvas arka plan (tıklamayı etkilemez) */
+.kfx-wrap { position: relative; }
+#kfx-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: .28;
+  mix-blend-mode: overlay;
+  filter: blur(.2px);
+}
+
+/* Komut Paleti (Ctrl/Cmd+K) */
+.k-cmdk {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+}
+.k-cmdk.is-open { display: grid; place-items: start center; }
+.k-cmdk__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(8px);
+}
+.k-cmdk__panel {
+  position: relative;
+  margin-top: min(16vh, 140px);
+  width: min(720px, calc(100vw - 32px));
+  border-radius: 18px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 24px 70px rgba(0,0,0,.25);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+}
+body.body-color.dark-mode .k-cmdk__panel,
+body.dark-mode .k-cmdk__panel {
+  background: rgba(25,25,25,.92);
+  border-color: rgba(255,255,255,.10);
+}
+.k-cmdk__input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  padding: 16px 18px;
+  font-size: 16px;
+  background: transparent;
+}
+.k-cmdk__list {
+  max-height: min(44vh, 380px);
+  overflow: auto;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+.k-cmdk__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  gap: 12px;
+  cursor: pointer;
+}
+.k-cmdk__item:hover,
+.k-cmdk__item.is-active {
+  background: rgba(0,0,0,.06);
+}
+.k-cmdk__left { display: grid; gap: 2px; }
+.k-cmdk__title { font-weight: 700; line-height: 1.2; }
+.k-cmdk__hint { font-size: 12px; opacity: .75; }
+.k-cmdk__kbd {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: rgba(0,0,0,.07);
+  white-space: nowrap;
+}
+
+/* Reduce motion saygısı */
+@media (prefers-reduced-motion: reduce) {
+  .k-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .k-tilt, .k-magnetic { transition: none !important; }
+  #kfx-canvas { display: none !important; }
+}

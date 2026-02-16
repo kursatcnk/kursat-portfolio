@@ -1,0 +1,37 @@
+.marquee-container {
+    overflow: hidden;
+    background-color: #1e1e1e;
+    padding: 30px 0;
+  }
+  
+  .marquee-wrapper {
+    display: flex;
+    width: fit-content;
+    animation: scroll-left 25s linear infinite;
+  }
+  
+  .marquee-content {
+    display: flex;
+  }
+  
+  .marquee-text {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 30px;
+    white-space: nowrap;
+  
+    h3 {
+      color: $white;
+    }
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  

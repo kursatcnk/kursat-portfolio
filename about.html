@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<!-- Ben bu sayfada kendimi ve çalışma yaklaşımımı anlatıyorum. -->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com https://formsubmit.co; frame-src 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta name="view-transition" content="same-origin"/>
+<meta name="theme-color" content="#00ff8c"/>
+<link rel="manifest" href="manifest.webmanifest"/>
+<link rel="apple-touch-icon" href="assets/img/pwa/icon-192.png"/>
+<meta content="Kürşatcan Çankaroğlu" name="author"/>
+<meta content="Kürşatcan Çankaroğlu — Web geliştirici. Modern, hızlı ve dönüşüm odaklı web siteleri/arayüzler geliştiriyorum. Tasarım, geliştirme ve yayına alma sürecini uçtan uca yürütür; ihtiyaç oldukça iyileştirir ve destek veririm." name="description"/>
+<title>Kürşatcan Çankaroğlu | Hakkımda</title>
+<link href="assets/img/favicon.svg" rel="shortcut icon"/>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/css/all.min.css" rel="stylesheet"/>
+<link href="assets/css/animate.css" rel="stylesheet"/>
+<link href="assets/css/magnific-popup.css" rel="stylesheet"/>
+<link href="assets/css/meanmenu.css" rel="stylesheet"/>
+<link href="assets/css/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="assets/css/nice-select.css" rel="stylesheet"/>
+<link href="assets/css/color.css" rel="stylesheet"/>
+<link href="assets/css/main.css?v=37" rel="stylesheet"/>
+<link href="assets/css/custom.css?v=59" rel="stylesheet"/>
+<link href="assets/css/enhancements.css?v=69" rel="stylesheet"/>
+</head>
+<body class="body-color">
+<!-- Ben burada sayfanın en üstünde scroll ilerleme çizgisini ekliyorum. -->
+<div aria-hidden="true" class="scroll-progress"></div>
+<div class="preloader" id="preloader">
+<div class="animation-preloader">
+<div class="spinner">
+</div>
+<div class="txt-loading">
+<span class="letters-loading" data-text-preloader="Y">Y</span>
+<span class="letters-loading" data-text-preloader="Ü">Ü</span>
+<span class="letters-loading" data-text-preloader="K">K</span>
+<span class="letters-loading" data-text-preloader="L">L</span>
+<span class="letters-loading" data-text-preloader="E">E</span>
+<span class="letters-loading" data-text-preloader="N">N</span>
+<span class="letters-loading" data-text-preloader="İ">İ</span>
+<span class="letters-loading" data-text-preloader="Y">Y</span>
+<span class="letters-loading" data-text-preloader="O">O</span>
+<span class="letters-loading" data-text-preloader="R">R</span>
+</div>
+<p class="text-center"><span class="d-block">Yükleniyor...</span><small class="d-block">Kürşatcan Çankaroğlu</small></p>
+</div>
+<div class="loader">
+<div class="row">
+<div class="col-3 loader-section section-left">
+<div class="bg"></div>
+</div>
+<div class="col-3 loader-section section-left">
+<div class="bg"></div>
+</div>
+<div class="col-3 loader-section section-right">
+<div class="bg"></div>
+</div>
+<div class="col-3 loader-section section-right">
+<div class="bg"></div>
+</div>
+</div>
+</div>
+</div>
+<button class="back-to-top" id="back-top">
+<i class="fa-regular fa-arrow-up"></i>
+</button>
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
+<div class="fix-area">
+<div class="offcanvas__info">
+<div class="offcanvas__wrapper">
+<div class="offcanvas__content">
+<div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+<div class="offcanvas__logo">
+<a href="index.html">
+<img alt="logo-img" src="assets/img/logo/logo-white.svg"/>
+</a>
+</div>
+<div class="offcanvas__close">
+<button>
+<i class="fas fa-times"></i>
+</button>
+</div>
+</div>
+<p class="text d-none d-xl-block">
+                        İhtiyacınızı hızlıca netleştirip, sürdürülebilir bir çözüm planı çıkarırım. Temiz kod, güvenlik ve performans önceliğimdir.
+                    </p>
+<div class="mobile-menu fix mb-3"></div>
+<div class="offcanvas__contact">
+<h4>İletişim Bilgileri</h4>
+<ul>
+<li class="d-flex align-items-center">
+<div class="offcanvas__contact-icon">
+<i class="fal fa-map-marker-alt"></i>
+</div>
+<div class="offcanvas__contact-text">
+<a href="#" target="_blank">Türkiye • Uzaktan / Hibrit</a>
+</div>
+</li>
+<li class="d-flex align-items-center">
+<div class="offcanvas__contact-icon mr-15">
+<i class="fal fa-envelope"></i>
+</div>
+<div class="offcanvas__contact-text">
+<a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
+</div>
+</li>
+<li class="d-flex align-items-center">
+<div class="offcanvas__contact-icon mr-15">
+<i class="fal fa-clock"></i>
+</div>
+<div class="offcanvas__contact-text">
+<a href="#" target="_blank">Pzt-Cuma, 09:00 - 18:00</a>
+</div>
+</li>
+</ul>
+<div class="header-button mt-4 text-center">
+<a class="theme-btn" href="contact.html">
+                                Ön Görüşme <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="social-icon d-flex align-items-center">
+<a href="#"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+<a href="#"><i class="fab fa-medium"></i></a>
+<a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="offcanvas__overlay"></div>
+<header class="header-1" id="header-sticky">
+<div class="container-fluid">
+<div class="mega-menu-wrapper">
+<div class="header-main">
+<div class="logo">
+<a class="header-logo" href="index.html">
+<img alt="logo-img" src="assets/img/logo/logo.svg"/>
+</a>
+<div class="logo-2">
+<a href="index.html">
+<img alt="" src="assets/img/logo/logo.svg"/>
+</a>
+</div>
+</div>
+<div class="mean__menu-wrapper">
+<div class="main-menu">
+<nav id="mobile-menu">
+<ul>
+<li class="active">
+<a class="border-none" href="index.html">Anasayfa</a>
+</li>
+<li>
+<a href="about.html">Hakkımda</a>
+</li>
+<li>
+<a href="certificates.html">Sertifikalar</a>
+</li>
+<li><a href="service.html">Hizmetler</a></li>
+<li><a href="portfolio.html">Projeler</a></li>
+<li><a href="news.html">Yazılar</a></li>
+<li>
+<a href="faq.html">SSS</a>
+</li>
+<li>
+<a href="contact.html">İletişim</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="header-right d-flex justify-content-end align-items-center">
+<a class="theme-btn" href="contact.html">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+<div class="header__hamburger d-xl-none my-auto">
+<div class="sidebar__toggle">
+<i class="fas fa-bars"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(assets/img/breadcrumb/bg.jpg);">
+<div class="star-shape float-bob-x">
+<img alt="img" src="assets/img/shape/star.png"/>
+</div>
+<div class="container">
+<div class="row">
+<div class="page-heading">
+<h2>Hakkımda</h2>
+<ul class="breadcrumb-list">
+<li>
+<a href="index.html">Anasayfa</a>
+</li>
+<li><i class="fa-solid fa-angle-right"></i></li>
+<li class="active">Hakkımda</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- KC ABOUT v2 — Sade, modern ve anlaşılır -->
+<section class="kc-about-hero section-padding pb-0 fix">
+<div class="container">
+<div class="row g-5 align-items-center">
+<div class="col-lg-6">
+<div class="kc-about-hero__content" data-kc-reveal="">
+<span class="kc-eyebrow"><img alt="img" src="assets/img/shape/star-2.png"/>Kısaca</span>
+<h2 class="kc-about-title">Ben Kürşatcan.</h2>
+<p class="kc-about-lead">
+            Sizin için modern web çözümleri geliştiriyorum: hızlı açılan, mobilde kusursuz görünen ve yönetimi kolay sistemler. Hedefiniz teklif toplamak, randevu almak ya da operasyonu sadeleştirmekse; kullanıcı yolculuğunu buna göre kurgularım.
+          </p>
+<div class="kc-chips">
+<span class="kc-chip"><i class="fa-solid fa-location-dot"></i> İstanbul</span>
+<span class="kc-chip"><i class="fa-solid fa-code"></i> Web geliştirme</span>
+<span class="kc-chip"><i class="fa-solid fa-diagram-project"></i> Ürün &amp; süreç</span>
+</div>
+<div class="kc-about-cta">
+<a class="theme-btn kc-cv-open" data-bs-target="#cvModal" data-bs-toggle="modal" href="assets/docs/Kursatcan_Cankaraoglu_CV.pdf">
+              CV’me göz atın <i class="fa-solid fa-eye"></i>
+</a>
+<a class="theme-btn style-2" href="contact.html">
+              İletişim <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="kc-stats">
+<div class="kc-stat">
+<strong>5+</strong><span>Yıl deneyim</span>
+</div>
+<div class="kc-stat">
+<strong>30+</strong><span>Proje</span>
+</div>
+<div class="kc-stat">
+<strong>A+</strong><span>Kalite hedefi</span>
+</div>
+</div>
+<p class="kc-about-note">İsterseniz CV’yi sayfa içinde açarım; isterseniz tek tıklamayla indirirsiniz.</p>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="kc-about-hero__media" data-kc-reveal="">
+<div class="kc-portrait-wrap">
+<img alt="img" class="kc-portrait" src="assets/img/profile/kursatcan-hero.png"/>
+<div class="kc-float kc-float--a">
+<i class="fa-solid fa-bolt"></i>
+<div>
+<strong>Hızlı açılış</strong>
+<span>mobil öncelikli</span>
+</div>
+</div>
+<div class="kc-float kc-float--b">
+<i class="fa-solid fa-pen-ruler"></i>
+<div>
+<strong>Temiz tasarım</strong>
+<span>okunabilir &amp; net</span>
+</div>
+</div>
+<div class="kc-float kc-float--c">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<div>
+<strong>Kolay bakım</strong>
+<span>düzenli yapı</span>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="kc-glow"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="kc-about-story section-padding pt-0 fix">
+<div class="container">
+<div class="row g-4">
+<div class="col-lg-6">
+<div class="kc-card kc-card--story" data-kc-reveal="">
+<h3>Hikayem</h3>
+<p>
+            2015’te web geliştirme ile başladım; zamanla C#/.NET ve PHP ile dinamik web projeleri geliştirdim. Son yıllarda odağım; performans, temel güvenlik, okunabilir arayüz ve sürdürülebilir kod. İhtiyaç duyulduğunda mevcut projeleri devralıp iyileştirme/bakım süreçlerini de üstlenirim.
+          </p>
+<div class="kc-story-highlights">
+<div class="kc-sh-item">
+<i class="fa-solid fa-code"></i>
+<div>
+<strong>2015’ten beri</strong>
+<span>Web geliştirme temeli</span>
+</div>
+</div>
+<div class="kc-sh-item">
+<i class="fa-solid fa-layer-group"></i>
+<div>
+<strong>Uygulama geliştirme</strong>
+<span>C#/.NET &amp; PHP ile dinamik sistemler</span>
+</div>
+</div>
+<div class="kc-sh-item">
+<i class="fa-solid fa-gamepad"></i>
+<div>
+<strong>Bugün</strong>
+<span>Web odaklı: performans, bakım ve teslim kalitesi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="kc-card kc-card--principles" data-kc-reveal="">
+<h3>Çalışma tarzım</h3>
+<ul class="kc-checklist">
+<li>Önce hedefi ve kapsamı birlikte netleştiririz (gereksiz sayfa/özellik yok).</li>
+<li>Mobil öncelikli tasarım: okunabilirlik, erişilebilirlik ve net CTA.</li>
+<li>Hız + temel güvenlik: formlar, spam azaltma ve sorunsuz iletişim akışı.</li>
+<li>Yayın öncesi kontrol listesi + teslim notları: ne nereden güncellenir, net olsun.</li>
+<li>Yayın sonrası ölçüm, küçük iyileştirmeler ve bakım opsiyonu.</li>
+</ul>
+<div class="kc-pillrow">
+<span class="kc-pill"><i class="fa-solid fa-shield"></i> Düzen</span>
+<span class="kc-pill"><i class="fa-solid fa-gauge-high"></i> Hız</span>
+<span class="kc-pill"><i class="fa-solid fa-mobile-screen"></i> Mobil</span>
+<span class="kc-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Netlik</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="kc-about-exp section-padding section-bg fix">
+<div class="container">
+<div class="section-title text-center">
+<span class="wow fadeInUp"><img alt="img" src="assets/img/shape/star-2.png"/>Deneyim</span>
+<h2 class="wow fadeInUp" data-wow-delay=".2s">İş Deneyimlerim</h2>
+<p class="wow fadeInUp" data-wow-delay=".3s">CV’deki deneyimlerim: rol, tarih ve öne çıkan işler.</p>
+</div>
+<div class="kc-timeline" data-kc-timeline="">
+<div aria-hidden="true" class="kc-tl-line"><span class="kc-tl-progress"></span></div>
+<div class="kc-tl-item" data-kc-reveal="">
+<div class="kc-tl-meta">
+<span class="kc-tl-date">07/2025 – Günümüz</span>
+<span class="kc-tl-place">İstanbul</span>
+</div>
+<div class="kc-tl-card">
+<h3>ESN Sistem Yazılım <span>• Teknik Ürün Sahibi</span></h3>
+<ul>
+<li>Ürün vizyonu, yol haritası ve kapsamı netleştirip backlog önceliklendirmesini iş değeri/efor dengesine göre yönettim.</li>
+<li>Paydaş ihtiyaçlarını user story ve acceptance criteria’ya çevirerek ekiplerle hizaladım; teslimat kalitesini artırdım.</li>
+<li>Risk/bağımlılıkları erken tespit ederek süreç iyileştirmeleri (SLA takibi, trend analizi) ile operasyonel verimliliği yükselttim.</li>
+</ul>
+</div>
+</div>
+<div class="kc-tl-item" data-kc-reveal="">
+<div class="kc-tl-meta">
+<span class="kc-tl-date">10/2023 – 06/2025</span>
+<span class="kc-tl-place">İstanbul</span>
+</div>
+<div class="kc-tl-card">
+<h3>ESN Sistem Yazılım <span>• Yazılım Destek Uzmanı</span></h3>
+<ul>
+<li>Incident yönetimi, log analizi ve sistematik troubleshooting ile kritik vakaların çözümünü yürüttüm; kök neden raporları hazırladım.</li>
+<li>Müşteri geri bildirimlerini analiz edip ürün ekibine aksiyonlanabilir çıktılar sundum; kalıcı iyileştirmeler için backlog girdileri oluşturdum.</li>
+<li>Dokümantasyon/knowledge base oluşturarak tekrar eden sorunları azalttım ve yeni ekip üyelerinin adaptasyonunu hızlandırdım.</li>
+</ul>
+</div>
+</div>
+<div class="kc-tl-item" data-kc-reveal="">
+<div class="kc-tl-meta">
+<span class="kc-tl-date">10/2017 – 06/2018</span>
+<span class="kc-tl-place">İstanbul</span>
+</div>
+<div class="kc-tl-card">
+<h3>Siemens <span>• Veri Analisti Stajyeri</span></h3>
+<ul>
+<li>SQL ile veri çekme/temizleme ve periyodik raporlama yaparak operasyon KPI’larının takibini destekledim.</li>
+<li>Veri tutarlılığı kontrolleri ve rapor otomasyonlarıyla süreçlerin daha hızlı ve hatasız ilerlemesine katkı sağladım.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="kc-edu2026 section-padding fix">
+<div class="container">
+<div class="row g-4 align-items-start">
+<div class="col-lg-4">
+<div class="kc-edu2026-intro" data-kc-reveal="">
+<div class="kc-eyebrow"><img alt="img" src="assets/img/shape/star-2.png"/>Eğitim</div>
+<h2 class="kc-edu2026-title">Eğitim Geçmişim</h2>
+<p class="kc-edu2026-text">
+            Okul, bölüm ve tarih… Burada sizi detaya boğmadan; bugün yaptığım işe en çok katkı veren eğitim adımlarımı paylaşıyorum.
+          </p>
+<div class="kc-edu2026-note">
+<i class="fa-solid fa-circle-check"></i>
+            Öğrenmeye devam: her projede daha iyi bir yapı, daha iyi bir arayüz.
+          </div>
+<div class="kc-edu2026-chips">
+<span class="kc-chip">Sürekli gelişim</span>
+<span class="kc-chip">Uygulamalı odak</span>
+<span class="kc-chip">Disiplinli süreç</span>
+</div>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="kc-edu2026-timeline">
+<article class="kc-edu2026-item" data-kc-reveal="">
+<div class="kc-edu2026-year">2026 – Devam</div>
+<div class="kc-edu2026-card">
+<div class="kc-edu2026-school"><i class="fa-solid fa-building-columns"></i> Anadolu Üniversitesi</div>
+<h3 class="kc-edu2026-program">İşletme Yönetimi</h3>
+<div class="kc-edu2026-meta"><span class="kc-chip kc-chip--soft">Lisans</span></div>
+</div>
+</article>
+<article class="kc-edu2026-item" data-kc-reveal="">
+<div class="kc-edu2026-year">2023 – 2025</div>
+<div class="kc-edu2026-card">
+<div class="kc-edu2026-school"><i class="fa-solid fa-building-columns"></i> Anadolu Üniversitesi</div>
+<h3 class="kc-edu2026-program">Yönetim Bilişim Sistemleri</h3>
+<div class="kc-edu2026-meta"><span class="kc-chip kc-chip--soft">Lisans</span></div>
+</div>
+</article>
+<article class="kc-edu2026-item" data-kc-reveal="">
+<div class="kc-edu2026-year">2021 – 2023</div>
+<div class="kc-edu2026-card">
+<div class="kc-edu2026-school"><i class="fa-solid fa-building-columns"></i> Anadolu Üniversitesi</div>
+<h3 class="kc-edu2026-program">Web Tasarımı ve Kodlama</h3>
+<div class="kc-edu2026-meta"><span class="kc-chip kc-chip--soft">Ön Lisans</span></div>
+</div>
+</article>
+<article class="kc-edu2026-item" data-kc-reveal="">
+<div class="kc-edu2026-year">2019 – 2021</div>
+<div class="kc-edu2026-card">
+<div class="kc-edu2026-school"><i class="fa-solid fa-building-columns"></i> Maltepe Üniversitesi</div>
+<h3 class="kc-edu2026-program">Bilgisayar Programcılığı</h3>
+<div class="kc-edu2026-meta"><span class="kc-chip kc-chip--soft">Ön Lisans</span></div>
+</div>
+</article>
+<article class="kc-edu2026-item" data-kc-reveal="">
+<div class="kc-edu2026-year">2014 – 2018</div>
+<div class="kc-edu2026-card">
+<div class="kc-edu2026-school"><i class="fa-solid fa-school"></i> Handan Hayrettin Yelkikanat</div>
+<h3 class="kc-edu2026-program">Bilişim Teknolojileri</h3>
+<div class="kc-edu2026-meta"><span class="kc-chip kc-chip--soft">Lise</span></div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="kc-skillboard2026 section-padding section-bg-2 fix">
+  <div class="container">
+    <div class="kc-skillboard2026__frame" data-kc-reveal>
+      <div class="kc-skillboard2026__mesh" aria-hidden="true"></div>
+
+      <div class="kc-skillboard2026__left">
+        <div class="kc-skillboard2026__kicker">
+          <span class="kc-badge-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Mini Dashboard</span>
+        </div>
+        <h2 class="kc-skillboard2026__title">Yetkinlik Stüdyosu</h2>
+        <p class="kc-skillboard2026__desc">Diller + BTK Akademi sertifikalarım. Sekmeleri değiştirin, kartlara tıklayın: detay penceresi açılır.</p>
+
+        <div class="kc-skillboard2026__tabs" role="tablist" aria-label="Yetkinlik sekmeleri">
+          <button class="kc-sb-tab is-active" data-kc-reveal type="button" role="tab" aria-selected="true" data-kc-sb-tab="langs">
+            <i class="fa-solid fa-language"></i> Diller
+          </button>
+          <button class="kc-sb-tab" data-kc-reveal type="button" role="tab" aria-selected="false" data-kc-sb-tab="certs">
+            <i class="fa-solid fa-certificate"></i> Sertifikalar
+          </button>
+        </div>
+
+        <div class="kc-skillboard2026__hint">
+          <i class="fa-regular fa-lightbulb"></i>
+          ID kopyalamak için <strong>kopya</strong> ikonuna tıklayın.
+        </div>
+      </div>
+
+      <div class="kc-skillboard2026__right">
+        <!-- LANGS -->
+        <div class="kc-sb-panel is-active" role="tabpanel" data-kc-sb-panel="langs">
+          <div class="kc-sb-metrics">
+            <div class="kc-sb-metric"><span class="k">Ana dil</span><span class="v">Türkçe</span></div>
+            <div class="kc-sb-metric"><span class="k">İngilizce</span><span class="v">C1</span></div>
+            <div class="kc-sb-metric"><span class="k">Japonca</span><span class="v">A1</span></div>
+            <div class="kc-sb-metric"><span class="k">İletişim</span><span class="v">Meet + Yazılı</span></div>
+          </div>
+
+          <div class="kc-sb-langgrid" data-kc-langgrid>
+            <button class="kc-sb-lang" data-kc-reveal type="button" data-kc-lang="tr" data-kc-tilt data-kc-tip="Akıcılık: Ana dil • Sunum • Teknik yazım • Toplantı">
+              <div class="kc-sb-lang__top">
+                <div class="kc-sb-lang__name"><span class="kc-flag">🇹🇷</span> Türkçe</div>
+                <div class="kc-sb-lang__lvl">Ana dil</div>
+              </div>
+              <div class="kc-sb-bar" data-kc-bar="100"><span></span></div>
+              <div class="kc-sb-lang__sub">Sunum • Teknik yazım • Takım iletişimi</div>
+            </button>
+
+            <button class="kc-sb-lang" data-kc-reveal type="button" data-kc-lang="en" data-kc-tilt data-kc-tip="Akıcılık: C1 • Dokümantasyon • Teknik görüşme • Sunum">
+              <div class="kc-sb-lang__top">
+                <div class="kc-sb-lang__name"><span class="kc-flag">🇬🇧</span> İngilizce</div>
+                <div class="kc-sb-lang__lvl">C1</div>
+              </div>
+              <div class="kc-sb-bar" data-kc-bar="86"><span></span></div>
+              <div class="kc-sb-lang__sub">Dokümantasyon • Teknik görüşme • Sunum</div>
+            </button>
+
+            <button class="kc-sb-lang" data-kc-reveal type="button" data-kc-lang="jp" data-kc-tilt data-kc-tip="Seviye: A1 • Temel diyalog • Günlük pratik • Not alma">
+              <div class="kc-sb-lang__top">
+                <div class="kc-sb-lang__name"><span class="kc-flag">🇯🇵</span> Japonca</div>
+                <div class="kc-sb-lang__lvl">A1</div>
+              </div>
+              <div class="kc-sb-bar" data-kc-bar="28"><span></span></div>
+              <div class="kc-sb-lang__sub">Temel seviye • Düzenli pratik</div>
+            </button>
+          </div>
+
+          <div class="kc-sb-callout">
+            <i class="fa-solid fa-sparkles"></i>
+            Hedef: ziyaretçi <strong>“tamam, aradığım kişi bu”</strong> desin.
+          </div>
+        </div>
+
+        <!-- CERTS -->
+        <div class="kc-sb-panel" role="tabpanel" data-kc-sb-panel="certs">
+          <div class="kc-sb-certshead">
+            <div>
+              <div class="kc-badge-pill"><i class="fa-solid fa-certificate"></i> BTK Akademi</div>
+              <h3 class="kc-sb-certshead__title">Sertifika Vitrini</h3>
+              <p class="kc-sb-certshead__desc">Doğrulanabilir Credential ID’ler • Toplam <strong>14</strong> sertifika</p>
+            </div>
+            <a class="kc-btn kc-btn--primary kc-magnetic" data-kc-magnetic href="certificates.html">
+              <i class="fa-solid fa-grid-2"></i> Tüm Sertifikalar
+            </a>
+          </div>
+
+          <div class="kc-sb-metrics">
+            <div class="kc-sb-metric"><span class="k">En yeni</span><span class="v">Sep 2025</span></div>
+            <div class="kc-sb-metric"><span class="k">Veri/AI</span><span class="v">4</span></div>
+            <div class="kc-sb-metric"><span class="k">Siber</span><span class="v">4</span></div>
+            <div class="kc-sb-metric"><span class="k">Yönetim</span><span class="v">3</span></div>
+          </div>
+
+          <div class="kc-sb-certgrid">
+            <article class="kc-sb-cert" data-kc-reveal data-kc-cert data-kc-tilt data-title="Yapay Zekaya Giriş" data-date="2025-09-01" data-year="2025" data-issued="Sep 2025" data-id="bx1hLLNBwp" data-scope="all,2025,ai,veri">
+              <div class="kc-sb-cert__top">
+                <span class="kc-sb-tag"><i class="fa-solid fa-sparkles"></i> En yeni</span>
+                <span class="kc-sb-date"><i class="fa-regular fa-calendar"></i> Sep 2025</span>
+              </div>
+              <h4 class="kc-sb-cert__title">Yapay Zekaya Giriş</h4>
+              <div class="kc-sb-cert__id"><span class="kc-mono">bx1hLLNBwp</span></div>
+              <div class="kc-sb-cert__actions">
+                <button class="kc-icon-btn" type="button" data-kc-copy="bx1hLLNBwp" aria-label="Credential ID kopyala"><i class="fa-regular fa-copy"></i></button>
+                <span class="kc-sb-open">Detay <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </article>
+
+            <article class="kc-sb-cert" data-kc-reveal data-kc-cert data-kc-tilt data-title="Web Tabanlı Coğrafi Bilgi Sistemleri" data-date="2024-08-01" data-year="2024" data-issued="Aug 2024" data-id="qKrhmGmzKl" data-scope="all,2024,geo,veri">
+              <div class="kc-sb-cert__top">
+                <span class="kc-sb-tag"><i class="fa-solid fa-location-dot"></i> CBS</span>
+                <span class="kc-sb-date"><i class="fa-regular fa-calendar"></i> Aug 2024</span>
+              </div>
+              <h4 class="kc-sb-cert__title">Web Tabanlı CBS</h4>
+              <div class="kc-sb-cert__id"><span class="kc-mono">qKrhmGmzKl</span></div>
+              <div class="kc-sb-cert__actions">
+                <button class="kc-icon-btn" type="button" data-kc-copy="qKrhmGmzKl" aria-label="Credential ID kopyala"><i class="fa-regular fa-copy"></i></button>
+                <span class="kc-sb-open">Detay <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </article>
+
+            <article class="kc-sb-cert" data-kc-reveal data-kc-cert data-kc-tilt data-title="Temel Kriptoloji" data-date="2024-06-01" data-year="2024" data-issued="Jun 2024" data-id="qKrhmnIJ1d" data-scope="all,2024,sec">
+              <div class="kc-sb-cert__top">
+                <span class="kc-sb-tag"><i class="fa-solid fa-shield-halved"></i> Siber</span>
+                <span class="kc-sb-date"><i class="fa-regular fa-calendar"></i> Jun 2024</span>
+              </div>
+              <h4 class="kc-sb-cert__title">Temel Kriptoloji</h4>
+              <div class="kc-sb-cert__id"><span class="kc-mono">qKrhmnIJ1d</span></div>
+              <div class="kc-sb-cert__actions">
+                <button class="kc-icon-btn" type="button" data-kc-copy="qKrhmnIJ1d" aria-label="Credential ID kopyala"><i class="fa-regular fa-copy"></i></button>
+                <span class="kc-sb-open">Detay <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </article>
+
+            <article class="kc-sb-cert" data-kc-reveal data-kc-cert data-kc-tilt data-title="Veri Modelleme" data-date="2024-06-01" data-year="2024" data-issued="Jun 2024" data-id="8jmhLmbrrz" data-scope="all,2024,veri">
+              <div class="kc-sb-cert__top">
+                <span class="kc-sb-tag"><i class="fa-solid fa-database"></i> Veri</span>
+                <span class="kc-sb-date"><i class="fa-regular fa-calendar"></i> Jun 2024</span>
+              </div>
+              <h4 class="kc-sb-cert__title">Veri Modelleme</h4>
+              <div class="kc-sb-cert__id"><span class="kc-mono">8jmhLmbrrz</span></div>
+              <div class="kc-sb-cert__actions">
+                <button class="kc-icon-btn" type="button" data-kc-copy="8jmhLmbrrz" aria-label="Credential ID kopyala"><i class="fa-regular fa-copy"></i></button>
+                <span class="kc-sb-open">Detay <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </article>
+          </div>
+
+          <div class="kc-sb-footnote">
+            <i class="fa-regular fa-circle-check"></i>
+            Kartlara tıklayın: detay penceresi açılır • ID’yi tek tıklamayla kopyalayın.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kc-about-cta2 section-padding fix">
+<div class="container">
+<div class="kc-cta-slab" data-kc-reveal="">
+<div>
+<h2>Projenizi anlatın; sizin için net bir yol haritası çıkarayım.</h2>
+<p>Kısa bir görüşme ile kapsamı, öncelikleri ve teslim modelini birlikte netleştirelim. Ardından size uygulanabilir bir plan ve sonraki adımları paylaşayım.</p>
+</div>
+<div class="kc-cta-actions">
+<a class="theme-btn" href="contact.html">Projenizi Konuşalım <i class="fa-solid fa-arrow-right"></i></a>
+<a class="theme-btn style-2" data-bs-target="#cvModal" data-bs-toggle="modal" href="assets/docs/Kursatcan_Cankaraoglu_CV.pdf">CV’yi aç</a>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer-section footer-1 fix section-bg-2 fix">
+<div class="random-shape float-bob-y">
+<img alt="img" src="assets/img/shape/random-shape.png"/>
+</div>
+<div class="star-shape float-bob-x">
+<img alt="img" src="assets/img/shape/star.png"/>
+</div>
+<div class="container">
+<div class="footer-widget-wrapper">
+<div class="row g-0">
+<div class="col-lg-6">
+<div class="row">
+<div class="col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>Hizmetler</h4>
+</div>
+<div class="content">
+<p>Türkiye • Uzaktan / Hibrit</p>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>İletişim</h4>
+</div>
+<div class="content">
+<a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a> <br/>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="footer-social">
+<h4>Sosyal: </h4>
+<ul class="socials-icon">
+<li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-medium"></i></a></li>
+<li><a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="row justify-content-between footer-right-margin">
+<div class="col-lg-5 col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>Hızlı Linkler</h4>
+</div>
+<ul class="list-items">
+<li><a href="about.html">Hakkımda</a></li>
+<li><a href="service.html">Hizmetler</a></li>
+<li><a href="portfolio.html">Projeler</a></li>
+<li><a href="news.html">Yazılar</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-5 col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>Hizmetler</h4>
+</div>
+<ul class="list-items">
+<li><a href="service-details.html">Kurumsal Web Sitesi</a></li>
+<li><a href="service-details.html">Özel Web Uygulaması</a></li>
+<li><a href="service-details.html">Tasarım &amp; Arayüz Tasarımı</a></li>
+<li><a href="service-details.html">Entegrasyonlar</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-bottom-wrapper">
+<p>
+                        © <span>Kürşatcan Çankaroğlu</span>
+</p>
+<a class="footer-logo" href="index.html">
+<img alt="img" src="assets/img/logo/logo-white.svg"/>
+</a>
+<ul class="footer-list">
+<li>Kullanım Şartları</li>
+<li>Gizlilik Politikası</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/viewport.jquery.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery.waypoints.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/typed.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js?v=59"></script>
+
+<script src="assets/js/enhancements.js?v=69"></script><!-- CV Modal (Modern) -->
+<div aria-hidden="true" class="modal fade kc-modal" id="cvModal" tabindex="-1">
+<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content kc-cv2026">
+<div class="kc-cv2026-header">
+<div class="kc-cv2026-titlewrap">
+<div class="kc-cv2026-badge"><i class="fa-solid fa-file-pdf"></i> PDF</div>
+<div>
+<div class="kc-cv2026-title">CV Önizleme</div>
+<div class="kc-cv2026-sub">Kürşatcan Çankaroğlu</div>
+</div>
+</div>
+<div class="kc-cv2026-actions">
+<a class="kc-btn kc-btn--ghost" href="assets/docs/Kursatcan_Cankaraoglu_CV.pdf" rel="noopener" target="_blank">
+            Sekmede aç <i class="fa-solid fa-up-right-from-square"></i>
+</a>
+<a class="kc-btn kc-btn--primary" download="" href="assets/docs/Kursatcan_Cankaraoglu_CV.pdf">
+            İndir <i class="fa-solid fa-download"></i>
+</a>
+<button aria-label="Kapat" class="kc-icon-btn" data-bs-dismiss="modal" type="button">
+<i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+</div>
+<div class="kc-cv2026-body">
+<div aria-hidden="true" class="kc-cv2026-skeleton">
+<div class="kc-skel-line"></div>
+<div class="kc-skel-line"></div>
+<div class="kc-skel-line"></div>
+</div>
+<iframe class="kc-cv-frame" data-src="assets/docs/Kursatcan_Cankaraoglu_CV.pdf" loading="lazy" title="CV"></iframe>
+</div>
+</div>
+</div>
+</div>
+
+
+<div aria-hidden="true" class="modal fade kc-modal kc-cert-modal" id="kcCertModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content kc-cert-modal__content">
+      <button class="kc-modal-x" type="button" data-bs-dismiss="modal" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+      <div class="kc-cert-modal__hero">
+        <div class="kc-cert-modal__badge"><i class="fa-solid fa-certificate"></i> BTK Akademi</div>
+        <h3 id="kcCertModalTitle">Sertifika</h3>
+        <div class="kc-cert-modal__meta">
+          <span id="kcCertModalDate"><i class="fa-regular fa-calendar"></i> —</span>
+          <span class="kc-meta-dot"></span>
+          <span><i class="fa-solid fa-fingerprint"></i> <span id="kcCertModalId" class="kc-mono">—</span></span>
+        </div>
+      </div>
+
+      <div class="kc-cert-modal__body">
+        <div class="kc-cert-modal__chips" id="kcCertModalTags"></div>
+
+        <div class="kc-cert-modal__actions">
+          <button class="kc-btn kc-btn--primary" type="button" data-kc-copy-modal>
+            <i class="fa-regular fa-copy"></i> Credential ID kopyala
+          </button>
+          <a class="kc-btn kc-btn--ghost" href="contact.html">
+            <i class="fa-solid fa-comment-dots"></i> İletişime geç
+          </a>
+        </div>
+
+        <div class="kc-cert-modal__note">
+          <i class="fa-solid fa-circle-info"></i>
+          <p>Bu sayfa: arama/filtre/sıralama + “detay” deneyimiyle 2026 premium UI hedefi için tasarlandı.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

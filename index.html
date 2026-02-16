@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<!-- Ben burada ana sayfamın bölümlerini düzenli ve hızlı olacak şekilde kuruyorum. -->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com https://formsubmit.co; frame-src 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta name="view-transition" content="same-origin"/>
+<meta name="theme-color" content="#00ff8c"/>
+<link rel="manifest" href="manifest.webmanifest"/>
+<link rel="apple-touch-icon" href="assets/img/pwa/icon-192.png"/>
+<meta content="Kürşatcan Çankaroğlu" name="author"/>
+<meta content="Kürşatcan Çankaroğlu — Web geliştirici. Modern, hızlı ve sonuç odaklı web siteleri/arayüzler geliştiriyorum. Tasarım, geliştirme ve yayına alma sürecini uçtan uca yürütür; ihtiyaç oldukça iyileştirir ve destek veririm." name="description"/>
+<title>Kürşatcan Çankaroğlu | Web Geliştirici</title>
+<link href="assets/img/favicon.svg" rel="shortcut icon"/>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/css/all.min.css" rel="stylesheet"/>
+<link href="assets/css/animate.css" rel="stylesheet"/>
+<link href="assets/css/magnific-popup.css" rel="stylesheet"/>
+<link href="assets/css/meanmenu.css" rel="stylesheet"/>
+<link href="assets/css/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="assets/css/nice-select.css" rel="stylesheet"/>
+<link href="assets/css/color.css" rel="stylesheet"/>
+<link href="assets/css/main.css?v=37" rel="stylesheet"/>
+<link href="assets/css/custom.css?v=59" rel="stylesheet"/>
+<link href="assets/css/enhancements.css?v=69" rel="stylesheet"/>
+</head>
+<body class="body-color">
+<!-- Ben burada sayfanın en üstünde scroll ilerleme çizgisini ekliyorum. -->
+<div aria-hidden="true" class="scroll-progress"></div>
+<div class="preloader" id="preloader">
+<div class="animation-preloader">
+<div class="spinner">
+</div>
+<div class="txt-loading">
+<span class="letters-loading" data-text-preloader="Y">Y</span>
+<span class="letters-loading" data-text-preloader="Ü">Ü</span>
+<span class="letters-loading" data-text-preloader="K">K</span>
+<span class="letters-loading" data-text-preloader="L">L</span>
+<span class="letters-loading" data-text-preloader="E">E</span>
+<span class="letters-loading" data-text-preloader="N">N</span>
+<span class="letters-loading" data-text-preloader="İ">İ</span>
+<span class="letters-loading" data-text-preloader="Y">Y</span>
+<span class="letters-loading" data-text-preloader="O">O</span>
+<span class="letters-loading" data-text-preloader="R">R</span>
+</div>
+<p class="text-center"><span class="d-block">Yükleniyor...</span><small class="d-block">Kürşatcan Çankaroğlu</small></p>
+</div>
+<div class="loader">
+<div class="row">
+<div class="col-3 loader-section section-left">
+<div class="bg"></div>
+</div>
+<div class="col-3 loader-section section-left">
+<div class="bg"></div>
+</div>
+<div class="col-3 loader-section section-right">
+<div class="bg"></div>
+</div>
+<div class="col-3 loader-section section-right">
+<div class="bg"></div>
+</div>
+</div>
+</div>
+</div>
+<button class="back-to-top" id="back-top">
+<i class="fa-regular fa-arrow-up"></i>
+</button>
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
+<div class="fix-area">
+<div class="offcanvas__info">
+<div class="offcanvas__wrapper">
+<div class="offcanvas__content">
+<div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+<div class="offcanvas__logo">
+<a href="index.html">
+<img alt="logo-img" src="assets/img/logo/logo-white.svg"/>
+</a>
+</div>
+<div class="offcanvas__close">
+<button>
+<i class="fas fa-times"></i>
+</button>
+</div>
+</div>
+<p class="text d-none d-xl-block">
+                        İhtiyacınızı hızlıca netleştirip, sürdürülebilir bir çözüm planı çıkarırım. Temiz kod, güvenlik ve performans önceliğimdir.
+                    </p>
+<div class="mobile-menu fix mb-3"></div>
+<div class="offcanvas__contact">
+<h4>İletişim Bilgileri</h4>
+<ul>
+<li class="d-flex align-items-center">
+<div class="offcanvas__contact-icon">
+<i class="fal fa-map-marker-alt"></i>
+</div>
+<div class="offcanvas__contact-text">
+<a href="#" target="_blank">Türkiye • Uzaktan / Hibrit</a>
+</div>
+</li>
+<li class="d-flex align-items-center">
+<div class="offcanvas__contact-icon mr-15">
+<i class="fal fa-envelope"></i>
+</div>
+<div class="offcanvas__contact-text">
+<a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
+</div>
+</li>
+<li class="d-flex align-items-center">
+<div class="offcanvas__contact-icon mr-15">
+<i class="fal fa-clock"></i>
+</div>
+<div class="offcanvas__contact-text">
+<a href="#" target="_blank">Pzt-Cuma, 09:00 - 18:00</a>
+</div>
+</li>
+</ul>
+<div class="header-button mt-4 text-center">
+<a class="theme-btn" href="contact.html">
+                                Ön Görüşme <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="social-icon d-flex align-items-center">
+<a href="#"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+<a href="#"><i class="fab fa-medium"></i></a>
+<a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="offcanvas__overlay"></div>
+<header class="header-1" id="header-sticky">
+<div class="container-fluid">
+<div class="mega-menu-wrapper">
+<div class="header-main">
+<div class="logo">
+<a class="header-logo" href="index.html">
+<img alt="logo-img" src="assets/img/logo/logo.svg"/>
+</a>
+<div class="logo-2">
+<a href="index.html">
+<img alt="" src="assets/img/logo/logo.svg"/>
+</a>
+</div>
+</div>
+<div class="mean__menu-wrapper">
+<div class="main-menu">
+<nav id="mobile-menu">
+<ul>
+<li class="active">
+<a class="border-none" href="index.html">Anasayfa</a>
+</li>
+<li>
+<a href="about.html">Hakkımda</a>
+</li>
+<li>
+<a href="certificates.html">Sertifikalar</a>
+</li>
+<li><a href="service.html">Hizmetler</a></li>
+<li><a href="portfolio.html">Projeler</a></li>
+<li><a href="news.html">Yazılar</a></li>
+<li>
+<a href="faq.html">SSS</a>
+</li>
+<li>
+<a href="contact.html">İletişim</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="header-right d-flex justify-content-end align-items-center">
+<a class="theme-btn" href="contact.html">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+<div class="header__hamburger d-xl-none my-auto">
+<div class="sidebar__toggle">
+<i class="fas fa-bars"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Ben burada ilk izlenimi veren hero alanını gösteriyorum -->
+<section class="hero-section hero-1 bg-cover fix" style="background-image: url(assets/img/hero/bg.jpg);">
+<div class="random-shape float-bob-x">
+<img alt="img" src="assets/img/shape/random-shape.png"/>
+</div>
+<div class="arrow-shape float-bob-y">
+<img alt="img" src="assets/img/hero/angle-arrow.png"/>
+</div>
+<div class="star-shape float-bob-y">
+<img alt="img" src="assets/img/shape/star.png"/>
+</div>
+<div class="hero-info">
+<a class="active" href="#">GitHub</a>
+<a href="#">LinkedIn</a>
+<a href="#">Medium</a>
+<a href="contact.html">İletişim</a>
+</div>
+<div class="container">
+<div class="row g-4 align-items-center">
+<div class="col-lg-6 order-2 order-lg-1">
+<div class="hero-images">
+<div class="portrait-card">
+<img alt="Kürşatcan Çankaroğlu" class="hero-portrait" decoding="async" fetchpriority="high" src="assets/img/profile/kursatcan-hero.png"/></div>
+<div class="hero-shape">
+<img alt="img" src="assets/img/shape/bg-shape.png"/>
+</div>
+</div>
+</div>
+<div class="col-lg-6 order-1 order-lg-2">
+<div class="hero-content">
+<span><img alt="img" src="assets/img/shape/star-2.png"/>Merhaba! 👋</span>
+<h1><span class="hero-hi">Merhaba, ben</span> <span class="hero-name">Kürşatcan Çankaroğlu</span></h1>
+<div class="hero-role"><span class="type-text"></span></div>
+<p>Markanıza uygun, modern ve hızlı web çözümleri geliştiriyorum. Süreci sizinle birlikte netleştirir; yayına aldıktan sonra da ölçüm, küçük iyileştirmeler ve bakım desteğiyle sürdürülebilir hale getiririm.</p>
+<div class="hero-btn-wrapper">
+<a class="theme-btn" href="contact.html">Projenizi Konuşalım
+                                <i class="fa-solid fa-arrow-right"></i>
+</a>
+<a class="video-btn" href="portfolio.html">
+<span class="icon"><i class="fa-solid fa-folder-open"></i></span>
+<span class="text">Projelerimi Gör</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KC: Ana sayfadaki kayan şerit kaldırıldı (yorum satırı yapıldı, gerekirse geri açılabilir) -->
+<!--
+<section class="marquee-section section-bg-2 fix">
+<div class="marquee-container">
+<div class="marquee-wrapper">
+<div class="marquee-content">
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+</div>
+<div class="marquee-content">
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+<div class="marquee-text">
+<img alt="img" src="assets/img/star/star-2.png"/>
+<h3>HIZLI • GÜVENLİ • ÖLÇEKLENEBİLİR</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+-->
+
+<section class="about-section fix section-padding pb-0">
+<div class="container">
+<div class="about-wrapper-1 pt-0">
+<div class="random-shape float-bob-x">
+<img alt="img" src="assets/img/shape/random-shape.png"/>
+</div>
+<div class="star-shape float-bob-y">
+<img alt="shape" src="assets/img/shape/star.png"/>
+</div>
+<div class="row g-4 align-items-center">
+<div class="col-lg-6">
+<div class="about-content">
+<div class="section-title">
+<span class="wow fadeInUp"><img alt="img" src="assets/img/shape/star-2.png"/>Hakkımda</span>
+<h2 class="wow fadeInUp" data-wow-delay=".2s">İşinizi Büyüten <br/> <span>Web Çözümleri</span></h2>
+<p class="wow fadeInUp" data-wow-delay=".3s">Önce hedefinizi birlikte netleştiririz; ardından markanızı doğru anlatan, mobilde akıcı çalışan ve hızlı açılan bir web deneyimi kurarım. Ziyaretçi siteye girdiğinde ne yapacağını hemen anlar: teklif ister, randevu alır ya da sizinle iletişime geçer. Tasarım, geliştirme, yayına alma ve yayın sonrası bakım/iyileştirmeleri uçtan uca, şeffaf bir planla yönetirim.</p>
+</div>
+<div class="client-reviews mt-4 mt-md-0">
+<div class="cr-item wow fadeInUp" data-wow-delay=".4s">
+<h2><span class="count">5</span>+</h2>
+<h6>Yıl <br/>
+                                        deneyim
+                                    </h6>
+</div>
+<div class="cr-item wow fadeInUp" data-wow-delay=".5s">
+<h2><span class="count">30</span>+</h2>
+<h6>Proje <br/>
+                                        teslimi
+                                    </h6>
+</div>
+</div>
+<div class="about-button">
+<a class="theme-btn wow fadeInUp" data-wow-delay=".6s" href="about.html">Daha Fazla <i class="fa-solid fa-arrow-right"></i></a>
+<div class="phone wow fadeInUp" data-wow-delay=".7s">
+<div class="icon">
+<img alt="img" src="assets/img/icon/phone.svg"/>
+</div>
+<div class="text">
+<span>E-posta</span>
+<h6><a class="kc-email-link" href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a></h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 d-flex justify-content-center">
+<div class="about-images">
+<!-- Hakkımda görselim: Bu görsel, sayfa açılır açılmaz değil; ilk kaydırmadan sonra yumuşakça görünür. -->
+<img alt="Kürşatcan Çankaroğlu - çalışma anı" class="about-portrait fx-reveal" data-fx="right" data-fx-defer="scroll" src="assets/img/profile/kursatcan-balcony-code.png"/>
+<div class="bg-shape wow img-custom-anim-top">
+<img alt="img" src="data:image/png;base64,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"/>
+</div>
+<!-- KC: Overlay istatistik kartları geçici olarak kapatıldı. Açmak için bu yorum bloklarını kaldırın. -->
+<!--
+<div class="shape-left float-bob-x">
+  <div class="kc-stat kc-stat--reviews">
+    <div class="kc-stat__avatars">
+      <img src="assets/img/client/avater.png" alt="Müşteri avatarları" loading="lazy"/>
+    </div>
+    <div class="kc-stat__content">
+      <div class="kc-stat__row">
+        <div class="kc-stat__kpi kc-stat__kpi--small">10+ İnceleme</div>
+        <div class="kc-stat__stars" aria-label="5 üzerinden 5">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="shape-right float-bob-y">
+  <div class="kc-stat kc-stat--customers">
+    <div class="kc-stat__icon" aria-hidden="true"><i class="fa-solid fa-user-check"></i></div>
+    <div class="kc-stat__content">
+      <div class="kc-stat__kpi">50+</div>
+      <div class="kc-stat__label">Memnun Müşteri</div>
+    </div>
+  </div>
+</div>
+-->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="service-section service-1 kc-services-light section-padding section-bg fix">
+<div class="random-shape float-bob-y">
+<img alt="img" src="assets/img/shape/random-shape.png"/>
+</div>
+<div class="container">
+<div class="section-title text-center">
+<span class="wow fadeInUp"><img alt="img" src="assets/img/shape/star-2.png"/>Hizmetler</span>
+<h2 class="wow fadeInUp" data-wow-delay=".2s">Öne Çıkan <span>Hizmetlerim</span></h2>
+</div>
+<div class="kc-services-2026">
+  <div class="kc-services-top wow fadeInUp" data-wow-delay=".20s">
+    <p class="kc-services-sub">İhtiyacınıza göre doğru kapsamı seçer; tasarımdan yayına kadar net bir teslim planı çıkarırım. Sizi gereksiz detaylarla yormadan, işi sonuca götüren adımları doğru sıraya koyarız.</p>
+    <div class="kc-services-actions">
+      <a class="kc-svc-cta" href="contact.html">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+      <a class="kc-svc-ghost" href="service.html">Tüm Hizmetlerim</a>
+    </div>
+  </div>
+
+  <div class="kc-process-rail wow fadeInUp" data-wow-delay=".28s" aria-label="Uçtan uca süreç">
+    <div class="kc-step"><span>01</span><strong>Keşif</strong><em>Kapsam &amp; hedef</em></div>
+    <div class="kc-step"><span>02</span><strong>UI/UX</strong><em>Tasarım &amp; akış</em></div>
+    <div class="kc-step"><span>03</span><strong>Geliştirme</strong><em>Temiz kod</em></div>
+    <div class="kc-step"><span>04</span><strong>Test</strong><em>Mobil &amp; tarayıcı</em></div>
+    <div class="kc-step"><span>05</span><strong>Yayın</strong><em>Kurulum &amp; kontrol</em></div>
+    <div class="kc-step"><span>06</span><strong>Bakım</strong><em>İyileştirme</em></div>
+  </div>
+
+  <div class="row g-4 kc-services-grid">
+    <div class="col-12 col-md-6 col-xl-4 d-flex">
+
+    <article class="kc-svc-card wow fadeInUp" data-wow-delay=".22s" id="kurumsal">
+      <div class="kc-svc-top">
+        <span class="kc-svc-no">01</span>
+        <span class="kc-svc-ico" aria-hidden="true"><i class="fa-solid fa-building"></i></span>
+      </div>
+      <h4>Kurumsal Web Sitesi</h4>
+      <p>Markanızı net anlatan, mobilde kusursuz görünen ve hızlı açılan kurumsal site.</p>
+      <ul class="kc-svc-points" aria-label="Öne çıkanlar">
+        <li><i class="fa-solid fa-check"></i> Mobil uyum + premium arayüz</li>
+        <li><i class="fa-solid fa-check"></i> Hız + temel SEO (Core Web Vitals)</li>
+      </ul>
+      <div class="kc-svc-tags"><span>İçerik yönetimi</span><span>Çoklu dil</span></div>
+      <a class="kc-svc-link" href="service-details.html?service=kurumsal">Detay <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4 d-flex">
+
+    <article class="kc-svc-card wow fadeInUp" data-wow-delay=".30s" id="landing">
+      <div class="kc-svc-top">
+        <span class="kc-svc-no">02</span>
+        <span class="kc-svc-ico" aria-hidden="true"><i class="fa-solid fa-rocket"></i></span>
+      </div>
+      <h4>Landing Page &amp; Kampanya</h4>
+      <p>Tek sayfa kampanya/landing: güçlü mesaj, doğru CTA ve ölçümleme altyapısı.</p>
+      <ul class="kc-svc-points" aria-label="Öne çıkanlar">
+        <li><i class="fa-solid fa-check"></i> Dönüşüm odaklı içerik akışı</li>
+        <li><i class="fa-solid fa-check"></i> Form / WhatsApp + ölçüm</li>
+      </ul>
+      <div class="kc-svc-tags"><span>Dönüşüm</span><span>Ölçüm</span></div>
+      <a class="kc-svc-link" href="service-details.html?service=landing">Detay <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-4 d-flex">
+
+    <article class="kc-svc-card wow fadeInUp" data-wow-delay=".38s" id="dashboard">
+      <div class="kc-svc-top">
+        <span class="kc-svc-no">03</span>
+        <span class="kc-svc-ico" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
+      </div>
+      <h4>Yönetim Paneli / Dashboard</h4>
+      <p>Operasyonu kolaylaştıran ekranlar: kullanıcı rolleri, raporlar ve yetkilendirme.</p>
+      <ul class="kc-svc-points" aria-label="Öne çıkanlar">
+        <li><i class="fa-solid fa-check"></i> Rol bazlı yetki &amp; güvenli giriş</li>
+        <li><i class="fa-solid fa-check"></i> Raporlama ve yönetilebilir ekranlar</li>
+      </ul>
+      <div class="kc-svc-tags"><span>Roller</span><span>Rapor</span></div>
+      <a class="kc-svc-link" href="service-details.html?service=dashboard">Detay <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    </div>
+<!-- Ana sayfayı sadeleştirmek için "Web Uygulaması / SaaS" kartını şimdilik kapattım. Gerekirse burayı yorumdan çıkarıp tekrar açabilirim. -->
+
+    <div class="col-12 col-md-6 col-xl-4 d-flex">
+
+    <article class="kc-svc-card wow fadeInUp" data-wow-delay=".46s" id="webapp">
+      <div class="kc-svc-top">
+        <span class="kc-svc-no">04</span>
+        <span class="kc-svc-ico" aria-hidden="true"><i class="fa-solid fa-cubes"></i></span>
+      </div>
+      <h4>Web Uygulaması / SaaS</h4>
+      <p>İş akışınıza özel modüller: sürdürülebilir mimari, ölçeklenebilir geliştirme.</p>
+      <ul class="kc-svc-points" aria-label="Öne çıkanlar">
+        <li><i class="fa-solid fa-check"></i> Modüler yapı + API yaklaşımı</li>
+        <li><i class="fa-solid fa-check"></i> Bakımı kolay, büyümeye hazır mimari</li>
+      </ul>
+      <div class="kc-svc-tags"><span>Modüler</span><span>API</span></div>
+      <a class="kc-svc-link" href="service-details.html?service=webapp">Detay <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    </div>
+
+<!-- /Web Uygulaması / SaaS -->
+<!-- Ana sayfayı sadeleştirmek için "Entegrasyonlar & Otomasyon" kartını şimdilik kapattım. Gerekirse burayı yorumdan çıkarıp tekrar açabilirim. -->
+    <div class="col-12 col-md-6 col-xl-4 d-flex">
+
+    <article class="kc-svc-card wow fadeInUp" data-wow-delay=".54s" id="entegrasyon">
+      <div class="kc-svc-top">
+        <span class="kc-svc-no">05</span>
+        <span class="kc-svc-ico" aria-hidden="true"><i class="fa-solid fa-plug"></i></span>
+      </div>
+      <h4>Entegrasyonlar &amp; Otomasyon</h4>
+      <p>WhatsApp, ödeme, CRM ve e‑posta gibi sistemleri sorunsuz şekilde bağlarım.</p>
+      <ul class="kc-svc-points" aria-label="Öne çıkanlar">
+        <li><i class="fa-solid fa-check"></i> Ödeme / CRM / e‑posta bağlantıları</li>
+        <li><i class="fa-solid fa-check"></i> Otomatik bildirim ve iş akışları</li>
+      </ul>
+      <div class="kc-svc-tags"><span>Otomasyon</span><span>Bağlantı</span></div>
+      <a class="kc-svc-link" href="service-details.html?service=entegrasyon">Detay <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    </div>
+
+<!-- /Entegrasyonlar & Otomasyon -->
+<!-- Ana sayfayı sadeleştirmek için "Performans, Google & Bakım" kartını şimdilik kapattım. Gerekirse burayı yorumdan çıkarıp tekrar açabilirim. -->
+    <div class="col-12 col-md-6 col-xl-4 d-flex">
+
+    <article class="kc-svc-card wow fadeInUp" data-wow-delay=".62s" id="performans">
+      <div class="kc-svc-top">
+        <span class="kc-svc-no">06</span>
+        <span class="kc-svc-ico" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></span>
+      </div>
+      <h4>Performans, Google &amp; Bakım</h4>
+      <p>Hız optimizasyonu, teknik Google görünürlüğü ve düzenli bakım ile sisteminiz sağlam kalır.</p>
+      <ul class="kc-svc-points" aria-label="Öne çıkanlar">
+        <li><i class="fa-solid fa-check"></i> Hız + teknik SEO düzeni</li>
+        <li><i class="fa-solid fa-check"></i> Bakım, küçük iyileştirme, güvenlik</li>
+      </ul>
+      <div class="kc-svc-tags"><span>Hız</span><span>Bakım</span></div>
+      <a class="kc-svc-link" href="service-details.html?service=performans">Detay <i class="fa-solid fa-arrow-right"></i></a>
+    </article>
+    </div>
+
+
+<!-- /Performans, Google & Bakım -->
+  </div>
+</div>
+</div>
+</section>
+<section class="project-section section-padding fix">
+<div class="container">
+<div class="section-title-area">
+<div class="section-title">
+<span class="wow fadeInUp">Projeler</span>
+<h2 class="wow fadeInUp" data-wow-delay=".3s">Öne Çıkan Projeler</h2>
+</div>
+<a class="theme-btn wow fadeInUp" data-wow-delay=".5s" href="portfolio.html">Tüm Projeler <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+<div class="project-wrapper">
+<div class="row g-4">
+<div class="col-xl-6 col-lg-6 col-md-6">
+<div class="project-items wow img-custom-anim-top" data-wow-delay=".2s">
+<div class="image">
+<img alt="Rafael Güzellik Merkezi" src="assets/img/project/kc_rafael.jpg"/>
+</div>
+<div class="content">
+<div class="text">
+<span>Landing / Kurumsal Web</span>
+<h4><a href="portfolio-details.html?slug=rafael-guzellik-merkezi">Rafael — Güzellik Merkezi Sitesi</a></h4>
+</div>
+<div class="icon">
+<a href="portfolio-details.html?slug=rafael-guzellik-merkezi"><i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-xl-6 col-lg-6 col-md-6">
+<div class="project-items wow img-custom-anim-top" data-wow-delay=".3s">
+<div class="image">
+<img alt="Eray Genç Portfolyo" src="assets/img/project/kc_eray_genc.jpg"/>
+</div>
+<div class="content">
+<div class="text">
+<span>Kişisel Site</span>
+<h4><a href="portfolio-details.html?slug=eray-genc-portfolio">Eray Genç — Portfolyo Sitesi</a></h4>
+</div>
+<div class="icon">
+<a href="portfolio-details.html?slug=eray-genc-portfolio"><i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KC: Özet / Az ama öz bölümü kaldırıldı (yorum satırı yapıldı, gerekirse geri açılabilir) -->
+<!--
+<section class="kc-home-essentials section-padding fix">
+<div class="container">
+<div class="section-title-area">
+<div class="section-title">
+<span class="wow fadeInUp"><img alt="img" src="assets/img/shape/star-2.png"/>Özet</span>
+<h2 class="wow fadeInUp" data-wow-delay=".2s">Az ama öz: <span>güven, hız</span> ve net bir akış</h2>
+<p class="wow fadeInUp" data-wow-delay=".35s">
+          Ana sayfayı “karar vermek için yeterli”, detayları ise Hizmetler sayfasında “incelemek için derin” olacak şekilde kurguladım.
+        </p>
+</div>
+<a class="theme-btn wow fadeInUp" data-kc-magnetic="" data-wow-delay=".45s" href="service.html#teslimatlar">
+        Teslimat Standartlarım <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-xl-3">
+<div class="kc-value-card kc-tilt wow fadeInUp" data-wow-delay=".15s">
+<div class="kc-card-ico"><i class="fa-solid fa-gauge-high"></i></div>
+<h4>Hız</h4>
+<p>Görsel/asset optimizasyonu, kritik yük sırası ve performans kontrol listesi ile “bekletmeyen” açılış.</p>
+<div class="kc-card-foot"><span>Ölçüm</span><span>Optimize</span><span>Test</span></div>
+</div>
+</div>
+<div class="col-md-6 col-xl-3">
+<div class="kc-value-card kc-tilt wow fadeInUp" data-wow-delay=".28s">
+<div class="kc-card-ico"><i class="fa-solid fa-shield"></i></div>
+<h4>Güven</h4>
+<p>Okunabilir tipografi, doğru kontrast, net mikro metinler ve sağlam form akışı ile güven hissi.</p>
+<div class="kc-card-foot"><span>UI</span><span>Form</span><span>Spam koruma</span></div>
+</div>
+</div>
+<div class="col-md-6 col-xl-3">
+<div class="kc-value-card kc-tilt wow fadeInUp" data-wow-delay=".41s">
+<div class="kc-card-ico"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+<h4>Bakım Kolaylığı</h4>
+<p>Modüler yapı + temiz dosya düzeni: yeni sayfa eklemek, metin güncellemek, revize yapmak kolay.</p>
+<div class="kc-card-foot"><span>Düzen</span><span>Esnek</span><span>Doküman</span></div>
+</div>
+</div>
+<div class="col-md-6 col-xl-3">
+<div class="kc-value-card kc-tilt wow fadeInUp" data-wow-delay=".54s">
+<div class="kc-card-ico"><i class="fa-solid fa-bullseye"></i></div>
+<h4>Dönüşüm</h4>
+<p>Ziyaretçinin ne yapacağını 3 saniyede anlaması: doğru CTA’lar, sade menü, temiz yönlendirme.</p>
+<div class="kc-card-foot"><span>CTA</span><span>Akış</span><span>Ölçüm</span></div>
+</div>
+</div>
+</div>
+<div class="kc-home-essentials__cta wow fadeInUp" data-wow-delay=".62s">
+<a class="theme-btn" data-kc-magnetic="" href="contact.html">Projenizi Konuşalım <i class="fa-solid fa-arrow-right"></i></a>
+<a class="kc-ghost-link" href="service.html">Detaylı Hizmetler</a>
+</div>
+</div>
+</section>
+-->
+
+<section class="testimonials-section testimonials-1 section-padding section-bg-2 fix">
+<div class="random-shape float-bob-x">
+<img alt="img" src="assets/img/shape/random-shape.png"/>
+</div>
+<div class="container">
+<div class="row g-4">
+<div class="col-lg-6">
+<div class="section-title">
+<span class="wow fadeInUp"><img alt="img" src="assets/img/shape/star-2.png"/>Referanslar</span>
+<h2 class="wow fadeInUp" data-wow-delay=".2s">Müşterilerden Gelen Yorumlar</h2>
+</div>
+<div class="reviews wow fadeInUp" data-wow-delay=".4s">
+<h2 class="count">5</h2>
+<div class="item">
+<span>10+ proje geri bildirimi</span>
+<div class="star">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="testimonials-wrapper">
+<div class="swiper testimonial-slider">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="testimonial-box-items">
+<div class="client-info">
+<img alt="Kullanıcı avatarı" src="assets/img/testimonials/avatar-male.svg" loading="lazy"/>
+<div class="client-content">
+<h5>Ahmet Yılmaz</h5>
+<p>Ürün Sahibi</p>
+</div>
+</div>
+<div class="testi-content">
+<div class="icon">
+<img alt="img" src="assets/img/icon/42.svg"/>
+</div>
+<p>
+                                                İhtiyaçlarımızı hızlıca analiz edip çok temiz bir altyapı kurdu. Teslim sonrası bakım ve iyileştirmelerde de iletişimi çok güçlüydü.
+                                            </p>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-box-items">
+<div class="client-info">
+<img alt="Kullanıcı avatarı" src="assets/img/testimonials/avatar-female.svg" loading="lazy"/>
+<div class="client-content">
+<h5>Elif Demir</h5>
+<p>Proje Sorumlusu</p>
+</div>
+</div>
+<div class="testi-content">
+<div class="icon">
+<img alt="img" src="assets/img/icon/42.svg"/>
+</div>
+<p>
+                                                Performans ve güvenlik konularına yaklaşımı gerçekten iyiydi. Loglama, hata yönetimi ve yetkilendirme tarafını sorunsuz şekilde tamamladı.
+                                            </p>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-box-items">
+<div class="client-info">
+<img alt="Kullanıcı avatarı" src="assets/img/testimonials/avatar-male.svg" loading="lazy"/>
+<div class="client-content">
+<h5>Mehmet Kaya</h5>
+<p>Yazılım Müdürü</p>
+</div>
+</div>
+<div class="testi-content">
+<div class="icon">
+<img alt="img" src="assets/img/icon/42.svg"/>
+</div>
+<p>
+                                                Veri yapısı ve yapılan optimizasyonlar sayesinde raporlama ekranlarımız ciddi hız kazandı. Proje yönetimi ve dokümantasyon da çok düzenliydi.
+                                            </p>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-box-items">
+<div class="client-info">
+<img alt="Kullanıcı avatarı" src="assets/img/testimonials/avatar-female.svg" loading="lazy"/>
+<div class="client-content">
+<h5>Zeynep Şahin</h5>
+<p>Proje Yöneticisi</p>
+</div>
+</div>
+<div class="testi-content">
+<div class="icon">
+<img alt="img" src="assets/img/icon/42.svg"/>
+</div>
+<p>
+                                                Tasarım, geliştirme ve yayın sürecini şeffaf şekilde yürüttü. Süreç boyunca düzenli demo paylaşımlarıyla ilerledik ve hedef tarihte yayına çıktık.
+                                            </p>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-box-items">
+<div class="client-info">
+<img alt="Kullanıcı avatarı" src="assets/img/testimonials/avatar-male.svg" loading="lazy"/>
+<div class="client-content">
+<h5>Caner Öztürk</h5>
+<p>Kurucu</p>
+</div>
+</div>
+<div class="testi-content">
+<div class="icon">
+<img alt="img" src="assets/img/icon/42.svg"/>
+</div>
+<p>
+                                                Kurumsal web sitemizi ve yönetim panelimizi uçtan uca geliştirdi. Hem altyapı hem de kullanıcı deneyimi tarafında beklediğimizin üstünde bir sonuç aldık.
+                                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-dot text-center">
+<div class="dot"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="kc-compare-section section-padding fix" id="demo">
+<div class="container">
+<div class="row g-4 align-items-center">
+<div class="col-lg-5">
+<div class="section-title mb-0">
+<span class="wow fadeInUp"><img alt="img" src="assets/img/shape/star-2.png"/>Kısa Demo</span>
+<h2 class="wow fadeInUp" data-wow-delay=".15s">Siz hedefi söyleyin;<br/><span>ben</span> hissedilir fark yaratayım</h2>
+<p class="wow fadeInUp" data-wow-delay=".3s">Küçük dokunuşlarla bile “daha hızlı, daha temiz, daha net” bir deneyim mümkün. Aşağıdaki slider sadece örnek; asıl iş, projenize uygun hamleleri doğru sıraya koymak.</p>
+</div>
+<div class="kc-compare-points wow fadeInUp" data-wow-delay=".45s">
+<div class="kc-compare-point"><i class="fa-solid fa-bolt"></i><span>Hız: kritik yükleri azaltırım</span></div>
+<div class="kc-compare-point"><i class="fa-solid fa-wand-magic-sparkles"></i><span>UI: daha premium görünüm</span></div>
+<div class="kc-compare-point"><i class="fa-solid fa-bullseye"></i><span>İletişim: daha kolay</span></div>
+</div>
+</div>
+<div class="col-lg-7">
+<div class="kc-compare-card wow fadeInUp" data-kc-compare="" data-wow-delay=".2s">
+<div class="kc-compare-frame">
+<img alt="Önce: eski arayüz" class="kc-compare-img kc-compare-img--before" src="assets/img/demo/before-644x470.png"/>
+<div class="kc-compare-overlay" data-kc-compare-overlay="" style="width:60%">
+<img alt="Sonra: modern arayüz" class="kc-compare-img kc-compare-img--after" src="assets/img/demo/after-644x470.png"/>
+</div>
+<span class="kc-compare-label kc-compare-label--before">Önce</span>
+<span class="kc-compare-label kc-compare-label--after">Sonra</span>
+</div>
+<input aria-label="Önce / sonra karşılaştırma" class="kc-compare-range" data-kc-compare-range="" max="100" min="0" type="range" value="60"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KC: Hızlı Başlangıç CTA bölümü kaldırıldı (yorum satırı yapıldı, gerekirse geri açılabilir) -->
+<!--
+<section class="kc-cta-final section-padding section-bg-2 fix">
+<div class="container">
+<div class="kc-cta-card wow fadeInUp" data-wow-delay=".15s">
+<div aria-hidden="true" class="kc-cta-glow"></div>
+<div class="kc-cta-grid">
+<div class="kc-cta-left">
+<span class="kc-cta-kicker"><img alt="img" src="assets/img/shape/star-2.png"/>Hızlı Başlangıç</span>
+<h2>Projenizi <span>10 dakikada</span> netleştirelim.</h2>
+<p>Hedef + kapsam + zaman planı → size temiz bir yol haritası çıkarayım. Dilerseniz önce küçük bir “demo” ile başlayıp adım adım büyütürüz.</p>
+<div class="kc-cta-actions">
+<a class="theme-btn" data-kc-magnetic="" href="contact.html">Teklif Al <i class="fa-solid fa-arrow-right"></i></a>
+<a class="video-btn" href="service.html#paketler">
+<span class="icon"><i class="fa-solid fa-layer-group"></i></span>
+<span class="text">Paketleri Gör</span>
+</a>
+</div>
+<div class="kc-cta-mini">
+<span><i class="fa-solid fa-circle-check"></i> Mobil uyum</span>
+<span><i class="fa-solid fa-circle-check"></i> Hız kontrolü</span>
+<span><i class="fa-solid fa-circle-check"></i> Yayın sonrası destek</span>
+</div>
+</div>
+<div aria-label="Hızlı kazanımlar" class="kc-cta-right">
+<div class="kc-cta-metric">
+<span class="k">Teslim</span>
+<strong class="v">Temiz yapı + rehber</strong>
+</div>
+<div class="kc-cta-metric">
+<span class="k">İlk izlenim</span>
+<strong class="v">Premium UI + akış</strong>
+</div>
+<div class="kc-cta-metric">
+<span class="k">Sonuç</span>
+<strong class="v">Daha net CTA</strong>
+</div>
+<div class="kc-cta-metric">
+<span class="k">Performans</span>
+<strong class="v">Hızlı açılış</strong>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+-->
+
+<section class="kc-posts-section section-padding section-bg">
+<div class="container">
+<div class="section-title text-center">
+<span class="wow fadeInUp" data-wow-delay=".2s">Yazılar</span>
+<h2 class="wow fadeInUp" data-wow-delay=".3s">Öne Çıkan <span>Yazılarım</span></h2>
+<p class="wow fadeInUp" data-wow-delay=".4s">Herkesin anlayacağı anlatımlarla; teknik detayları da ihmal etmeden. Kısa, net ve işinize yarayan notlar.</p>
+</div>
+<div class="row g-4 justify-content-center" id="kc-featured-posts">
+<div class="col-lg-4 col-md-6">
+  <article class="kc-post-card">
+    <a class="kc-post-thumb" href="news-details.html?slug=jwt-ile-kimlik-dogrulama" aria-label="JWT ile Kimlik Doğrulama (Herkesin Anlayacağı Dille)">
+      <img loading="lazy" src="assets/img/news/4.jpg" alt="JWT ile Kimlik Doğrulama (Herkesin Anlayacağı Dille)">
+      <span class="kc-post-chip">ASP.NET Core</span>
+    </a>
+    <div class="kc-post-body">
+      <div class="kc-post-meta">
+        <span class="kc-post-date">26 Haziran 2024</span>
+        <span class="kc-dot"></span>
+        <span class="kc-post-time">7 dk</span>
+      </div>
+      <h3 class="kc-post-title"><a href="news-details.html?slug=jwt-ile-kimlik-dogrulama">JWT ile Kimlik Doğrulama (Herkesin Anlayacağı Dille)</a></h3>
+      <p class="kc-post-excerpt">JWT, bir kullanıcının kim olduğunu API’ye kanıtlamanın pratik yoludur. Mantığını örnekle anlatıp, temel akışı sadeleştiriyorum.</p>
+      <div class="kc-post-bottom">
+        <div class="kc-tags"><span class="kc-tag">API</span><span class="kc-tag">Güvenlik</span></div>
+        <a class="kc-readmore" href="news-details.html?slug=jwt-ile-kimlik-dogrulama">Oku <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </article>
+</div>
+<div class="col-lg-4 col-md-6">
+  <article class="kc-post-card">
+    <a class="kc-post-thumb" href="news-details.html?slug=clean-architecture-proje-yapisi" aria-label="Clean Architecture ile Proje Yapısı: Neden Daha Az Hata?">
+      <img loading="lazy" src="assets/img/news/5.jpg" alt="Clean Architecture ile Proje Yapısı: Neden Daha Az Hata?">
+      <span class="kc-post-chip">Mimari</span>
+    </a>
+    <div class="kc-post-body">
+      <div class="kc-post-meta">
+        <span class="kc-post-date">26 Haziran 2024</span>
+        <span class="kc-dot"></span>
+        <span class="kc-post-time">8 dk</span>
+      </div>
+      <h3 class="kc-post-title"><a href="news-details.html?slug=clean-architecture-proje-yapisi">Clean Architecture ile Proje Yapısı: Neden Daha Az Hata?</a></h3>
+      <p class="kc-post-excerpt">Kod büyüdükçe “nerede ne var” karışır. Clean Architecture, bağımlılıkları sadeleştirip projeyi uzun vadede yönetilebilir yapar.</p>
+      <div class="kc-post-bottom">
+        <div class="kc-tags"><span class="kc-tag">Mimari</span><span class="kc-tag">Bakım</span></div>
+        <a class="kc-readmore" href="news-details.html?slug=clean-architecture-proje-yapisi">Oku <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </article>
+</div>
+<div class="col-lg-4 col-md-6">
+  <article class="kc-post-card">
+    <a class="kc-post-thumb" href="news-details.html?slug=web-sitesi-ne-ise-yarar" aria-label="Bir Web Sitesi Gerçekte Ne İşe Yarar?">
+      <img loading="lazy" src="assets/img/news/1.jpg" alt="Bir Web Sitesi Gerçekte Ne İşe Yarar?">
+      <span class="kc-post-chip">Genel</span>
+    </a>
+    <div class="kc-post-body">
+      <div class="kc-post-meta">
+        <span class="kc-post-date">20 Haziran 2024</span>
+        <span class="kc-dot"></span>
+        <span class="kc-post-time">6 dk</span>
+      </div>
+      <h3 class="kc-post-title"><a href="news-details.html?slug=web-sitesi-ne-ise-yarar">Bir Web Sitesi Gerçekte Ne İşe Yarar?</a></h3>
+      <p class="kc-post-excerpt">Web sitesi “kartvizit” değildir. Doğru kurgulanırsa ziyaretçiyi güvene, sonra da aksiyona taşır. Basit bir çerçeve ile anlatıyorum.</p>
+      <div class="kc-post-bottom">
+        <div class="kc-tags"><span class="kc-tag">Dönüşüm</span><span class="kc-tag">İlk İzlenim</span></div>
+        <a class="kc-readmore" href="news-details.html?slug=web-sitesi-ne-ise-yarar">Oku <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </article>
+</div>
+</div>
+<div class="text-center mt-40">
+<a class="theme-btn wow fadeInUp" data-wow-delay=".2s" href="news.html">Tüm Yazıları Gör <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+</section><section class="awards-section section-padding fix">
+<div class="trophy-shape">
+<img alt="img" src="assets/img/shape/trophy.png"/>
+</div>
+<div class="star-shape float-bob-x">
+<img alt="img" src="assets/img/shape/star.png"/>
+</div>
+<div class="container">
+<div class="awards-wrapper">
+<div class="row g-4">
+<div class="col-md-6">
+<div class="section-title mb-0">
+<span class="wow fadeInUp"><img alt="img" src="assets/img/shape/star-2.png"/>Yaklaşım</span>
+<h2 class="wow fadeInUp" data-wow-delay=".2s"><span>Çalışma</span> Prensiplerim</h2>
+</div>
+</div>
+<div class="col-md-6">
+<div class="awards-item wow fadeInUp" data-wow-delay=".2s">
+<div class="content">
+<div class="icon">
+<img alt="img" src="assets/img/icon/1.svg"/>
+</div>
+<div class="text">
+<h4>Temiz Mimari &amp; Kod Kalitesi</h4>
+<span>Sürekli</span>
+</div>
+</div>
+<div class="icon">
+<img alt="img" src="assets/img/icon/5.svg"/>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="awards-item wow fadeInUp" data-wow-delay=".5s">
+<div class="content">
+<div class="icon">
+<img alt="img" src="assets/img/icon/2.svg"/>
+</div>
+<div class="text">
+<h4>Güvenli Giriş &amp; Yetkiler</h4>
+<span>Sürekli</span>
+</div>
+</div>
+<div class="icon">
+<img alt="img" src="assets/img/icon/6.svg"/>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="awards-item wow fadeInUp" data-wow-delay=".8s">
+<div class="content">
+<div class="icon">
+<img alt="img" src="assets/img/icon/3.svg"/>
+</div>
+<div class="text">
+<h4>Hız &amp; Performans</h4>
+<span>Sürekli</span>
+</div>
+</div>
+<div class="icon">
+<img alt="img" src="assets/img/icon/7.svg"/>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="awards-item wow fadeInUp" data-wow-delay="1.1s">
+<div class="content">
+<div class="icon">
+<img alt="img" src="assets/img/icon/4.svg"/>
+</div>
+<div class="text">
+<h4>Yayın &amp; Bakım</h4>
+<span>Sürekli</span>
+</div>
+</div>
+<div class="icon">
+<img alt="img" src="assets/img/icon/8.svg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer-section footer-1 fix section-bg-2 fix">
+<div class="random-shape float-bob-y">
+<img alt="img" src="assets/img/shape/random-shape.png">
+</img></div>
+<div class="star-shape float-bob-x">
+<img alt="img" src="assets/img/shape/star.png">
+</img></div>
+<div class="container">
+<div class="footer-widget-wrapper">
+<div class="row g-0">
+<div class="col-lg-6">
+<div class="row">
+<div class="col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>Hizmetler</h4>
+</div>
+<div class="content">
+<p>Türkiye • Uzaktan / Hibrit</p>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>İletişim</h4>
+</div>
+<div class="content">
+<a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a> <br/>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="footer-social">
+<h4>Sosyal: </h4>
+<ul class="socials-icon">
+<li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-medium"></i></a></li>
+<li><a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="row justify-content-between footer-right-margin">
+<div class="col-lg-5 col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>Hızlı Linkler</h4>
+</div>
+<ul class="list-items">
+<li><a href="about.html">Hakkımda</a></li>
+<li><a href="service.html">Hizmetler</a></li>
+<li><a href="portfolio.html">Projeler</a></li>
+<li><a href="news.html">Yazılar</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-5 col-md-6">
+<div class="single-footer-widget">
+<div class="widget-head">
+<h4>Hizmetler</h4>
+</div>
+<ul class="list-items">
+<li><a href="service-details.html">Kurumsal Web Sitesi</a></li>
+<li><a href="service-details.html">Özel Web Uygulaması</a></li>
+<li><a href="service-details.html">Tasarım &amp; Arayüz Tasarımı</a></li>
+<li><a href="service-details.html">Entegrasyonlar</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-bottom-wrapper">
+<p>
+                        © <span>Kürşatcan Çankaroğlu</span>
+</p>
+<a class="footer-logo" href="index.html">
+<img alt="img" src="assets/img/logo/logo-white.svg">
+</img></a>
+<ul class="footer-list">
+<li>Kullanım Şartları</li>
+<li>Gizlilik Politikası</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/viewport.jquery.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery.waypoints.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/typed.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/posts.data.js"></script>
+<script src="assets/js/custom.js?v=59"></script>
+
+<script src="assets/js/enhancements.js?v=69"></script>
+</body>
+</html>

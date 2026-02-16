@@ -1,0 +1,109 @@
+.price-wrapper {
+    .price-item {
+        margin-top: 30px;
+        padding: 40px 32px;
+        background-color: $white;
+        border-radius: 16px;
+        border: 1.5px solid transparent;
+        @include transition;
+
+
+        @include breakpoint(max-xl){
+            padding: 40px 30px;
+        }
+
+        .content {
+            border-bottom: 1px solid #dadada;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+
+            h3 {
+                font-size: 40px;
+                color: $theme-color;
+                margin-top: 5px;
+                margin-bottom: 10px;
+
+                span {
+                    color: $text-color;
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .price-list {
+            li {
+                @include flex;
+                gap: 10px;
+                color: $header-color;
+                margin-bottom: 10px;
+                i {
+                    color: $white;
+                    background-color: $black;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100px;
+                    @include flex;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .theme-btn {
+            margin-top: 25px;
+            display: block;
+            background-color: transparent;
+            border: 1px solid $theme-color;
+            text-align: center;
+
+            @include breakpoint(max-xl){
+                padding: 14px 10px;
+            }
+
+            @include breakpoint(max-lg){
+                padding: 20px;
+            }
+
+            @include breakpoint(max-md){
+                padding: 15px;
+            }
+
+            @include breakpoint(max-sm){
+                padding: 15px;
+            }
+
+            &:hover {
+                &::before {
+                    background-color: $theme-color;
+                }
+                color: $header-color;
+            }
+        }
+
+        &:hover {
+            border-color:  $theme-color;
+            background: #F6FFFB;
+            transform: translateY(-15px);
+        }
+
+        &.style-2 {
+            position: relative;
+
+            .content {
+                .box {
+                    position: absolute;
+                    background-color: $header-color;
+                    color: $white;
+                    padding: 4px 8px;
+                    border-radius: 100px;
+                    top: 12px;
+                    right: 12px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

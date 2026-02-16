@@ -1,0 +1,510 @@
+.about-wrapper-1 {
+  position: relative;
+
+  @include breakpoint (max-xl){
+    margin-top: -45px;
+  }
+
+  // @include breakpoint (max-lg){
+  //   margin-top: 0;
+  // }
+
+  .random-shape {
+    position: absolute;
+    top: 12%;
+    right: 3%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  .star-shape {
+    position: absolute;
+    top: 25%;
+    left: 44%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  .about-images {
+    position: relative;
+    z-index: 9;
+
+    img {
+      @include imgw;
+    }
+
+    .bg-shape {
+      position: absolute;
+      top: 107px;
+      left: 48px;
+      z-index: -1;
+
+      @include breakpoint(max-sm) {
+        display: none;
+      }
+    }
+
+    .shape-left {
+      position: absolute;
+      top: 72%;
+      left: -60px;
+
+      @include breakpoint(max-xl) {
+        img {
+          max-width: 200px;
+        }
+      }
+
+      @include breakpoint(max-sm) {
+        display: none;
+      }
+    }
+
+    .shape-right {
+      position: absolute;
+      top: 24%;
+      right: -23%;
+
+      @include breakpoint(max-xxl) {
+        img {
+          max-width: 200px;
+        }
+
+        top: 30%;
+        right: -9%;
+      }
+
+      @include breakpoint(max-sm) {
+        display: none;
+      }
+    }
+  }
+
+  .about-content {
+
+    .section-title {
+      h2 {
+        margin-bottom: 13px;
+      }
+    }
+
+    .client-reviews {
+      margin-bottom: 45px;
+      @include flex;
+      gap: 90px;
+
+      @include breakpoint(max-xl) {
+        gap: 40px;
+      }
+
+      @include breakpoint(max-sm) {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        gap: 10px
+      }
+
+      .cr-item {
+        @include flex;
+        gap: 10px;
+
+        @include breakpoint(max-xl) {
+          gap: 20px;
+        }
+
+        @include breakpoint(max-sm) {
+          flex-wrap: wrap;
+          gap: 0;
+        }
+
+        h6 {
+          font-size: 18px;
+          font-weight: 600;
+
+          @include breakpoint(max-sm) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .about-button {
+      @include flex;
+      gap: 24px;
+
+      @include breakpoint(max-sm) {
+        flex-wrap: wrap;
+      }
+
+      .phone {
+        @include flex;
+        gap: 16px;
+        .icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 100px;
+          border: 1px solid rgba(102, 102, 102, 0.16);
+          @include flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.about-2 { 
+  position: relative;
+  z-index: 9;
+
+  .star-shape {
+    position: absolute;
+    top: 12%;
+    right: 10%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  .star-down-shape {
+    position: absolute;
+    left: 9%;
+    bottom: 9%;
+
+    @include breakpoint(max-xxxl) {
+      left: 3%;
+      bottom: -2%;
+    }
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+}
+
+.about-wrapper-2 {
+  @include breakpoint(max-xl) {
+    margin-top: 20px;
+  }
+
+  @include breakpoint(max-lg) {
+    margin-top: -20px;
+  }
+
+  .about-images {
+    position: relative;
+    max-width: 610px;
+    height: 560px;
+
+    @include breakpoint(max-sm) {
+      height: initial;
+    }
+
+    img {
+      @include imgw;
+    }
+
+    .bg-shape {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-48%, -48%);
+      z-index: -1;
+
+      img {
+        width: initial;
+        height: initial;
+      }
+
+      @include breakpoint(max-xl) {
+        display: none;
+      }
+    }
+
+    .video {
+      position: relative;
+      position: absolute;
+      left: 0;
+      top: -7%;
+      width: 154px;
+      height: 154px;
+      line-height: 154px;
+      text-align: center;
+      border-radius: 100%;
+      background-color: $black;
+      z-index: 999;
+
+
+      @include breakpoint (max-xl) {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+      }
+
+      @include breakpoint (max-lg) {
+        top: 10px;
+        left: 25px;
+      }
+
+      @include breakpoint(max-sm) {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        top: -30px;
+        left: 5px;
+      }
+
+      .video-btn {
+        text-align: center;
+        display: inline-block;
+        line-height: 48px;
+        width: 48px;
+        height: 48px;
+        background: $theme-color;
+        border-radius: 100px;
+        z-index: 999;
+        position: absolute;
+        z-index: 99;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        i {
+          z-index: 99;
+          position: relative;
+          transform: rotate(-45deg);
+        }
+      }
+
+      .circle-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+          animation: cir36 10s linear infinite;
+          width: initial;
+
+          @include breakpoint(max-sm) {
+            width: 90px;
+          }
+        }
+      }
+    }
+  }
+
+  .about-content {
+    .section-title {
+      p {
+        margin-top: 20px;
+      }
+    }
+
+    .client-reviews {
+      margin-bottom: 50px;
+      @include flex;
+      justify-content: space-between;
+
+      @include breakpoint(max-xl) {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      @include breakpoint(max-sm){
+        gap: 30px;
+      }
+
+      .cr-item {
+        h2 {
+          @include breakpoint(max-xl) {
+            font-size: 35px;
+          }
+
+          @include breakpoint(max-sm) {
+            font-size: 30px;
+          }
+        }
+
+        h6 {
+          color: $text-color;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .about-button {
+
+      @include flex;
+      gap: 12px;
+
+      @include breakpoint(max-xl) {
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .theme-btn {
+
+        &.style-2 {
+          background-color: transparent;
+          border: $border-color;
+          border-color: #1c1d20;
+        }
+
+        @include breakpoint(max-sm) {
+          padding: 18px 25px;
+        }
+      }
+    }
+  }
+}
+
+.about-wrapper-3 {
+
+  .about-images {
+    position: relative;
+
+    .circle-box {
+      width: 148px;
+      height: 148px;
+      background: $header-color;
+      border-radius: 100px;
+      position: absolute;
+      top: 16%;
+      left: 75%;
+
+      img {
+        animation: cir36 10s linear infinite;
+      }
+
+      @include breakpoint(max-xl) {
+        width: 100px;
+        height: 100px;
+        top: 16%;
+        left: 73%;
+      }
+    }
+
+    img {
+      @include imgw;
+    }
+  }
+
+  .about-content {
+
+    .section-title {
+      p {
+        margin-top: 12px;
+      }
+    }
+
+    .text {
+      @include flex;
+      gap: 24px;
+      margin-bottom: 20px;
+
+      @include breakpoint (max-xl) {
+        margin-top: 30px;
+      }
+    }
+
+    .items {
+      @include flex;
+      gap: 40px;
+      margin-bottom: 30px;
+
+      @include breakpoint(max-xl) {
+        gap: 20px;
+      }
+
+      @include breakpoint(max-sm) {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .item {
+        @include flex;
+        gap: 16px;
+
+        @include breakpoint(max-xl) {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 100px;
+          background: rgba(28, 29, 32, 0.04);
+          @include flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .about-btn {
+      margin-top: 40px;
+      @include flex;
+      gap: 24px;
+
+      @include breakpoint(max-sm) {
+        gap: 20px;
+      }
+
+      .video-btn {
+        @include flex;
+        gap: 9px;
+
+        span {
+          margin-bottom: 0;
+        }
+
+        .icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 100px;
+          border: $border-color-2;
+          @include flex;
+          justify-content: center;
+
+          i {
+            color: $theme-color;
+          }
+        }
+
+        .textx {
+          font-family: Manrope;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.about-3 {
+  position: relative;
+
+  .scales-shape {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  .order-shape {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+}

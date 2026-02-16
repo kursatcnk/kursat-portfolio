@@ -1,0 +1,108 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'>
+  <defs>
+    <linearGradient id='bg' x1='0' y1='0' x2='0.98' y2='0.99'>
+      <stop offset='0' stop-color='#06090b'/>
+      <stop offset='0.55' stop-color='#0b1b14'/>
+      <stop offset='1' stop-color='#071014'/>
+    </linearGradient>
+
+    <radialGradient id='glow1' cx='22%' cy='18%' r='68%'>
+      <stop offset='0' stop-color='#28e98c' stop-opacity='0.55'/>
+      <stop offset='1' stop-color='#28e98c' stop-opacity='0'/>
+    </radialGradient>
+    <radialGradient id='glow2' cx='86%' cy='76%' r='70%'>
+      <stop offset='0' stop-color='#7c5cff' stop-opacity='0.45'/>
+      <stop offset='1' stop-color='#7c5cff' stop-opacity='0'/>
+    </radialGradient>
+
+    <filter id='blur' x='-20%' y='-20%' width='140%' height='140%'>
+      <feGaussianBlur stdDeviation='34'/>
+    </filter>
+
+    <filter id='shadow' x='-30%' y='-30%' width='160%' height='160%'>
+      <feDropShadow dx='0' dy='18' stdDeviation='22' flood-color='#000' flood-opacity='0.45'/>
+    </filter>
+
+    <filter id='noise' x='-20%' y='-20%' width='140%' height='140%'>
+      <feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch' seed='8'/>
+      <feColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.045 0'/>
+    </filter>
+
+    <linearGradient id='glass' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0' stop-color='rgba(255,255,255,0.10)'/>
+      <stop offset='0.55' stop-color='rgba(255,255,255,0.06)'/>
+      <stop offset='1' stop-color='rgba(255,255,255,0.02)'/>
+    </linearGradient>
+
+    <linearGradient id='edge' x1='0' y1='0' x2='1' y2='0'>
+      <stop offset='0' stop-color='rgba(255,255,255,0.08)'/>
+      <stop offset='0.5' stop-color='rgba(255,255,255,0.18)'/>
+      <stop offset='1' stop-color='rgba(255,255,255,0.08)'/>
+    </linearGradient>
+  </defs>
+
+  <rect width='1600' height='900' fill='url(#bg)'/>
+
+  <circle cx='330' cy='160' r='420' fill='url(#glow1)' filter='url(#blur)'/>
+  <circle cx='1320' cy='700' r='460' fill='url(#glow2)' filter='url(#blur)'/>
+
+  <!-- ambient streaks -->
+  <g opacity='0.18'>
+    <path d='M-80 620 C 260 520, 520 520, 860 420 S 1460 180, 1720 140' fill='none' stroke='#7c5cff' stroke-width='10' stroke-linecap='round'/>
+    <path d='M-80 680 C 260 580, 520 580, 860 480 S 1460 240, 1720 200' fill='none' stroke='#28e98c' stroke-width='6' stroke-linecap='round'/>
+  </g>
+
+  <!-- subtle grid -->
+  <g opacity='0.10' stroke='rgba(255,255,255,0.9)' stroke-width='1'>
+    <path d='M0 120H1600M0 300H1600M0 480H1600M0 660H1600M0 840H1600'/>
+    <path d='M160 0V900M360 0V900M560 0V900M760 0V900M960 0V900M1160 0V900M1360 0V900'/>
+  </g>
+
+  <!-- noise overlay -->
+  <rect width='1600' height='900' filter='url(#noise)' opacity='0.75'/>
+
+  <!-- floating glass panels -->
+  <g filter='url(#shadow)'>
+    <g transform='translate(0 0) rotate(-6 800 450)'>
+      <rect x='260' y='220' width='1080' height='520' rx='60' fill='url(#glass)' stroke='rgba(255,255,255,0.12)' stroke-width='2'/>
+      <rect x='300' y='260' width='1000' height='440' rx='52' fill='rgba(0,0,0,0.10)' stroke='url(#edge)' stroke-width='1.2'/>
+      <g opacity='0.9'>
+        <rect x='340' y='300' width='240' height='12' rx='8' fill='rgba(255,255,255,0.18)'/>
+        <rect x='340' y='328' width='170' height='10' rx='8' fill='rgba(255,255,255,0.12)'/>
+        <rect x='340' y='354' width='210' height='10' rx='8' fill='rgba(255,255,255,0.10)'/>
+        <rect x='1060' y='300' width='80' height='10' rx='8' fill='#28e98c' opacity='0.65'/>
+        <rect x='1150' y='300' width='80' height='10' rx='8' fill='#7c5cff' opacity='0.55'/>
+      </g>
+      <g opacity='0.55'>
+        <rect x='340' y='628' width='360' height='12' rx='8' fill='rgba(255,255,255,0.10)'/>
+        <rect x='340' y='654' width='300' height='10' rx='8' fill='rgba(255,255,255,0.08)'/>
+        <rect x='340' y='678' width='240' height='10' rx='8' fill='rgba(255,255,255,0.06)'/>
+      </g>
+    </g>
+  </g>
+
+  <!-- main icon scene -->
+  
+    <g transform='translate(800 455)'>
+      <g filter='url(#shadow)'>
+        <rect x='-320' y='-170' width='640' height='340' rx='48' fill='rgba(255,255,255,0.06)' stroke='rgba(255,255,255,0.12)' stroke-width='2'/>
+      </g>
+      <g stroke='#28e98c' stroke-width='16' stroke-linecap='round' stroke-linejoin='round' fill='none'>
+        <path d='M-200 -120h240l80 80v240h-320z'/>
+        <path d='M40 -120v80h80'/>
+      </g>
+      <g stroke='#7c5cff' stroke-width='12' stroke-linecap='round' stroke-linejoin='round' fill='none' opacity='0.95'>
+        <path d='M140 0c0-90-120-60-120-130 0-40 36-70 90-70 50 0 86 22 86 70 0 62-56 66-56 104'/>
+        <circle cx='84' cy='110' r='12'/>
+      </g>
+      <g stroke='rgba(255,255,255,0.92)' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' fill='none' opacity='0.92'>
+        <path d='M-160 10h160'/>
+        <path d='M-160 60h200'/>
+        <path d='M-160 110h130'/>
+      </g>
+    </g>
+    
+
+  <!-- vignette -->
+  <rect width='1600' height='900' fill='rgba(0,0,0,0.22)'/>
+</svg>
