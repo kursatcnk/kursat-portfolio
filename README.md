@@ -1,6 +1,6 @@
 # Kürşat Portfolyo Sitesi
 
-Bu proje, **Kürşatcan Çankaroğlu** için hazırladığım modern ve mobil uyumlu portfolyo sitesidir.
+Bu proje, kendi adıma hazırladığım modern ve mobil uyumlu portfolyo sitesidir.
 
 ## Proje Yapısı
 
