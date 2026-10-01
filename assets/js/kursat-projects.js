@@ -7,8 +7,8 @@ window.KURSAT_PROJECTS = [
     title: "PromptForge",
     sceneTitle: "PromptForge",
     scene: { shots: ["assets/media/work/promptforge/landing-lg.webp", "assets/media/work/promptforge/forge-dark-lg.webp"] },
-    headline: "İyi sonuç, iyi yazılmış bir istekle başlıyor.",
-    summary: "Yazdığın promptu, kullanacağın modelin en iyi anladığı hâle getiren ve neden değiştiğini anlatan çalışma alanı.",
+    headline: "Prompt yazmayı kolaylaştıran bir çalışma alanı.",
+    summary: "Yazdığınız promptu seçtiğiniz modele göre yeniden düzenliyor ve neyi neden değiştirdiğini tek tek gösteriyor. Fikir, tasarım ve kod benim.",
     year: "2026",
     type: "Web uygulaması · SaaS",
     role: "Ürün, tasarım ve full-stack geliştirme",
@@ -18,7 +18,7 @@ window.KURSAT_PROJECTS = [
     cover: { main: "assets/media/work/promptforge/landing-lg.webp", side: "assets/media/work/promptforge/forge-dark-lg.webp" },
     intro: [
       "Yapay zekâ araçlarında kötü sonuçların çoğu modelden değil, yarım yamalak yazılmış istekten geliyor: bağlam yok, kural yok, çıktının nasıl görüneceği belli değil.",
-      "PromptForge promptu okuyor, eksik bağlamı ve belirsiz ifadeleri buluyor, sonra seçilen modelin en iyi anladığı biçimde yeniden yazıyor. Her analizde neyin neden değiştiğini de gösteriyor; amaç sadece promptu düzeltmek değil, daha iyi prompt yazmayı öğretmek."
+      "PromptForge promptu okuyup eksik bağlamı ve belirsiz ifadeleri buluyor, sonra seçilen modelin en iyi anladığı biçimde yeniden yazıyor. Her değişikliğin yanında kısa bir açıklama var; birkaç kullanımdan sonra aynı eksikleri zaten bırakmamaya başlıyorsunuz."
     ],
     features: [
       { title: "Modele özel biçim", text: "İçerik aynı kalıyor, biçim değişiyor: GPT için Markdown başlıkları, Claude için XML etiketleri, Gemini için etiketli satırlar, DeepSeek için sade paragraflar." },
@@ -49,8 +49,8 @@ window.KURSAT_PROJECTS = [
     title: "OnPixel — Cards Rumble",
     sceneTitle: "Cards Rumble",
     scene: { shots: ["assets/media/work/cards-rumble/home-lg.webp", "assets/media/work/cards-rumble/home-mobile.webp"], phone: true },
-    headline: "Kuralları anlatmak yerine oynatmak.",
-    summary: "Kendi bağımsız oyun stüdyom OnPixel'in ilk oyunu için resmi site: oyunun kurallarını anlatan, tarayıcıda denenebilen bir vitrin.",
+    headline: "Kuralları okutmak yerine oynatan bir oyun sitesi.",
+    summary: "Kendi oyun stüdyom OnPixel'in ilk oyunu Cards Rumble'ın sitesi. Ziyaretçi kuralları uzun bir metinden değil, tarayıcıda kısa bir maç oynayarak öğreniyor.",
     year: "2026",
     type: "Stüdyo & oyun sitesi",
     role: "Stüdyo kurucusu · tasarım ve geliştirme",
@@ -60,7 +60,7 @@ window.KURSAT_PROJECTS = [
     cover: { main: "assets/media/work/cards-rumble/home-lg.webp", side: "assets/media/work/cards-rumble/home-mobile.webp" },
     intro: [
       "Cards Rumble: Clash of Elements, OnPixel'in geliştirdiği 1'e 1 strateji kart oyunu. Üç element, otuz kart ve iki ayrı zafer yolu var; oyunun derinliği kurallarda saklı.",
-      "Sitenin işi bu kuralları sıkıcı bir metin duvarına çevirmeden anlatmak: kartın anatomisi, element döngüsü ve oyun modları kaydırdıkça açılan sahnelerle anlatılıyor, ziyaretçi isterse tarayıcıda kısa bir düelloya girip kuralları deneyerek öğreniyor."
+      "Sitede bu kuralları uzun bir metinle anlatmak istemedim. Bir kartın nelerden oluştuğu, elementlerin birbirini nasıl yendiği ve oyun modları kaydırdıkça açılan bölümlerde anlatılıyor; isteyen tarayıcıda kısa bir maç oynayıp kuralları deneyerek öğreniyor."
     ],
     features: [
       { title: "Anlatan sahneler", text: "GSAP ScrollTrigger ile kaydırdıkça ilerleyen hero ve bölüm geçişleri; hareket azaltma tercihi olan kullanıcıda sade sürüm." },
@@ -89,8 +89,8 @@ window.KURSAT_PROJECTS = [
     title: "ESN Görev Takip",
     sceneTitle: "Görev Takip",
     scene: { shots: ["assets/media/work/gorev-takip/main.webp", "assets/media/work/gorev-takip/alarm.webp"] },
-    headline: "Unutulan takip, kaçan müşteridir.",
-    summary: "Kurulum gerektirmeyen, USB'den çalışan görev ve hatırlatma uygulaması. Müşteri takibinde “şu gün tekrar yazmam lazım” işlerini unutturmuyor.",
+    headline: "“Şu gün tekrar yazarım” notları için küçük bir uygulama.",
+    summary: "Müşteri takibini kaçırmamak için kendime yazdım. Kurulum istemiyor, USB'den çalışıyor; zamanı gelince ekrana sesli bir hatırlatma çıkarıyor.",
     year: "2026",
     type: "Masaüstü uygulama",
     role: "Tasarım ve geliştirme",
@@ -99,7 +99,7 @@ window.KURSAT_PROJECTS = [
     stage: "#15191f",
     cover: { main: "assets/media/work/gorev-takip/main.webp", side: "assets/media/work/gorev-takip/alarm.webp" },
     intro: [
-      "Destek ve ürün tarafında her gün onlarca müşteriyle yazışırken en kolay kaybolan şey “şu gün tekrar dönmem lazım” notları oluyor. Hazır araçlar ya fazla ağır ya da kurulum ve hesap istiyor.",
+      "İşim gereği her gün birçok müşteriyle yazışıyorum. Bu yoğunlukta en kolay kaybolan şey “şu gün tekrar dönmem lazım” notları oluyor. Denediğim hazır araçlar ya fazla ağır geldi ya da kurulum ve hesap istedi.",
       "ESN Görev Takip çift tıkla açılan, saatin yanındaki simgeye inip arka planda bekleyen küçük bir uygulama. Zamanı gelince ekranın en önüne sesli bir uyarı çıkarıyor; tüm veriler exe'nin yanındaki tek bir dosyada, USB ile birlikte taşınıyor."
     ],
     features: [
@@ -127,11 +127,11 @@ window.KURSAT_PROJECTS = [
     slug: "eticaret-analiz",
     title: "E-Ticaret Analiz",
     subtitle: "Satış ve kampanya raporlama",
-    summary: "Satış, kategori ve sepet davranışını KPI'larla özetleyen analiz ve raporlama çalışması.",
+    summary: "E-ticaret verisinden satış, kategori ve sepet raporları çıkaran bir analiz çalışması.",
     year: "2025",
     type: "Veri / dashboard",
     stack: ["C#", "Entity Framework", "SQL"],
-    intro: ["E-ticaret verisini KPI'lara çeviren analiz ve raporlama çalışması. Dönem karşılaştırmaları, kategori/ürün performansı ve kampanya etkisini tek ekranda özetleyerek karar almayı hızlandırıyor."],
+    intro: ["Entity Framework Core ve LINQ ile e-ticaret verisini rapora çeviren bir çalışma. Satış trendleri, kategori ve ürün performansı ve kampanyaların etkisi dönemler arasında karşılaştırılıyor."],
     highlights: ["Satış trendleri ve dönem karşılaştırması", "Kategori/ürün performansı ve kârlılık", "Sepet dönüşümü ve kampanya etkisi", "Sunuma hazır tablo/PDF çıktısı"]
   },
   {
@@ -142,7 +142,7 @@ window.KURSAT_PROJECTS = [
     year: "2025",
     type: "AI entegrasyonları",
     stack: ["ASP.NET Core", "C#", "Azure AI", "OpenAI", "Claude", "Gemini", "Hugging Face"],
-    intro: ["Farklı yapay zekâ sağlayıcılarının API'lerini aynı ASP.NET Core iskeletinde tek tek bağladığım bir dizi küçük uygulama. Amaç her servisin istek/yanıt modelini, hata durumlarını ve maliyet davranışını gerçek kodla öğrenmekti; PromptForge'daki sağlayıcı adaptörleri bu çalışmanın üzerine kuruldu."],
+    intro: ["Farklı yapay zekâ sağlayıcılarının API'lerini aynı ASP.NET Core iskeletinde tek tek bağladığım küçük uygulamalar. Her servisin nasıl cevap verdiğini, nasıl hata verdiğini ve ne kadara mal olduğunu kodla görmek istedim. PromptForge'daki sağlayıcı bağlantıları bu çalışmanın üzerine kurulu."],
     items: [
       ["Görsel analiz", "Azure AI Vision"], ["Detaylı nesne tespiti", "Azure AI Vision"], ["Kod asistanı", "OpenAI"],
       ["Görsel üretimi", "Replicate"], ["Text-to-image", "Stability AI"], ["Ses → yazı", "Deepgram"],
@@ -156,66 +156,66 @@ window.KURSAT_PROJECTS = [
     slug: "ceviri",
     title: "Çeviri Uygulaması",
     subtitle: "API tabanlı hızlı çeviri arayüzü",
-    summary: "Dil değiştirme, kopyalama, geçmiş ve favorilerle günlük kullanıma uygun çeviri arayüzü.",
+    summary: "Dil değiştirme, kopyalama, geçmiş ve favorileri olan sade bir çeviri arayüzü.",
     year: "2025",
     type: "Web uygulaması",
     stack: ["ASP.NET Core", "C#", "REST API"],
-    intro: ["Çeviri servislerine API ile bağlanan, sonucu hızlıca sunan web uygulaması. Debounce ve önbellekle gereksiz istekleri azaltıyor; dil değiştirme, kopyalama, geçmiş ve favorilerle günlük kullanımı pratikleştiriyor."],
+    intro: ["Bir çeviri servisine API ile bağlanan küçük bir web uygulaması. Siz yazmayı bırakınca çeviri geliyor, aynı metin için servise tekrar gidilmiyor. Dil değiştirme, kopyalama, geçmiş ve favoriler de var."],
     highlights: ["Kaynak/hedef dil seçimi ve tek tıkla değiştirme", "Debounce + önbellek ile düşük maliyetli istek", "Geçmiş ve favoriler", "Mobilde rahat kullanım"]
   },
   {
     slug: "kutuphane",
     title: "Kütüphane Yönetimi",
     subtitle: "Katalog, üye ve ödünç akışı",
-    summary: "Kitap, üye ve ödünç/iade süreçlerini yöneten; gecikme takipli MVC uygulaması.",
+    summary: "Kitapları, üyeleri ve ödünç/iade işlerini takip eden bir MVC uygulaması.",
     year: "2024",
     type: "Web uygulaması",
     stack: ["ASP.NET MVC", "C#", "SQL"],
-    intro: ["Kütüphane operasyonunu düzenleyen web uygulaması: kitap kataloğu, üye yönetimi ve ödünç/iade akışı. ISBN ve kategori bazlı arama, gecikme takibi ve durum filtreleriyle sirkülasyonu görünür hâle getiriyor."],
+    intro: ["Kitap kataloğunu, üyeleri ve ödünç/iade akışını yöneten bir ASP.NET MVC uygulaması. ISBN, kategori ve yazara göre arama yapılabiliyor; teslim tarihi geçen kitaplar ayrı bir listede görünüyor."],
     highlights: ["ISBN/kategori/yazar ile katalog ve hızlı arama", "Ödünç/iade akışı ve teslim tarihi kontrolü", "Gecikenler listesi ve durum filtreleri", "Popüler kitap ve aktif üye raporları"]
   },
   {
     slug: "stok-takip",
     title: "Stok & Ürün Takip",
     subtitle: "Depo ve stok yönetimi",
-    summary: "Ürün, depo ve stok hareketlerini tek panelden yöneten, kritik stok uyarılı MVC uygulaması.",
+    summary: "Ürünleri, depoları ve stok hareketlerini takip eden, stok azalınca uyaran bir MVC uygulaması.",
     year: "2024",
     type: "Web uygulaması",
     stack: ["ASP.NET MVC", "C#", "SQL"],
-    intro: ["Küçük ve orta ölçekli işletmeler için stok kontrolünü düzenleyen ASP.NET MVC uygulaması. Ürün kartları, depo hareketleri, tedarikçi kayıtları ve kritik stok eşikleriyle kayıp/eksik riskini azaltıyor."],
+    intro: ["Ürünleri, depoları, tedarikçileri ve stok hareketlerini tek yerden takip etmek için yazdığım bir ASP.NET MVC uygulaması. Bir ürün belirlenen minimum miktarın altına düşünce uyarı veriyor."],
     highlights: ["Ürün, kategori ve depo yönetimi", "Stok giriş/çıkış ve hareket geçmişi", "Kritik stok uyarıları ve minimum eşikler", "En çok hareket edenler ve düşük stok raporları"]
   },
   {
     slug: "cnk-fitness",
     title: "CNK Fitness",
     subtitle: "Spor salonu yönetim sistemi",
-    summary: "Üyelik, paket/abonelik, ödeme ve ders planlamasını tek panelde toplayan masaüstü uygulaması.",
+    summary: "Üyelikleri, paketleri, ödemeleri ve ders programını tek yerde tutan bir masaüstü uygulaması.",
     year: "2024",
     type: "Masaüstü uygulama",
     stack: ["C# / .NET", "Masaüstü arayüz", "SQL", "Raporlama"],
-    intro: ["CNK Fitness için üyelikten ödemeye kadar tüm operasyonu sadeleştiren masaüstü uygulaması. Üye kartı, paket/abonelik, ödeme geçmişi ve ders/randevu planı tek akışta; hızlı arama, filtre ve rapor ekranlarıyla günlük işlemleri hızlandırıyor."],
+    intro: ["CNK Fitness için yazdığım masaüstü uygulaması. Üye kayıtları, paketler, ödeme geçmişi ve ders programı aynı yerde; salondaki görevli günlük işleri arama ve filtrelerle kısa sürede hallediyor."],
     highlights: ["Üye kartı ve paket/abonelik tanımları", "Ödeme geçmişi, borç ve bitiş uyarıları", "Ders/randevu takvimi ve yoklama akışı", "Raporlar: aktif üye, tahsilat, paket dağılımı"]
   },
   {
     slug: "rafael-guzellik",
     title: "Rafael Güzellik Merkezi",
     subtitle: "Randevu odaklı tanıtım sitesi",
-    summary: "Mobilde hızlı açılan, hizmet kartları, galeri ve WhatsApp yönlendirmesiyle randevuya odaklanan tek sayfa.",
+    summary: "Hizmetleri, galeriyi ve randevu için WhatsApp bağlantısını tek sayfada toplayan, telefonda hızlı açılan bir site.",
     year: "2024",
     type: "Landing / kurumsal web",
     stack: ["HTML", "CSS", "JavaScript", "Responsive"],
-    intro: ["Rafael Güzellik Merkezi için tek bakışta güven ve randevu hedefiyle tasarlandı. Hizmetleri kısa kartlarla öne çıkarıyor, galeri ve konum/iletişim alanlarını netleştiriyor; WhatsApp ve telefon çağrılarıyla dönüşümü artırıyor."],
+    intro: ["Rafael Güzellik Merkezi için yaptığım tek sayfalık site. Hizmetler kısa kartlarla anlatılıyor, galeri ve konum bilgisi hemen altında; ziyaretçi tek dokunuşla WhatsApp'tan ya da telefonla randevu isteyebiliyor."],
     highlights: ["Güçlü ilk ekran ve randevu/WhatsApp çağrısı", "Hizmet kartları ve net içerik hiyerarşisi", "Galeri, konum ve iletişim blokları", "Görsel sıkıştırma, lazy-load ve temel SEO"]
   },
   {
     slug: "eray-genc",
     title: "Eray Genç",
     subtitle: "Kişisel portfolyo sitesi",
-    summary: "Projeler, yetenekler, CV ve iletişimi tek akışta toplayan sade kişisel site.",
+    summary: "Projeleri, yetenekleri ve iletişim bilgilerini tek sayfada toplayan sade bir kişisel site.",
     year: "2024",
     type: "Kişisel site",
     stack: ["HTML", "CSS", "JavaScript"],
-    intro: ["Eray Genç için proje ızgarası, deneyim/öğrenim akışı ve hızlı iletişim içeren bir portfolyo. Tipografi ve boşluk dengesi, kaydırma geçişleri ve mobilde okunabilirlik odaklı; içerik modüler bölümlerle kolayca güncelleniyor."],
+    intro: ["Eray Genç için hazırladığım kişisel portfolyo. Projeler, deneyim ve iletişim bilgileri tek sayfada; telefonda rahat okunsun diye tek sütuna iniyor. Bölümler ayrı ayrı güncellenebiliyor."],
     highlights: ["Etiket/kategori mantıklı proje ızgarası", "CV indirme ve sosyal bağlantılar", "Kaydırma geçişleri", "Mobilde tek sütun, yüksek okunabilirlik"]
   }
 ];

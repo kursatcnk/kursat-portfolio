@@ -62,7 +62,7 @@
             <div><span class="kursat-label">Rol</span><span>${esc(p.role || "")}</span></div>
           </div>
           <div class="kursat-case-cta">
-            <a class="kursat-link" href="${caseUrl(p.slug)}">Vaka çalışmasını oku ${K.icons.arrow}</a>
+            <a class="kursat-link" href="${caseUrl(p.slug)}">Ayrıntılara bak ${K.icons.arrow}</a>
             ${github}
           </div>
         </div>
@@ -97,7 +97,7 @@
                 <div><span class="kursat-label">Teknoloji</span><strong>${esc(p.stack.slice(0, 2).join(" · "))}</strong></div>
               </div>
               <div class="kursat-scene-cta">
-                <a class="kursat-button" href="${caseUrl(p.slug)}">Vaka çalışması ${K.icons.arrow}</a>
+                <a class="kursat-button" href="${caseUrl(p.slug)}">Projenin ayrıntıları ${K.icons.arrow}</a>
                 ${github}
               </div>
             </div>
@@ -188,7 +188,7 @@
         <section class="kursat-page-head kursat-container">
           <span class="kursat-label">Bulunamadı</span>
           <h1 class="kursat-h1">Bu proje burada değil.</h1>
-          <p class="kursat-lead">Bağlantı eskimiş olabilir. Tüm işler tek sayfada duruyor.</p>
+          <p class="kursat-lead">Bağlantı eskimiş olabilir. Bütün projeler İşler sayfasında.</p>
           <div class="kursat-hero-actions"><a class="kursat-button" href="portfolio.html">Tüm işler ${K.icons.arrow}</a></div>
         </section>`;
       return;
@@ -211,7 +211,7 @@
     if (p.featured) {
       body += block("Neden", `${p.headline ? `<h2>${esc(p.headline)}</h2>` : ""}${intro}`);
       if (p.features) body += block("Neler yapıyor", listHtml(p.features));
-      if (p.engineering) body += block("Mühendislik", listHtml(p.engineering));
+      if (p.engineering) body += block("Arka planda", listHtml(p.engineering));
       if (p.gallery) {
         const figs = p.gallery.map((g) => `
           <figure class="${g.wide ? "is-wide" : ""}">
@@ -226,7 +226,7 @@
       }
     } else {
       body += block("Özet", intro);
-      if (p.highlights) body += block("Öne çıkanlar", `<ul class="kursat-cs-list">${p.highlights.map((h) => `<li><span>${esc(h)}</span></li>`).join("")}</ul>`);
+      if (p.highlights) body += block("İçinde neler var", `<ul class="kursat-cs-list">${p.highlights.map((h) => `<li><span>${esc(h)}</span></li>`).join("")}</ul>`);
       if (p.items) body += block("Entegrasyonlar", `<ul class="kursat-cs-list">${p.items.map(([n, s]) => `<li><strong>${esc(n)}</strong><span>${esc(s)}</span></li>`).join("")}</ul>`);
     }
     body += block("Teknoloji", `<div class="kursat-stack">${p.stack.map((s) => `<span class="kursat-tag">${esc(s)}</span>`).join("")}</div>`);
