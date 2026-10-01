@@ -680,7 +680,7 @@
       if (impact.focusDesc) impact.focusDesc.textContent = kit.desc;
       if (impact.estimate) impact.estimate.textContent = estimateTime();
 
-      renderList(impact.missingList, computeMissingItems(), { empty: "Brief gayet net; ön analizle devam edebilirim." });
+      renderList(impact.missingList, computeMissingItems(), { empty: "Eksik bir şey yok, bu bilgilerle başlayabilirim." });
       renderPills(impact.deliver, computeDeliverables());
       renderList(impact.wins, computeQuickWins(p1));
       renderList(impact.risks, computeRisks(), { risk: true, empty: "Net; ek risk görünmüyor." });
@@ -855,7 +855,7 @@
       return true;
     }
 
-    copyBtn?.addEventListener("click", () => K.copyText(buildCopyText(), "Brief kopyalandı"));
+    copyBtn?.addEventListener("click", () => K.copyText(buildCopyText(), "Özet kopyalandı"));
 
     mailBtn?.addEventListener("click", () => {
       readState();
@@ -1011,7 +1011,7 @@
         sendBtn.textContent = "Gönderildi";
         sendBtn.classList.add("is-done");
         setStatus(hasEmailJS ? "Gönderildi. En kısa sürede dönüş yapacağım." : "İletildi. İlk kullanımda FormSubmit bir aktivasyon e-postası gönderebilir.", "ok");
-        K.toast("Brief iletildi");
+        K.toast("Mesajınız iletildi");
         finish();
         return;
       }
