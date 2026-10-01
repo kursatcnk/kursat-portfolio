@@ -59,7 +59,7 @@ window.KURSAT_POSTS = [
   <li><strong>Takip ediyorum.</strong> Sorunların nerede tekrar ettiğini, hangi işlerin söz verilen süreyi aştığını rakamlarla izliyorum.</li>
 </ul>
 <h2>Destekten gelmenin faydası</h2>
-<p>Bu role gelmeden önce aynı şirkette iki yıl yazılım destek uzmanıydım. Yani sorunların kullanıcıya nasıl yansıdığını telefonun öbür ucundan dinledim. Bir talebi değerlendirirken hâlâ ilk sorduğum şey bu: “Bu değişiklik, destek hattını arayan birinin derdini azaltır mı?”</p>
+<p>Bu role gelmeden önce aynı şirkette iki yıl yazılım destek uzmanıydım. Yani sorunların kullanıcıya nasıl yansıdığını birebir gördüm. Bir talebi değerlendirirken hâlâ ilk sorduğum şey bu: “Bu değişiklik, destek hattını arayan birinin derdini azaltır mı?”</p>
 <p>Kod yazmayı bilmenin de faydası büyük. Geliştiricinin “bu zor” dediği şeyin neden zor olduğunu anlayabiliyorum. Bazen aynı ihtiyacı çok daha kolay karşılayacak bir yol da önerebiliyorum. Kendi projelerimde ise iki rolü birden yapıyorum: önce analist gibi soruyu netleştiriyor, sonra geliştirici olarak kodunu yazıyorum.</p>
 <div class="kursat-callout"><strong>Bir yazılım yaptıracaksanız:</strong> Ne istediğinizi değil, neden istediğinizi anlatın. “Excel'e aktarma butonu istiyoruz” yerine “her ay sonu satış ekibi müşteri listesini elle hazırlıyor ve yarım günümüz gidiyor” demek, size çok daha iyi bir çözüm getirebilir.</div>`
   },

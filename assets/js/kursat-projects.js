@@ -90,7 +90,7 @@ window.KURSAT_PROJECTS = [
     sceneTitle: "Görev Takip",
     scene: { shots: ["assets/media/work/gorev-takip/main.webp", "assets/media/work/gorev-takip/alarm.webp"] },
     headline: "“Şu gün tekrar yazarım” notları için küçük bir uygulama.",
-    summary: "Müşteri takibini kaçırmamak için kendime yazdım. Kurulum istemiyor, USB'den çalışıyor; zamanı gelince ekrana sesli bir hatırlatma çıkarıyor.",
+    summary: "Müşteri takibinde geri dönüş notlarının kaybolmaması için geliştirdiğim bir masaüstü uygulaması. Kurulum istemiyor, USB'den çalışıyor; zamanı gelince ekrana sesli bir hatırlatma çıkarıyor.",
     year: "2026",
     type: "Masaüstü uygulama",
     role: "Tasarım ve geliştirme",
@@ -99,7 +99,7 @@ window.KURSAT_PROJECTS = [
     stage: "#15191f",
     cover: { main: "assets/media/work/gorev-takip/main.webp", side: "assets/media/work/gorev-takip/alarm.webp" },
     intro: [
-      "İşim gereği her gün birçok müşteriyle yazışıyorum. Bu yoğunlukta en kolay kaybolan şey “şu gün tekrar dönmem lazım” notları oluyor. Denediğim hazır araçlar ya fazla ağır geldi ya da kurulum ve hesap istedi.",
+      "Müşteri yazışmalarının yoğun olduğu işlerde en kolay kaybolan şey “şu gün tekrar dönmem lazım” notları oluyor. Hazır araçlar ya bu iş için fazla ağır kalıyor ya da kurulum ve hesap istiyor.",
       "ESN Görev Takip çift tıkla açılan, saatin yanındaki simgeye inip arka planda bekleyen küçük bir uygulama. Zamanı gelince ekranın en önüne sesli bir uyarı çıkarıyor; tüm veriler exe'nin yanındaki tek bir dosyada, USB ile birlikte taşınıyor."
     ],
     features: [
