@@ -320,7 +320,8 @@
   function renderPostDetail() {
     const host = document.querySelector("[data-kursat-post]");
     if (!host) return;
-    const slug = param("slug") || param("p");
+    const asked = param("slug") || param("p");
+    const slug = (window.KURSAT_POST_ALIASES || {})[asked] || asked;
     const index = posts.findIndex((p) => p.slug === slug);
     const p = posts[index];
     if (!p) {
