@@ -150,7 +150,30 @@
         });
       }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
     }
-    els.forEach((el) => revealObserver.observe(el));
+    els.forEach((el) => {
+      // Liste kaplarında öğelere sıra numarası ver; CSS bununla gecikmeyi hesaplıyor
+      [...el.children].forEach((child, i) => child.style.setProperty("--i", String(Math.min(i, 10))));
+      revealObserver.observe(el);
+    });
+  }
+
+  // --- sayfalar arası geçiş yedeği: View Transitions olmayan tarayıcılarda içerik sönerek ayrılır ---
+  function initPageLeave() {
+    const root = document.documentElement;
+    if (!root.classList.contains("kursat-pt")) return;
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("a[href]");
+      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      if ((a.target && a.target !== "_self") || a.hasAttribute("download")) return;
+      const url = new URL(a.href, location.href);
+      if (url.origin !== location.origin || !/(\.html|\/)$/.test(url.pathname)) return;
+      if (url.pathname === location.pathname && url.search === location.search) return; // aynı sayfa içi bağlantı
+      e.preventDefault();
+      root.classList.add("kursat-leaving");
+      window.setTimeout(() => { location.href = url.href; }, 260);
+    });
+    // Geri tuşuyla önbellekten dönüldüğünde sayfa sönük kalmasın
+    window.addEventListener("pageshow", (e) => { if (e.persisted) root.classList.remove("kursat-leaving"); });
   }
 
   // --- dış linkler yeni sekmede, güvenli ---
@@ -231,6 +254,7 @@
     initYear();
     removeLegacyWorker();
     hardenLinks();
+    initPageLeave();
     // İlk boyamadan sonra geçişleri başlat
     window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
       document.body.classList.add("is-loaded");

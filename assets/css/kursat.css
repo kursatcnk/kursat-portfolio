@@ -664,8 +664,37 @@ a.kursat-index-row:hover svg, .kursat-post-row:hover svg { transform: translate(
 /* 23 Hareket */
 .kursat-js .kursat-reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--kursat-ease), transform 1s var(--kursat-ease); transition-delay: var(--_delay, 0s); }
 .kursat-js .kursat-reveal.is-in { opacity: 1; transform: none; }
-.kursat-js .kursat-unveil { opacity: 0; transform: scale(.97); transition: opacity 1s var(--kursat-ease), transform 1.2s var(--kursat-ease); }
-.kursat-js .kursat-unveil.is-in { opacity: 1; transform: none; }
+.kursat-js .kursat-unveil { opacity: 0; transform: translateY(40px); clip-path: inset(14% 3% 0 3% round 28px); transition: opacity .9s var(--kursat-ease), transform 1.2s var(--kursat-ease), clip-path 1.3s var(--kursat-ease); }
+.kursat-js .kursat-unveil.is-in { opacity: 1; transform: none; clip-path: inset(0 0 0 0 round 0); }
+
+/* Listeler: kap göründüğünde öğeler sırayla gelir (--i çekirdek betikte veriliyor) */
+.kursat-js :is(.kursat-index, .kursat-posts, .kursat-timeline, .kursat-facts, .kursat-process, .kursat-certs, .kursat-skills, .kursat-langs).kursat-reveal { transform: none; }
+.kursat-js :is(.kursat-index, .kursat-posts, .kursat-timeline, .kursat-facts, .kursat-process, .kursat-certs, .kursat-skills, .kursat-langs).kursat-reveal > * { opacity: 0; }
+.kursat-js :is(.kursat-index, .kursat-posts, .kursat-timeline, .kursat-facts, .kursat-process, .kursat-certs, .kursat-skills, .kursat-langs).kursat-reveal.is-in > * { opacity: 1; animation: kursat-rise .9s var(--kursat-ease) backwards; animation-delay: calc(var(--i, 0) * 70ms); }
+@keyframes kursat-rise { from { opacity: 0; transform: translateY(22px); } }
+
+/* Sayfa girişi: başlık bloğu satır satır yükselir */
+.kursat-js .kursat-page-head > *, .kursat-js .kursat-page-head .kursat-intro-head > *, .kursat-js .kursat-page-head .kursat-intro-portrait { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--kursat-ease), transform 1.1s var(--kursat-ease); }
+.kursat-js .kursat-page-head .kursat-intro { opacity: 1; transform: none; }
+.kursat-js .kursat-page-head .kursat-intro-portrait { transform: translateY(40px) scale(.98); }
+.kursat-js .is-loaded .kursat-page-head > *, .kursat-js .is-loaded .kursat-page-head .kursat-intro-head > *, .kursat-js .is-loaded .kursat-page-head .kursat-intro-portrait { opacity: 1; transform: none; }
+.kursat-js .kursat-page-head > :nth-child(2), .kursat-js .kursat-page-head .kursat-intro-head > :nth-child(1) { transition-delay: .06s; }
+.kursat-js .kursat-page-head > :nth-child(3), .kursat-js .kursat-page-head .kursat-intro-head > :nth-child(2) { transition-delay: .14s; }
+.kursat-js .kursat-page-head > :nth-child(4), .kursat-js .kursat-page-head .kursat-intro-head > :nth-child(3) { transition-delay: .22s; }
+.kursat-js .kursat-page-head > :nth-child(n+5) { transition-delay: .3s; }
+.kursat-js .kursat-page-head .kursat-intro-portrait { transition-delay: .18s; }
+
+/* Sayfalar arası geçiş: menü yerinde kalır, içerik söner ve yenisi aşağıdan gelir */
+@view-transition { navigation: auto; }
+.kursat-header { view-transition-name: kursat-header; }
+::view-transition-group(kursat-header) { animation-duration: .45s; animation-timing-function: var(--kursat-ease); }
+::view-transition-old(root) { animation: kursat-page-out .24s cubic-bezier(.4, 0, 1, 1) both; }
+::view-transition-new(root) { animation: kursat-page-in .75s var(--kursat-ease) .2s both; }
+@keyframes kursat-page-out { to { opacity: 0; transform: translateY(-18px); } }
+@keyframes kursat-page-in { from { opacity: 0; transform: translateY(32px); } }
+/* View Transitions olmayan tarayıcılar için aynı his (kursat-pt sınıfı tema betiğinde ekleniyor) */
+.kursat-pt main, .kursat-pt .kursat-footer { animation: kursat-page-in .7s var(--kursat-ease) backwards; }
+.kursat-pt.kursat-leaving main, .kursat-pt.kursat-leaving .kursat-footer { animation: kursat-page-out .28s cubic-bezier(.4, 0, 1, 1) both; }
 .kursat-split-line { display: block; overflow: hidden; padding: .06em 0 .14em; margin: -.06em 0 -.14em; }
 .kursat-split-line > span { display: inline-block; transition: transform 1.1s var(--kursat-ease), opacity 1.1s var(--kursat-ease); transition-delay: var(--_delay, 0s); }
 .kursat-js .kursat-split-line > span { transform: translateY(100%); opacity: 0; }
@@ -674,8 +703,9 @@ a.kursat-index-row:hover svg, .kursat-post-row:hover svg { transform: translate(
 .kursat-not-found .kursat-display { font-size: clamp(120px, 24vw, 320px); color: var(--kursat-surface); }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
-  .kursat-js .kursat-reveal, .kursat-js .kursat-unveil { opacity: 1; transform: none; }
+  @view-transition { navigation: none; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+  .kursat-js .kursat-reveal, .kursat-js .kursat-unveil, .kursat-js .kursat-reveal > *, .kursat-js .kursat-page-head > *, .kursat-js .kursat-page-head .kursat-intro-head > *, .kursat-js .kursat-page-head .kursat-intro-portrait { opacity: 1; transform: none; clip-path: none; }
   .kursat-js .kursat-split-line > span { transform: none; opacity: 1; }
 }
 
