@@ -1,389 +1,112 @@
-<!DOCTYPE html>
-
-<html lang="tr">
+<!doctype html>
+<html lang="tr" data-theme="dark">
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com https://formsubmit.co; frame-src 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; upgrade-insecure-requests" />
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta name="view-transition" content="same-origin"/>
-<meta name="theme-color" content="#00ff8c"/>
-<link rel="manifest" href="manifest.webmanifest"/>
-<link rel="apple-touch-icon" href="assets/img/pwa/icon-192.png"/>
-<meta content="Kürşatcan Çankaroğlu" name="author"/>
-<meta content="Kürşatcan Çankaroğlu — Web geliştirici. Modern, hızlı ve dönüşüm odaklı web siteleri/arayüzler geliştiriyorum. Tasarım, geliştirme ve yayına alma sürecini uçtan uca yürütür; ihtiyaç oldukça iyileştirir ve destek veririm." name="description"/>
-<title>Kürşatcan Çankaroğlu | Yazı Detayı</title>
-<link href="assets/img/favicon.svg" rel="shortcut icon"/>
-<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="assets/css/all.min.css" rel="stylesheet"/>
-<link href="assets/css/animate.css" rel="stylesheet"/>
-<link href="assets/css/magnific-popup.css" rel="stylesheet"/>
-<link href="assets/css/meanmenu.css" rel="stylesheet"/>
-<link href="assets/css/swiper-bundle.min.css" rel="stylesheet"/>
-<link href="assets/css/nice-select.css" rel="stylesheet"/>
-<link href="assets/css/color.css" rel="stylesheet"/>
-<link href="assets/css/main.css?v=37" rel="stylesheet"/>
-<link href="assets/css/custom.css?v=59" rel="stylesheet">
-<link href="assets/css/enhancements.css?v=69" rel="stylesheet"/>
-</link></head>
-<body class="body-color">
-<!-- Ben burada sayfanın en üstünde scroll ilerleme çizgisini ekliyorum. -->
-<div aria-hidden="true" class="scroll-progress"></div>
-<div class="preloader" id="preloader">
-<div class="animation-preloader">
-<div class="spinner">
-</div>
-<div class="txt-loading">
-<span class="letters-loading" data-text-preloader="Y">Y</span>
-<span class="letters-loading" data-text-preloader="Ü">Ü</span>
-<span class="letters-loading" data-text-preloader="K">K</span>
-<span class="letters-loading" data-text-preloader="L">L</span>
-<span class="letters-loading" data-text-preloader="E">E</span>
-<span class="letters-loading" data-text-preloader="N">N</span>
-<span class="letters-loading" data-text-preloader="İ">İ</span>
-<span class="letters-loading" data-text-preloader="Y">Y</span>
-<span class="letters-loading" data-text-preloader="O">O</span>
-<span class="letters-loading" data-text-preloader="R">R</span>
-</div>
-<p class="text-center"><span class="d-block">Yükleniyor...</span><small class="d-block">Kürşatcan Çankaroğlu</small></p>
-</div>
-<div class="loader">
-<div class="row">
-<div class="col-3 loader-section section-left">
-<div class="bg"></div>
-</div>
-<div class="col-3 loader-section section-left">
-<div class="bg"></div>
-</div>
-<div class="col-3 loader-section section-right">
-<div class="bg"></div>
-</div>
-<div class="col-3 loader-section section-right">
-<div class="bg"></div>
-</div>
-</div>
-</div>
-</div>
-<button class="back-to-top" id="back-top">
-<i class="fa-regular fa-arrow-up"></i>
-</button>
-<div class="mouse-cursor cursor-outer"></div>
-<div class="mouse-cursor cursor-inner"></div>
-<div class="fix-area">
-<div class="offcanvas__info">
-<div class="offcanvas__wrapper">
-<div class="offcanvas__content">
-<div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-<div class="offcanvas__logo">
-<a href="index.html">
-<img alt="logo-img" src="assets/img/logo/logo-white.svg"/>
-</a>
-</div>
-<div class="offcanvas__close">
-<button>
-<i class="fas fa-times"></i>
-</button>
-</div>
-</div>
-<p class="text d-none d-xl-block">
-                        İhtiyacınızı hızlıca netleştirip, sürdürülebilir bir çözüm planı çıkarırım. Temiz kod, güvenlik ve performans önceliğimdir.
-                    </p>
-<div class="mobile-menu fix mb-3"></div>
-<div class="offcanvas__contact">
-<h4>İletişim Bilgileri</h4>
-<ul>
-<li class="d-flex align-items-center">
-<div class="offcanvas__contact-icon">
-<i class="fal fa-map-marker-alt"></i>
-</div>
-<div class="offcanvas__contact-text">
-<a href="#" target="_blank">Türkiye • Uzaktan / Hibrit</a>
-</div>
-</li>
-<li class="d-flex align-items-center">
-<div class="offcanvas__contact-icon mr-15">
-<i class="fal fa-envelope"></i>
-</div>
-<div class="offcanvas__contact-text">
-<a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
-</div>
-</li>
-<li class="d-flex align-items-center">
-<div class="offcanvas__contact-icon mr-15">
-<i class="fal fa-clock"></i>
-</div>
-<div class="offcanvas__contact-text">
-<a href="#" target="_blank">Pzt-Cuma, 09:00 - 18:00</a>
-</div>
-</li>
-</ul>
-<div class="header-button mt-4 text-center">
-<a class="theme-btn" href="contact.html">
-                                Ön Görüşme <i class="fa-solid fa-arrow-right"></i>
-</a>
-</div>
-<div class="social-icon d-flex align-items-center">
-<a href="#"><i class="fab fa-github"></i></a>
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-<a href="#"><i class="fab fa-medium"></i></a>
-<a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="offcanvas__overlay"></div>
-<header class="header-1" id="header-sticky">
-<div class="container-fluid">
-<div class="mega-menu-wrapper">
-<div class="header-main">
-<div class="logo">
-<a class="header-logo" href="index.html">
-<img alt="logo-img" src="assets/img/logo/logo.svg"/>
-</a>
-<div class="logo-2">
-<a href="index.html">
-<img alt="" src="assets/img/logo/logo.svg"/>
-</a>
-</div>
-</div>
-<div class="mean__menu-wrapper">
-<div class="main-menu">
-<nav id="mobile-menu">
-<ul>
-<li class="active">
-<a class="border-none" href="index.html">Anasayfa</a>
-</li>
-<li>
-<a href="about.html">Hakkımda</a>
-</li>
-<li>
-<a href="certificates.html">Sertifikalar</a>
-</li>
-<li><a href="service.html">Hizmetler</a></li>
-<li><a href="portfolio.html">Projeler</a></li>
-<li><a href="news.html">Yazılar</a></li>
-<li>
-<a href="faq.html">SSS</a>
-</li>
-<li>
-<a href="contact.html">İletişim</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-<div class="header-right d-flex justify-content-end align-items-center">
-<a class="theme-btn" href="contact.html"> Teklif Al
-                            <i class="fa-solid fa-arrow-right"></i>
-</a>
-<div class="header__hamburger d-xl-none my-auto">
-<div class="sidebar__toggle">
-<i class="fas fa-bars"></i>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com https://formsubmit.co; frame-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; upgrade-insecure-requests">
+<title>Yazı — Kürşatcan Çankaroğlu</title>
+<meta name="description" content="Kürşatcan Çankaroğlu'nun yazıları.">
+<meta name="theme-color" content="#0c0c0b">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/media/brand/og.png">
+<link rel="icon" href="assets/media/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/media/brand/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script src="assets/js/kursat-theme.js"></script>
+<link rel="stylesheet" href="assets/css/kursat.css">
+<script src="assets/js/kursat-core.js" defer></script>
+<script src="assets/js/kursat-posts.js" defer></script>
+<script src="assets/js/kursat-content.js" defer></script>
+</head>
+<body>
+<a class="kursat-skip" href="#kursat-main">İçeriğe geç</a>
+<!-- kursat:header -->
+<header class="kursat-header">
+  <div class="kursat-container kursat-header-inner">
+    <a class="kursat-brand" href="index.html" aria-label="Kürşatcan Çankaroğlu, ana sayfa">
+      <span class="kursat-brand-mark" aria-hidden="true">KÇ</span>
+      <span>Kürşatcan <span class="kursat-brand-surname">Çankaroğlu</span> <span class="kursat-brand-role">· Yazılım geliştirici</span></span>
+    </a>
+    <nav class="kursat-nav" aria-label="Ana menü">
+      <a href="portfolio.html">İşler</a>
+      <a href="service.html">Hizmetler</a>
+      <a href="about.html">Hakkımda</a>
+      <a href="news.html" aria-current="page">Yazılar</a>
+      <a href="contact.html">İletişim</a>
+    </nav>
+    <div class="kursat-header-tools">
+      <span class="kursat-clock" data-kursat-clock></span>
+      <button class="kursat-icon-button kursat-theme-toggle" type="button" data-kursat-theme-toggle aria-label="Temayı değiştir">
+        <svg class="kursat-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="kursat-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+      </button>
+      <a class="kursat-button kursat-button--small" href="contact.html">Proje başlat</a>
+      <button class="kursat-icon-button kursat-menu-button" type="button" data-kursat-menu aria-expanded="false" aria-controls="kursat-drawer" aria-label="Menüyü aç">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+      </button>
+    </div>
+  </div>
 </header>
-<section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(assets/img/breadcrumb/bg.jpg);">
-<div class="star-shape float-bob-x">
-<img alt="img" src="assets/img/shape/star.png"/>
-</div>
-<div class="container">
-<div class="row">
-<div class="page-heading">
-<h2>Yazı Detayı</h2>
-<ul class="breadcrumb-list">
-<li>
-<a href="index.html">Anasayfa</a>
-</li>
-<li><i class="fa-solid fa-angle-right"></i></li>
-<li class="active">Yazı Detayı</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
 
-<div aria-hidden="true" class="kc-read-progress"><i></i></div>
-<section class="kc-post-hero section-bg fix">
-<div class="container">
-<div class="kc-post-hero-inner" data-kc-reveal="">
-<div class="kc-post-hero-text">
-<span class="kc-post-hero-chip" id="kc-post-hero-chip">Yazı</span>
-<h1 id="kc-post-hero-title">Yükleniyor…</h1>
-<p class="kc-post-hero-meta" id="kc-post-hero-meta"></p>
-<div class="kc-post-hero-actions">
-<a class="theme-btn" href="news.html">Tüm Yazılar <i class="fa-solid fa-arrow-right"></i></a>
-<button aria-label="Linki kopyala" class="kc-icon-btn" id="kc-copy-link" title="Linki kopyala" type="button">
-<i class="fa-regular fa-copy"></i>
-<span class="kc-copied">Kopyalandı</span>
-</button>
-</div>
-</div>
-<div class="kc-post-hero-media">
-<div class="kc-post-hero-frame">
-<img alt="Kapak görseli" id="kc-post-hero-cover" src="assets/img/news/4.jpg"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="kc-post-section section-padding" id="kc-post-detail">
-<div class="container">
-<div class="row g-4">
-<div class="col-lg-8">
-<article class="kc-post-article" data-kc-reveal="" id="kc-post-content">
-
-<div class="kc-post-fallback" data-kc-reveal>
-  <h2 style="margin:0 0 10px; font-weight:1000; letter-spacing:-.02em;">Yükleniyor…</h2>
-  <p style="margin:0 0 16px; opacity:.82; font-weight:650;">Yazı içeriği birkaç saniye içinde ekranda görünür. Görünmüyorsa sayfayı yenileyebilirsiniz.</p>
-  <div class="kc-post-skeleton" aria-hidden="true">
-    <span></span><span></span><span style="width:78%"></span>
-    <span style="height:16px; margin-top:10px;"></span>
-    <span></span><span style="width:88%"></span><span></span>
+<div class="kursat-drawer" id="kursat-drawer" aria-hidden="true">
+  <nav aria-label="Mobil menü">
+    <a href="index.html">Ana sayfa <span>00</span></a>
+    <a href="portfolio.html">İşler <span>01</span></a>
+    <a href="service.html">Hizmetler <span>02</span></a>
+    <a href="about.html">Hakkımda <span>03</span></a>
+    <a href="news.html" aria-current="page">Yazılar <span>04</span></a>
+    <a href="contact.html">İletişim <span>05</span></a>
+  </nav>
+  <div class="kursat-drawer-foot">
+    <a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
+    <a href="https://github.com/kursatcnk">GitHub</a>
+    <span data-kursat-clock></span>
   </div>
 </div>
+<!-- /kursat:header -->
 
+<main id="kursat-main" data-kursat-post>
+  <section class="kursat-page-head kursat-container">
+    <span class="kursat-label">Yükleniyor</span>
+    <noscript><p class="kursat-lead">Yazı JavaScript ile yükleniyor. <a class="kursat-link" href="news.html">Tüm yazılar</a></p></noscript>
+  </section>
+</main>
 
-<div class="kc-post-nav" id="kc-post-nav"></div>
-</div>
-<div class="col-lg-4">
-<aside class="kc-post-aside">
-<div class="kc-card" data-kc-reveal="">
-<div class="kc-card-head">
-<h4>İçindekiler</h4>
-<span class="kc-mini">Tek tıklamayla git</span>
-</div>
-<nav class="kc-toc" id="kc-post-toc"></nav>
-</div>
-<div class="kc-card kc-aside-cta" data-kc-reveal="">
-<h4>Bu tarz bir işi sizin için de yapabilirim</h4>
-<p>İhtiyacınızı 10 dakikada netleştirip sizin için en doğru çözümü birlikte planlayalım.</p>
-<a class="theme-btn" href="contact.html">İletişime Geç <i class="fa-solid fa-arrow-right"></i></a>
-</div>
-<div class="kc-card kc-aside-mini" data-kc-reveal="">
-<h4>Hızlı not</h4>
-<p>Yeni yazılar geldikçe arşiv büyür. “Yazılar” sayfasındaki arama/filtre ile kolayca bulursunuz.</p>
-</div>
-</aside>
-</div>
-</div>
-</div>
-</section>
-
-<footer class="footer-section footer-1 fix section-bg-2 fix">
-<div class="random-shape float-bob-y">
-<img alt="img" src="assets/img/shape/random-shape.png"/>
-</div>
-<div class="star-shape float-bob-x">
-<img alt="img" src="assets/img/shape/star.png"/>
-</div>
-<div class="container">
-<div class="footer-widget-wrapper">
-<div class="row g-0">
-<div class="col-lg-6">
-<div class="row">
-<div class="col-md-6">
-<div class="single-footer-widget">
-<div class="widget-head">
-<h4>Hizmetler</h4>
-</div>
-<div class="content">
-<p>Türkiye • Uzaktan / Hibrit</p>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="single-footer-widget">
-<div class="widget-head">
-<h4>İletişim</h4>
-</div>
-<div class="content">
-<a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a> <br/>
-</div>
-</div>
-</div>
-<div class="col-12">
-<div class="footer-social">
-<h4>Sosyal: </h4>
-<ul class="socials-icon">
-<li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-<li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-<li><a href="#"><i class="fa-brands fa-medium"></i></a></li>
-<li><a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="row justify-content-between footer-right-margin">
-<div class="col-lg-5 col-md-6">
-<div class="single-footer-widget">
-<div class="widget-head">
-<h4>Hızlı Linkler</h4>
-</div>
-<ul class="list-items">
-<li><a href="about.html">Hakkımda</a></li>
-<li><a href="service.html">Hizmetler</a></li>
-<li><a href="portfolio.html">Projeler</a></li>
-<li><a href="news.html">Yazılar</a></li>
-</ul>
-</div>
-</div>
-<div class="col-lg-5 col-md-6">
-<div class="single-footer-widget">
-<div class="widget-head">
-<h4>Hizmetler</h4>
-</div>
-<ul class="list-items">
-<li><a href="service-details.html">ASP.NET Core</a></li>
-<li><a href="service-details.html">Mimari</a></li>
-<li><a href="service-details.html">Performans</a></li>
-<li><a href="service-details.html">DevOps</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="footer-bottom-wrapper">
-<p>
-                        © <span>Kürşatcan Çankaroğlu</span>
-</p>
-<a class="footer-logo" href="index.html">
-<img alt="img" src="assets/img/logo/logo-white.svg"/>
-</a>
-<ul class="footer-list">
-<li>Kullanım Şartları</li>
-<li>Gizlilik Politikası</li>
-</ul>
-</div>
-</div>
-</div>
+<!-- kursat:footer -->
+<footer class="kursat-footer">
+  <div class="kursat-container">
+    <div class="kursat-grid kursat-footer-grid">
+      <div class="kursat-footer-col">
+        <span class="kursat-label">Kürşatcan Çankaroğlu</span>
+        <p>Ürün tarafını da bilen yazılım geliştirici. İstanbul'dan; uzaktan ve hibrit çalışıyorum.</p>
+        <a class="kursat-link" href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
+      </div>
+      <div class="kursat-footer-col">
+        <span class="kursat-label">Sayfalar</span>
+        <a href="portfolio.html">İşler</a>
+        <a href="service.html">Hizmetler</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="news.html">Yazılar</a>
+        <a href="contact.html">İletişim</a>
+      </div>
+      <div class="kursat-footer-col">
+        <span class="kursat-label">Bağlantılar</span>
+        <a href="https://github.com/kursatcnk">GitHub</a>
+        <a href="assets/docs/Kursatcan_Cankaroglu_CV.pdf" download>CV (PDF)</a>
+        <a href="certificates.html">Sertifikalar</a>
+        <a href="faq.html">Sık sorulanlar</a>
+      </div>
+    </div>
+    <p class="kursat-footer-word" aria-hidden="true">Kürşatcan</p>
+  </div>
+  <div class="kursat-container">
+    <div class="kursat-footer-base kursat-label">
+      <span>© <span data-kursat-year>2026</span> Kürşatcan Çankaroğlu</span>
+      <span>Framework kullanmadan HTML, CSS ve JavaScript ile geliştirildi</span>
+    </div>
+  </div>
 </footer>
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/viewport.jquery.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jquery.waypoints.js"></script>
-<script src="assets/js/jquery.counterup.min.js"></script>
-<script src="assets/js/swiper-bundle.min.js"></script>
-<script src="assets/js/jquery.meanmenu.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/typed.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/posts.data.js"></script>
-<script src="assets/js/custom.js?v=59"></script>
-
-<script src="assets/js/enhancements.js?v=69"></script>
+<!-- /kursat:footer -->
 </body>
 </html>

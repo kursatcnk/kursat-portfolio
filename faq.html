@@ -1,522 +1,164 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!doctype html>
+<html lang="tr" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com https://formsubmit.co; frame-src 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; upgrade-insecure-requests" />
-<meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="view-transition" content="same-origin"/>
-<meta name="theme-color" content="#00ff8c"/>
-<link rel="manifest" href="manifest.webmanifest"/>
-<link rel="apple-touch-icon" href="assets/img/pwa/icon-192.png"/>
-<meta name="author" content="Kürşatcan Çankaroğlu">
-    <meta name="description" content="Kürşatcan Çankaroğlu — Web geliştirici. Modern, hızlı ve dönüşüm odaklı web siteleri/arayüzler geliştiriyorum. Tasarım, geliştirme ve yayına alma sürecini uçtan uca yürütür; ihtiyaç oldukça iyileştirir ve destek veririm.">
-<title>Kürşatcan Çankaroğlu | SSS</title>
-<link rel="shortcut icon" href="assets/img/favicon.svg">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/all.min.css">
-<link rel="stylesheet" href="assets/css/animate.css">
-<link rel="stylesheet" href="assets/css/magnific-popup.css">
-<link rel="stylesheet" href="assets/css/meanmenu.css">
-<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-<link rel="stylesheet" href="assets/css/nice-select.css">
-<link rel="stylesheet" href="assets/css/color.css">
-<link rel="stylesheet" href="assets/css/main.css?v=37">
-<link href="assets/css/custom.css?v=59" rel="stylesheet"/>
-<link href="assets/css/enhancements.css?v=69" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com https://formsubmit.co; frame-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; upgrade-insecure-requests">
+<title>Sık sorulanlar — Kürşatcan Çankaroğlu</title>
+<meta name="description" content="Süreç, fiyatlandırma, teslim süresi, revizyon, ödeme ve yayın sonrası destek hakkında sık sorulan sorular.">
+<meta name="theme-color" content="#0c0c0b">
+<meta property="og:image" content="assets/media/brand/og.png">
+<link rel="icon" href="assets/media/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/media/brand/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script src="assets/js/kursat-theme.js"></script>
+<link rel="stylesheet" href="assets/css/kursat.css">
+<script src="assets/js/kursat-core.js" defer></script>
+<script src="assets/js/kursat-content.js" defer></script>
 </head>
+<body>
+<a class="kursat-skip" href="#kursat-main">İçeriğe geç</a>
+<!-- kursat:header -->
+<header class="kursat-header">
+  <div class="kursat-container kursat-header-inner">
+    <a class="kursat-brand" href="index.html" aria-label="Kürşatcan Çankaroğlu, ana sayfa">
+      <span class="kursat-brand-mark" aria-hidden="true">KÇ</span>
+      <span>Kürşatcan <span class="kursat-brand-surname">Çankaroğlu</span> <span class="kursat-brand-role">· Yazılım geliştirici</span></span>
+    </a>
+    <nav class="kursat-nav" aria-label="Ana menü">
+      <a href="portfolio.html">İşler</a>
+      <a href="service.html" aria-current="page">Hizmetler</a>
+      <a href="about.html">Hakkımda</a>
+      <a href="news.html">Yazılar</a>
+      <a href="contact.html">İletişim</a>
+    </nav>
+    <div class="kursat-header-tools">
+      <span class="kursat-clock" data-kursat-clock></span>
+      <button class="kursat-icon-button kursat-theme-toggle" type="button" data-kursat-theme-toggle aria-label="Temayı değiştir">
+        <svg class="kursat-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="kursat-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+      </button>
+      <a class="kursat-button kursat-button--small" href="contact.html">Proje başlat</a>
+      <button class="kursat-icon-button kursat-menu-button" type="button" data-kursat-menu aria-expanded="false" aria-controls="kursat-drawer" aria-label="Menüyü aç">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-<body class="body-color">
-
-<!-- Ben burada sayfanın en üstünde scroll ilerleme çizgisini ekliyorum. -->
-<div aria-hidden="true" class="scroll-progress"></div>
-
-    
-    <div id="preloader" class="preloader">
-        <div class="animation-preloader">
-            <div class="spinner">
-            </div>
-            <div class="txt-loading">
-<span class="letters-loading" data-text-preloader="Y">Y</span>
-<span class="letters-loading" data-text-preloader="Ü">Ü</span>
-<span class="letters-loading" data-text-preloader="K">K</span>
-<span class="letters-loading" data-text-preloader="L">L</span>
-<span class="letters-loading" data-text-preloader="E">E</span>
-<span class="letters-loading" data-text-preloader="N">N</span>
-<span class="letters-loading" data-text-preloader="İ">İ</span>
-<span class="letters-loading" data-text-preloader="Y">Y</span>
-<span class="letters-loading" data-text-preloader="O">O</span>
-<span class="letters-loading" data-text-preloader="R">R</span>
+<div class="kursat-drawer" id="kursat-drawer" aria-hidden="true">
+  <nav aria-label="Mobil menü">
+    <a href="index.html">Ana sayfa <span>00</span></a>
+    <a href="portfolio.html">İşler <span>01</span></a>
+    <a href="service.html" aria-current="page">Hizmetler <span>02</span></a>
+    <a href="about.html">Hakkımda <span>03</span></a>
+    <a href="news.html">Yazılar <span>04</span></a>
+    <a href="contact.html">İletişim <span>05</span></a>
+  </nav>
+  <div class="kursat-drawer-foot">
+    <a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
+    <a href="https://github.com/kursatcnk">GitHub</a>
+    <span data-kursat-clock></span>
+  </div>
 </div>
-<p class="text-center"><span class="d-block">Yükleniyor...</span><small class="d-block">Kürşatcan Çankaroğlu</small></p>
-        </div>
-        <div class="loader">
-            <div class="row">
-                <div class="col-3 loader-section section-left">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-left">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-right">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-right">
-                    <div class="bg"></div>
-                </div>
-            </div>
-        </div>
+<!-- /kursat:header -->
+
+<main id="kursat-main">
+  <section class="kursat-page-head kursat-container">
+    <nav class="kursat-crumbs" aria-label="Konum"><a href="service.html">Hizmetler</a><span>/</span><span>Sık sorulanlar</span></nav>
+    <h1 class="kursat-h1">Sık sorulan <span class="kursat-serif">sorular</span></h1>
+    <p class="kursat-lead">Süreç, maliyet ve teslim hakkında en çok gelen soruların net cevapları. Farklı bir sorunuz varsa kısa bir ön görüşmede netleştirelim.</p>
+  </section>
+
+  <section class="kursat-container" style="padding-bottom:var(--kursat-section)">
+    <div class="kursat-toolbar">
+      <div class="kursat-filters" data-kursat-faq-filters>
+        <button class="kursat-filter is-active" type="button" data-cat="all">Tümü <small></small></button>
+        <button class="kursat-filter" type="button" data-cat="kapsam">Kapsam &amp; hizmet <small></small></button>
+        <button class="kursat-filter" type="button" data-cat="surec">Süreç &amp; zaman <small></small></button>
+        <button class="kursat-filter" type="button" data-cat="fiyat">Fiyatlandırma <small></small></button>
+        <button class="kursat-filter" type="button" data-cat="yayin">Yayın &amp; sonrası <small></small></button>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <label class="kursat-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+          <span class="kursat-visually-hidden">Sorularda ara</span>
+          <input type="search" placeholder="Sorularda ara" data-kursat-faq-search>
+        </label>
+        <button class="kursat-link kursat-link--muted" type="button" data-kursat-faq-toggle>Tümünü aç</button>
+      </div>
     </div>
 
-    
-    <button id="back-top" class="back-to-top">
-        <i class="fa-regular fa-arrow-up"></i>
-    </button>
-<div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
-
-    
-    <div class="fix-area">
-        <div class="offcanvas__info">
-            <div class="offcanvas__wrapper">
-                <div class="offcanvas__content">
-                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-                        <div class="offcanvas__logo">
-                            <a href="index.html">
-                                <img src="assets/img/logo/logo-white.svg" alt="logo-img">
-                            </a>
-                        </div>
-                        <div class="offcanvas__close">
-                            <button>
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <p class="text d-none d-xl-block">
-                        İhtiyacınızı hızlıca netleştirip, sürdürülebilir bir çözüm planı çıkarırım. Temiz kod, güvenlik ve performans önceliğimdir.
-                    </p>
-                    <div class="mobile-menu fix mb-3"></div>
-                    <div class="offcanvas__contact">
-                        <h4>İletişim Bilgileri</h4>
-                        <ul>
-                            <li class="d-flex align-items-center">
-                                <div class="offcanvas__contact-icon">
-                                    <i class="fal fa-map-marker-alt"></i>
-                                </div>
-                                <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="#">Türkiye • Uzaktan / Hibrit</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <div class="offcanvas__contact-icon mr-15">
-                                    <i class="fal fa-envelope"></i>
-                                </div>
-                                <div class="offcanvas__contact-text">
-                                    <a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <div class="offcanvas__contact-icon mr-15">
-                                    <i class="fal fa-clock"></i>
-                                </div>
-                                <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="#">Pzt-Cuma, 09:00 - 18:00</a>
-                                </div>
-                            </li>
-                            </ul>
-                        <div class="header-button mt-4 text-center">
-                            <a href="contact.html" class="theme-btn">
-                                Ön Görüşme <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                        <div class="social-icon d-flex align-items-center">
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-medium"></i></a>
-                            <a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="kursat-accordion" data-kursat-faq>
+      <details data-cat="kapsam"><summary>Hangi hizmetleri sunuyorsunuz?<small>Kapsam</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Kurumsal web sitesi ve landing page, yönetim paneli ve web uygulaması, API ve entegrasyon, arayüz iyileştirme, performans ve Google görünürlüğü düzenlemeleri ile bakım/destek. Tek seferlik bir teslimat ya da sürekli bakım olarak ilerleyebiliriz.</p></div></details>
+      <details data-cat="kapsam"><summary>Hazır tema mı, özel tasarım mı yapıyorsunuz?<small>Kapsam</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Özel tasarım ve kendi yazdığım kodla çalışıyorum; bu site de öyle. Hazır temalar hızlı görünse de ağır gelir ve markanıza ait hissettirmez. Zaman çok kritikse, sade bir yapıyla hızlı bir ilk sürüm çıkarıp sonra büyütmek daha sağlıklı.</p></div></details>
+      <details data-cat="kapsam"><summary>Mevcut sitemi iyileştirebilir misiniz?<small>Kapsam</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Evet. Önce kısa bir analiz yapıyorum: hız, Google görünürlüğü, mobil uyum, güvenlik ve kullanıcı akışı. Ardından önceliklendirilmiş bir planla görsel düzen, içerik ve teknik iyileştirmeleri uyguluyorum.</p></div></details>
+      <details data-cat="surec"><summary>Proje süreci nasıl ilerliyor?<small>Süreç</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Kapsam ve hedefi netleştiriyoruz, tasarım ve akışı onaylıyoruz, geliştirip test ediyoruz, son olarak kontrol listesiyle yayına alıyoruz. Her adımda kısa onay noktaları olduğu için sürpriz yaşanmıyor.</p></div></details>
+      <details data-cat="surec"><summary>Ne kadar sürede teslim ediyorsunuz?<small>Süreç</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Kapsama göre değişiyor. Landing ve kurumsal siteler genelde 1–3 hafta, daha kapsamlı web uygulamaları ve paneller 3–8 hafta sürüyor. Hedef ve içerik hazırsa süre kısalıyor.</p></div></details>
+      <details data-cat="surec"><summary>Proje için sizden neler isteyeceksiniz?<small>Süreç</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Kısa bir brief (hedef, hedef kitle, beğendiğiniz örnekler), varsa logo ve renkler, temel içerikler ve alan adı/hosting bilgileri yeterli. İçerik tam hazır değilse birlikte düzenleyerek ilerleyebiliriz. İletişim sayfasındaki brief oluşturucu bu adımı 60 saniyeye indiriyor.</p></div></details>
+      <details data-cat="fiyat"><summary>Fiyatlandırma neye göre belirleniyor?<small>Fiyat</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Sayfa ya da ekran sayısı, özel tasarım ihtiyacı, içerik miktarı, entegrasyonlar (form, ödeme, API), çoklu dil ve bakım beklentisi. Ön görüşmede netleştirip şeffaf bir teklif paylaşıyorum.</p></div></details>
+      <details data-cat="fiyat"><summary>Revizyon hakkı var mı?<small>Fiyat</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Evet. Tasarım ve içerik tarafında belirli revizyon turlarıyla ilerliyoruz. Değişiklikler tek bir listede toplanıp önceliklendiriliyor; böylece hem hız hem kalite korunuyor.</p></div></details>
+      <details data-cat="fiyat"><summary>Ödeme nasıl oluyor?<small>Fiyat</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Genelde iki aşamalı: başlangıçta ön ödeme, teslim ve yayında kalan tutar. Uzun projelerde aşama bazlı bir plan da yapabiliyoruz.</p></div></details>
+      <details data-cat="yayin"><summary>Alan adı ve hosting konusunda destek oluyor musunuz?<small>Yayın</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Evet. Sizin adınıza satın almak yerine doğru seçimi yapmanız için yönlendiriyor, DNS, kurulum ve yayın adımlarında destek veriyorum. Kontrol her zaman sizde kalıyor.</p></div></details>
+      <details data-cat="yayin"><summary>Yayın sonrası destek veriyor musunuz?<small>Yayın</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Evet. Yayın sonrası hız, Google görünürlüğü, form testleri, güvenlik ve yedekleme kontrol listesi uygulanıyor. İsterseniz aylık bakımla güncellemeler düzenli devam ediyor.</p></div></details>
+      <details data-cat="yayin"><summary>Kaynak kodu ve erişimler kime ait oluyor?<small>Yayın</small><span class="kursat-plus" aria-hidden="true"></span></summary>
+        <div class="kursat-accordion-body"><p>Alan adı ve hosting hesapları sizde oluyor. Proje dosyaları ve erişimler size devrediliyor; amaç sizi bir sağlayıcıya bağımlı bırakmadan sürdürülebilir bir yapı kurmak.</p></div></details>
     </div>
-    <div class="offcanvas__overlay"></div>
+    <p class="kursat-empty" data-kursat-faq-empty>Eşleşen soru bulunamadı. Aramayı kısaltın ya da başka bir kategori seçin.</p>
 
-    
-    <header class="header-1" id="header-sticky">
-        <div class="container-fluid">
-            <div class="mega-menu-wrapper">
-                <div class="header-main">
-                    <div class="logo">
-                        <a href="index.html" class="header-logo">
-                            <img src="assets/img/logo/logo.svg" alt="logo-img">
-                        </a>
-                        <div class="logo-2">
-                            <a href="index.html">
-                                <img src="assets/img/logo/logo.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mean__menu-wrapper">
-                        <div class="main-menu">
-                            <nav id="mobile-menu">
-    <ul>
-        <li class="active">
-            <a href="index.html" class="border-none">Anasayfa</a>
-        </li>
-        <li>
-            <a href="about.html">Hakkımda</a>
-        </li>
-<li>
-<a href="certificates.html">Sertifikalar</a>
-</li>
-        <li><a href="service.html">Hizmetler</a></li>
-        <li><a href="portfolio.html">Projeler</a></li>
-        <li><a href="news.html">Yazılar</a></li>
-        <li>
-            <a href="faq.html">SSS</a>
-        </li>
-        <li>
-            <a href="contact.html">İletişim</a>
-        </li>
-    </ul>
-</nav>
-                        </div>
-                    </div>
-                    <div class="header-right d-flex justify-content-end align-items-center">
-                        <a href="contact.html" class="theme-btn"> Teklif Al
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <div class="header__hamburger d-xl-none my-auto">
-                            <div class="sidebar__toggle">
-                                <i class="fas fa-bars"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div class="kursat-cta-row" style="margin-top:56px">
+      <a class="kursat-button" href="contact.html">Sorunuzu sorun</a>
+      <a class="kursat-link kursat-link--muted" href="service.html">Hizmetlere dön</a>
+    </div>
+  </section>
+</main>
 
-    
-    <!-- 2026 Premium SSS (Sıfırdan) -->
-    <section class="kc-hero-soft" aria-label="Sıkça Sorulan Sorular başlığı">
-      <div class="kc-bg-blobs" aria-hidden="true">
-        <span class="kc-blob kc-blob--1"></span>
-        <span class="kc-blob kc-blob--2"></span>
+<!-- kursat:footer -->
+<footer class="kursat-footer">
+  <div class="kursat-container">
+    <div class="kursat-grid kursat-footer-grid">
+      <div class="kursat-footer-col">
+        <span class="kursat-label">Kürşatcan Çankaroğlu</span>
+        <p>Ürün tarafını da bilen yazılım geliştirici. İstanbul'dan; uzaktan ve hibrit çalışıyorum.</p>
+        <a class="kursat-link" href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
       </div>
-      <div class="container">
-        <div class="kc-hero-soft__inner" data-kc-reveal>
-          <div class="kc-hero-soft__top">
-            <div class="kc-pill-badge"><i class="fa-solid fa-circle-question"></i> SSS</div>
-            <div class="kc-crumb"><a href="index.html">Anasayfa</a> <span>›</span> <span class="is-active">SSS</span></div>
-          </div>
-          <h1 class="kc-hero-soft__title">Sıkça Sorulan Sorular</h1>
-          <p class="kc-hero-soft__lead">Süreç, maliyet ve teslimat hakkında en çok gelen soruların net cevapları. Hâlâ farklı bir ihtiyacınız varsa, kısa bir ön görüşme ile birlikte netleştirelim.</p>
-
-          <div class="kc-hero-soft__chips" data-kc-reveal>
-            <div class="kc-chip"><span>Ortalama başlangıç</span><b>1–3 gün</b></div>
-            <div class="kc-chip"><span>İletişim</span><b>WhatsApp / E‑posta</b></div>
-            <div class="kc-chip"><span>Kalite hedefi</span><b>Hız + Google görünürlüğü + Güvenlik</b></div>
-            <div class="kc-chip"><span>Garanti</span><b>Yayın sonrası destek</b></div>
-          </div>
-        </div>
+      <div class="kursat-footer-col">
+        <span class="kursat-label">Sayfalar</span>
+        <a href="portfolio.html">İşler</a>
+        <a href="service.html">Hizmetler</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="news.html">Yazılar</a>
+        <a href="contact.html">İletişim</a>
       </div>
-    </section>
-
-
-    <section class="kc-faq2026 section-padding" aria-label="Sıkça Sorulan Sorular içeriği">
-      <div class="container">
-        <div class="kc-faq-grid">
-
-          <aside class="kc-faq-aside" data-kc-reveal>
-            <div class="kc-faq-panel">
-              <div class="kc-faq-panel__head">
-                <h3>Kategoriler</h3>
-                <p>Hızlı filtreleyin.</p>
-              </div>
-              <div class="kc-faq-pills" role="tablist" aria-label="SSS kategorileri">
-                <button class="kc-faq-pill is-active" type="button" data-kc-faq-cat="all" role="tab" aria-selected="true">Tümü <span class="kc-faq-pill__count" data-kc-faq-count="all">0</span></button>
-                <button class="kc-faq-pill" type="button" data-kc-faq-cat="scope" role="tab" aria-selected="false">Kapsam & Hizmet <span class="kc-faq-pill__count" data-kc-faq-count="scope">0</span></button>
-                <button class="kc-faq-pill" type="button" data-kc-faq-cat="time" role="tab" aria-selected="false">Süreç & Zaman <span class="kc-faq-pill__count" data-kc-faq-count="time">0</span></button>
-                <button class="kc-faq-pill" type="button" data-kc-faq-cat="price" role="tab" aria-selected="false">Fiyatlandırma <span class="kc-faq-pill__count" data-kc-faq-count="price">0</span></button>
-                <button class="kc-faq-pill" type="button" data-kc-faq-cat="ops" role="tab" aria-selected="false">Yayın & Operasyon <span class="kc-faq-pill__count" data-kc-faq-count="ops">0</span></button>
-              </div>
-            </div>
-
-            <div class="kc-faq-sidecard" data-kc-reveal>
-              <div class="kc-faq-sidecard__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-              <h4>15 dk ön görüşme</h4>
-              <p>Hedefi ve kapsamı netleştirip size en uygun yol haritasını çıkaralım. İsterseniz aynı gün içinde tahmini teklif aralığı paylaşılır.</p>
-              <div class="kc-faq-sidecard__actions">
-                <a href="contact.html" class="theme-btn" data-kc-magnetic>Ön Görüşme <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="service.html" class="kc-ghost" data-kc-magnetic>Hizmetleri Gör <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </aside>
-
-
-          <main class="kc-faq-main">
-            <div class="kc-faq-toolbar" data-kc-reveal>
-              <div class="kc-input kc-input--xl">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input id="kc-faq-search" type="text" placeholder="Ara: teklif, bakım, Google görünürlüğü, süre..." aria-label="SSS içinde ara" autocomplete="off" />
-              </div>
-              <div class="kc-faq-actions">
-                <div class="kc-faq-meta"><span id="kc-faq-visible">0</span>/<span id="kc-faq-total">0</span> sonuç</div>
-                <button class="kc-faq-btn" type="button" id="kc-faq-expand">Tümünü Aç</button>
-                <button class="kc-faq-btn" type="button" id="kc-faq-collapse">Kapat</button>
-              </div>
-            </div>
-
-            <div id="kc-faq-list" class="kc-faq-list" data-kc-reveal>
-              <!-- Kapsam & Hizmet -->
-              <article class="kc-faq-item" data-kc-faq-item data-cat="scope">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Hangi hizmetleri sunuyorsunuz?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Kurumsal web sitesi ve landing page, yönetim paneli / web uygulama, API & entegrasyon, Tasarım arayüz iyileştirme, performans–Google görünürlüğü düzenlemeleri ve bakım/destek hizmetleri sunuluyor. İhtiyacınıza göre tek bir teslimat veya sürekli bakım paketi şeklinde ilerlenebilir.</div>
-                </div>
-              </article>
-
-              <article class="kc-faq-item" data-kc-faq-item data-cat="scope">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Hazır tema mı, özel tasarım mı yapıyorsunuz?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">İki seçenek de mümkün. Zaman kritikse mevcut bir altyapı üzerinden premium bir görünüm ve dönüşüm odaklı düzenleme yapılır. Marka kimliği önemliyse, sıfırdan özel tasarım + geliştirme ile daha güçlü bir sunum elde edilir.</div>
-                </div>
-              </article>
-
-              <article class="kc-faq-item" data-kc-faq-item data-cat="scope">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Mevcut sitemi iyileştirebilir misiniz?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Evet. Önce kısa bir analiz yapılır (hız, Google görünürlüğü, mobil uyum, güvenlik, kullanıcı akışı). Ardından önceliklendirilmiş bir plan ile görsel düzen, içerik iyileştirme ve teknik optimizasyonlar uygulanır.</div>
-                </div>
-              </article>
-
-              <!-- Süreç & Zaman -->
-              <article class="kc-faq-item" data-kc-faq-item data-cat="time">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Proje süreci nasıl ilerliyor?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Genelde 4 adım var: (1) Kapsam & hedef netleştirme, (2) Tasarım/akış onayı, (3) Geliştirme & test, (4) Yayın & kontrol listesi. Her adımda kısa onay noktaları ile ilerlenir; böylece sürpriz yaşamazsınız.</div>
-                </div>
-              </article>
-
-              <article class="kc-faq-item" data-kc-faq-item data-cat="time">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Ne kadar sürede teslim ediyorsunuz?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Kapsama göre değişir. Landing/kurumsal site genelde 1–3 hafta, daha kapsamlı web uygulama/panel 3–8 hafta aralığında ilerler. İlk görüşmede hedef ve içerik hazırsa daha hızlı teslim planı yapılabilir.</div>
-                </div>
-              </article>
-
-              <article class="kc-faq-item" data-kc-faq-item data-cat="time">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Proje için sizden neler isteyeceksiniz?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Kısa bir brif (hedef, hedef kitle, örnek beğeniler), logo/renkler (varsa), temel içerikler (hakkında, hizmetler, iletişim) ve varsa alan adı/hosting bilgileri yeterli. İçerikler tam hazır değilse birlikte düzenleyerek ilerlenebilir.</div>
-                </div>
-              </article>
-
-              <!-- Fiyatlandırma -->
-              <article class="kc-faq-item" data-kc-faq-item data-cat="price">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Fiyatlandırma neye göre belirleniyor?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Kapsam (sayfa/ekran sayısı), özel tasarım ihtiyacı, içerik miktarı, entegrasyonlar (form, ödeme, API), çoklu dil ve bakım beklentisi gibi kalemlere göre belirlenir. Ön görüşmede netleştirilip şeffaf bir teklif paylaşılır.</div>
-                </div>
-              </article>
-
-              <article class="kc-faq-item" data-kc-faq-item data-cat="price">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Revize hakkı var mı? Değişiklikler nasıl yönetiliyor?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Evet. Tasarım ve içerik tarafında belirli revize turları ile ilerlenir. Değişiklikler tek bir listede toplanır; önceliklendirilir ve parça parça uygulanır. Böylece hem hız hem kalite korunur.</div>
-                </div>
-              </article>
-
-              <article class="kc-faq-item" data-kc-faq-item data-cat="price">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Ödeme nasıl oluyor?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Genelde iki aşamalı ilerlenir: proje başlangıcı için ön ödeme, teslim/yayın aşamasında kalan tutar. Uzun süreli projelerde milestone bazlı plan da yapılabilir.</div>
-                </div>
-              </article>
-
-              <!-- Yayın & Operasyon -->
-              <article class="kc-faq-item" data-kc-faq-item data-cat="ops">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Alan adı ve hosting konusunda destek oluyor musunuz?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Evet. Sizin adınıza satın alma yerine, doğru seçim yapmanız için yönlendirme yapılır; DNS/kurulum/yayın adımlarında destek verilir. Böylece kontrol her zaman sizde kalır.</div>
-                </div>
-              </article>
-
-              <article class="kc-faq-item" data-kc-faq-item data-cat="ops">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Yayın sonrası destek veriyor musunuz?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Evet. Yayın sonrası kontrol listesi (hız, Google görünürlüğü, form testleri, güvenlik, yedekleme) uygulanır. İsterseniz aylık bakım paketleri ile güncelleme/iyileştirme süreçleri düzenli devam eder.</div>
-                </div>
-              </article>
-
-              <article class="kc-faq-item" data-kc-faq-item data-cat="ops">
-                <button class="kc-faq-q" type="button" aria-expanded="false">
-                  <span>Proje tesliminde kaynaklar ve erişimler kime ait oluyor?</span>
-                  <span class="kc-faq-ico" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
-                </button>
-                <div class="kc-faq-a" hidden>
-                  <div class="kc-faq-a__inner">Alan adı/hosting hesapları sizde olur. Proje dosyaları teslim edilir ve erişimler tarafınıza devredilir. Hedef; sizi bir sağlayıcıya bağımlı bırakmadan sürdürülebilir bir yapı kurmaktır.</div>
-                </div>
-              </article>
-            </div>
-
-            <div id="kc-faq-empty" class="kc-posts-empty" style="display:none; margin-top:18px;">
-              <div class="kc-empty-card" data-kc-reveal>
-                <div class="kc-empty-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                <h3 style="margin:0 0 6px; font-weight:1000;">Eşleşen soru bulunamadı</h3>
-                <p style="margin:0; opacity:.82; font-weight:650;">Arama terimini kısaltın veya başka bir kategori seçin.</p>
-              </div>
-            </div>
-          </main>
-        </div>
+      <div class="kursat-footer-col">
+        <span class="kursat-label">Bağlantılar</span>
+        <a href="https://github.com/kursatcnk">GitHub</a>
+        <a href="assets/docs/Kursatcan_Cankaroglu_CV.pdf" download>CV (PDF)</a>
+        <a href="certificates.html">Sertifikalar</a>
+        <a href="faq.html">Sık sorulanlar</a>
       </div>
-    </section>
-
-    
-    <footer class="footer-section footer-1 fix section-bg-2 fix">
-        <div class="random-shape float-bob-y">
-            <img src="assets/img/shape/random-shape.png" alt="img">
-        </div>
-        <div class="star-shape float-bob-x">
-            <img src="assets/img/shape/star.png" alt="img">
-        </div>
-        <div class="container">
-            <div class="footer-widget-wrapper">
-                <div class="row g-0">
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single-footer-widget">
-                                    <div class="widget-head">
-                                        <h4>Hizmetler</h4>
-                                    </div>
-                                    <div class="content">
-                                        <p>Türkiye • Uzaktan / Hibrit</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-footer-widget">
-                                    <div class="widget-head">
-                                        <h4>İletişim</h4>
-                                    </div>
-                                    <div class="content">
-                                        <a href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a> <br>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="footer-social">
-                                    <h4>Sosyal: </h4>
-                                    <ul class="socials-icon">
-                                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-medium"></i></a></li>
-                                        <li><a href="mailto:info.cankaroglu@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row justify-content-between footer-right-margin">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="single-footer-widget">
-                                    <div class="widget-head">
-                                        <h4>Hızlı Linkler</h4>
-                                    </div>
-                                    <ul class="list-items">
-                                        <li><a href="about.html">Hakkımda</a></li>
-                                        <li><a href="service.html">Hizmetler</a></li>
-                                        <li><a href="portfolio.html">Projeler</a></li>
-                                        <li><a href="news.html">Yazılar</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-5 col-md-6">
-                                <div class="single-footer-widget">
-                                    <div class="widget-head">
-                                        <h4>Hizmetler</h4>
-                                    </div>
-                                    <ul class="list-items">
-                                        <li><a href="service-details.html">Kurumsal Web Sitesi</a></li>
-                                        <li><a href="service-details.html">Web Uygulama & Panel</a></li>
-                                        <li><a href="service-details.html">Tasarım & Arayüz Tasarımı</a></li>
-                                        <li><a href="service-details.html">API & Entegrasyon</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-bottom-wrapper">
-                    <p>
-                        © <span>Kürşatcan Çankaroğlu</span>
-                    </p>
-                    <a href="index.html" class="footer-logo">
-                        <img src="assets/img/logo/logo-white.svg" alt="img">
-                    </a>
-                    <ul class="footer-list">
-                        <li>Kullanım Şartları</li>
-                        <li>Gizlilik Politikası</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/viewport.jquery.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jquery.waypoints.js"></script>
-<script src="assets/js/jquery.counterup.min.js"></script>
-<script src="assets/js/swiper-bundle.min.js"></script>
-<script src="assets/js/jquery.meanmenu.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/typed.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/custom.js?v=59"></script>
-
-<script src="assets/js/enhancements.js?v=69"></script>
+    </div>
+    <p class="kursat-footer-word" aria-hidden="true">Kürşatcan</p>
+  </div>
+  <div class="kursat-container">
+    <div class="kursat-footer-base kursat-label">
+      <span>© <span data-kursat-year>2026</span> Kürşatcan Çankaroğlu</span>
+      <span>Framework kullanmadan HTML, CSS ve JavaScript ile geliştirildi</span>
+    </div>
+  </div>
+</footer>
+<!-- /kursat:footer -->
 </body>
-
 </html>
