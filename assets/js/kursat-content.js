@@ -146,7 +146,8 @@
       el.innerHTML = featured.map((p, i) => sceneHtml(p, i, featured.length)).join("");
     });
     document.querySelectorAll("[data-kursat-index]").forEach((el) => {
-      const rows = projects.filter((p) => !p.featured).map(indexRowHtml).join("");
+      // Arşiv yeniden eskiye; aynı yıl içinde veri dosyasındaki sıra korunur
+      const rows = projects.filter((p) => !p.featured).sort((a, b) => Number(b.year) - Number(a.year)).map(indexRowHtml).join("");
       el.innerHTML = `
         <div class="kursat-index-head kursat-label"><span>Yıl</span><span>Proje</span><span>Tür</span><span>Teknoloji</span><span></span></div>
         ${rows}`;

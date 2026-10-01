@@ -122,7 +122,69 @@ window.KURSAT_PROJECTS = [
     ]
   },
 
-  // Arşiv — daha önceki işler
+  // Arşiv — daha önceki işler, yeniden eskiye
+  {
+    slug: "eticaret-analiz",
+    title: "E-Ticaret Analiz",
+    subtitle: "Satış ve kampanya raporlama",
+    summary: "Satış, kategori ve sepet davranışını KPI'larla özetleyen analiz ve raporlama çalışması.",
+    year: "2025",
+    type: "Veri / dashboard",
+    stack: ["C#", "Entity Framework", "SQL"],
+    intro: ["E-ticaret verisini KPI'lara çeviren analiz ve raporlama çalışması. Dönem karşılaştırmaları, kategori/ürün performansı ve kampanya etkisini tek ekranda özetleyerek karar almayı hızlandırıyor."],
+    highlights: ["Satış trendleri ve dönem karşılaştırması", "Kategori/ürün performansı ve kârlılık", "Sepet dönüşümü ve kampanya etkisi", "Sunuma hazır tablo/PDF çıktısı"]
+  },
+  {
+    slug: "advancedai",
+    title: "AdvancedAI",
+    subtitle: "17 yapay zekâ API entegrasyonu",
+    summary: "ASP.NET Core üzerinde görsel, ses, metin ve sohbet servislerini tek tek bağladığım entegrasyon çalışmaları.",
+    year: "2025",
+    type: "AI entegrasyonları",
+    stack: ["ASP.NET Core", "C#", "Azure AI", "OpenAI", "Claude", "Gemini", "Hugging Face"],
+    intro: ["Farklı yapay zekâ sağlayıcılarının API'lerini aynı ASP.NET Core iskeletinde tek tek bağladığım bir dizi küçük uygulama. Amaç her servisin istek/yanıt modelini, hata durumlarını ve maliyet davranışını gerçek kodla öğrenmekti; PromptForge'daki sağlayıcı adaptörleri bu çalışmanın üzerine kuruldu."],
+    items: [
+      ["Görsel analiz", "Azure AI Vision"], ["Detaylı nesne tespiti", "Azure AI Vision"], ["Kod asistanı", "OpenAI"],
+      ["Görsel üretimi", "Replicate"], ["Text-to-image", "Stability AI"], ["Ses → yazı", "Deepgram"],
+      ["Metinden sese", "Azure Speech"], ["Sohbet botu", "Claude"], ["PDF özetleyici", "Claude"],
+      ["İş başvurusu e-postası", "Claude"], ["Sohbet botu", "Gemini"], ["Otomatik prompt zinciri", "Gemini"],
+      ["Rol bazlı simülasyon", "Gemini"], ["Toksik içerik tespiti", "Hugging Face"], ["Duygu analizi", "Hugging Face"],
+      ["Soru–cevap (RoBERTa)", "Hugging Face"], ["Varlık çıkarma (NER)", "Hugging Face"]
+    ]
+  },
+  {
+    slug: "ceviri",
+    title: "Çeviri Uygulaması",
+    subtitle: "API tabanlı hızlı çeviri arayüzü",
+    summary: "Dil değiştirme, kopyalama, geçmiş ve favorilerle günlük kullanıma uygun çeviri arayüzü.",
+    year: "2025",
+    type: "Web uygulaması",
+    stack: ["ASP.NET Core", "C#", "REST API"],
+    intro: ["Çeviri servislerine API ile bağlanan, sonucu hızlıca sunan web uygulaması. Debounce ve önbellekle gereksiz istekleri azaltıyor; dil değiştirme, kopyalama, geçmiş ve favorilerle günlük kullanımı pratikleştiriyor."],
+    highlights: ["Kaynak/hedef dil seçimi ve tek tıkla değiştirme", "Debounce + önbellek ile düşük maliyetli istek", "Geçmiş ve favoriler", "Mobilde rahat kullanım"]
+  },
+  {
+    slug: "kutuphane",
+    title: "Kütüphane Yönetimi",
+    subtitle: "Katalog, üye ve ödünç akışı",
+    summary: "Kitap, üye ve ödünç/iade süreçlerini yöneten; gecikme takipli MVC uygulaması.",
+    year: "2024",
+    type: "Web uygulaması",
+    stack: ["ASP.NET MVC", "C#", "SQL"],
+    intro: ["Kütüphane operasyonunu düzenleyen web uygulaması: kitap kataloğu, üye yönetimi ve ödünç/iade akışı. ISBN ve kategori bazlı arama, gecikme takibi ve durum filtreleriyle sirkülasyonu görünür hâle getiriyor."],
+    highlights: ["ISBN/kategori/yazar ile katalog ve hızlı arama", "Ödünç/iade akışı ve teslim tarihi kontrolü", "Gecikenler listesi ve durum filtreleri", "Popüler kitap ve aktif üye raporları"]
+  },
+  {
+    slug: "stok-takip",
+    title: "Stok & Ürün Takip",
+    subtitle: "Depo ve stok yönetimi",
+    summary: "Ürün, depo ve stok hareketlerini tek panelden yöneten, kritik stok uyarılı MVC uygulaması.",
+    year: "2024",
+    type: "Web uygulaması",
+    stack: ["ASP.NET MVC", "C#", "SQL"],
+    intro: ["Küçük ve orta ölçekli işletmeler için stok kontrolünü düzenleyen ASP.NET MVC uygulaması. Ürün kartları, depo hareketleri, tedarikçi kayıtları ve kritik stok eşikleriyle kayıp/eksik riskini azaltıyor."],
+    highlights: ["Ürün, kategori ve depo yönetimi", "Stok giriş/çıkış ve hareket geçmişi", "Kritik stok uyarıları ve minimum eşikler", "En çok hareket edenler ve düşük stok raporları"]
+  },
   {
     slug: "cnk-fitness",
     title: "CNK Fitness",
@@ -155,67 +217,5 @@ window.KURSAT_PROJECTS = [
     stack: ["HTML", "CSS", "JavaScript"],
     intro: ["Eray Genç için proje ızgarası, deneyim/öğrenim akışı ve hızlı iletişim içeren bir portfolyo. Tipografi ve boşluk dengesi, kaydırma geçişleri ve mobilde okunabilirlik odaklı; içerik modüler bölümlerle kolayca güncelleniyor."],
     highlights: ["Etiket/kategori mantıklı proje ızgarası", "CV indirme ve sosyal bağlantılar", "Kaydırma geçişleri", "Mobilde tek sütun, yüksek okunabilirlik"]
-  },
-  {
-    slug: "stok-takip",
-    title: "Stok & Ürün Takip",
-    subtitle: "Depo ve stok yönetimi",
-    summary: "Ürün, depo ve stok hareketlerini tek panelden yöneten, kritik stok uyarılı MVC uygulaması.",
-    year: "2024",
-    type: "Web uygulaması",
-    stack: ["ASP.NET MVC", "C#", "SQL"],
-    intro: ["Küçük ve orta ölçekli işletmeler için stok kontrolünü düzenleyen ASP.NET MVC uygulaması. Ürün kartları, depo hareketleri, tedarikçi kayıtları ve kritik stok eşikleriyle kayıp/eksik riskini azaltıyor."],
-    highlights: ["Ürün, kategori ve depo yönetimi", "Stok giriş/çıkış ve hareket geçmişi", "Kritik stok uyarıları ve minimum eşikler", "En çok hareket edenler ve düşük stok raporları"]
-  },
-  {
-    slug: "kutuphane",
-    title: "Kütüphane Yönetimi",
-    subtitle: "Katalog, üye ve ödünç akışı",
-    summary: "Kitap, üye ve ödünç/iade süreçlerini yöneten; gecikme takipli MVC uygulaması.",
-    year: "2024",
-    type: "Web uygulaması",
-    stack: ["ASP.NET MVC", "C#", "SQL"],
-    intro: ["Kütüphane operasyonunu düzenleyen web uygulaması: kitap kataloğu, üye yönetimi ve ödünç/iade akışı. ISBN ve kategori bazlı arama, gecikme takibi ve durum filtreleriyle sirkülasyonu görünür hâle getiriyor."],
-    highlights: ["ISBN/kategori/yazar ile katalog ve hızlı arama", "Ödünç/iade akışı ve teslim tarihi kontrolü", "Gecikenler listesi ve durum filtreleri", "Popüler kitap ve aktif üye raporları"]
-  },
-  {
-    slug: "ceviri",
-    title: "Çeviri Uygulaması",
-    subtitle: "API tabanlı hızlı çeviri arayüzü",
-    summary: "Dil değiştirme, kopyalama, geçmiş ve favorilerle günlük kullanıma uygun çeviri arayüzü.",
-    year: "2025",
-    type: "Web uygulaması",
-    stack: ["ASP.NET Core", "C#", "REST API"],
-    intro: ["Çeviri servislerine API ile bağlanan, sonucu hızlıca sunan web uygulaması. Debounce ve önbellekle gereksiz istekleri azaltıyor; dil değiştirme, kopyalama, geçmiş ve favorilerle günlük kullanımı pratikleştiriyor."],
-    highlights: ["Kaynak/hedef dil seçimi ve tek tıkla değiştirme", "Debounce + önbellek ile düşük maliyetli istek", "Geçmiş ve favoriler", "Mobilde rahat kullanım"]
-  },
-  {
-    slug: "eticaret-analiz",
-    title: "E-Ticaret Analiz",
-    subtitle: "Satış ve kampanya raporlama",
-    summary: "Satış, kategori ve sepet davranışını KPI'larla özetleyen analiz ve raporlama çalışması.",
-    year: "2025",
-    type: "Veri / dashboard",
-    stack: ["C#", "Entity Framework", "SQL"],
-    intro: ["E-ticaret verisini KPI'lara çeviren analiz ve raporlama çalışması. Dönem karşılaştırmaları, kategori/ürün performansı ve kampanya etkisini tek ekranda özetleyerek karar almayı hızlandırıyor."],
-    highlights: ["Satış trendleri ve dönem karşılaştırması", "Kategori/ürün performansı ve kârlılık", "Sepet dönüşümü ve kampanya etkisi", "Sunuma hazır tablo/PDF çıktısı"]
-  },
-  {
-    slug: "advancedai",
-    title: "AdvancedAI",
-    subtitle: "17 yapay zekâ API entegrasyonu",
-    summary: "ASP.NET Core üzerinde görsel, ses, metin ve sohbet servislerini tek tek bağladığım entegrasyon çalışmaları.",
-    year: "2025",
-    type: "AI entegrasyonları",
-    stack: ["ASP.NET Core", "C#", "Azure AI", "OpenAI", "Claude", "Gemini", "Hugging Face"],
-    intro: ["Farklı yapay zekâ sağlayıcılarının API'lerini aynı ASP.NET Core iskeletinde tek tek bağladığım bir dizi küçük uygulama. Amaç her servisin istek/yanıt modelini, hata durumlarını ve maliyet davranışını gerçek kodla öğrenmekti; PromptForge'daki sağlayıcı adaptörleri bu çalışmanın üzerine kuruldu."],
-    items: [
-      ["Görsel analiz", "Azure AI Vision"], ["Detaylı nesne tespiti", "Azure AI Vision"], ["Kod asistanı", "OpenAI"],
-      ["Görsel üretimi", "Replicate"], ["Text-to-image", "Stability AI"], ["Ses → yazı", "Deepgram"],
-      ["Metinden sese", "Azure Speech"], ["Sohbet botu", "Claude"], ["PDF özetleyici", "Claude"],
-      ["İş başvurusu e-postası", "Claude"], ["Sohbet botu", "Gemini"], ["Otomatik prompt zinciri", "Gemini"],
-      ["Rol bazlı simülasyon", "Gemini"], ["Toksik içerik tespiti", "Hugging Face"], ["Duygu analizi", "Hugging Face"],
-      ["Soru–cevap (RoBERTa)", "Hugging Face"], ["Varlık çıkarma (NER)", "Hugging Face"]
-    ]
   }
 ];
