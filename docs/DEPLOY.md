@@ -1,29 +1,32 @@
-# Deploy Rehberi
+# Yayına alma
 
-Bu site **statik** olduğu için ücretsiz platformlarda kolayca canlıya alınabilir.
+Site statik; build adımı yok, kök klasör olduğu gibi yayınlanıyor.
 
-## Netlify (Önerilir)
+## Netlify (önerilen)
 
-1. Netlify hesabı açın.
-2. "Add new site" → "Deploy manually" seçin.
-3. Proje klasörünü (zip açılmış hali) sürükleyip bırakın.
-4. Yayınlandıktan sonra alan adını (domain) bağlayabilirsiniz.
+1. Netlify'da **Add new site → Import an existing project** ile bu repoyu seç (ya da klasörü sürükle-bırak).
+2. Build komutu boş, publish directory `.` olarak kalsın (`netlify.toml` bunu zaten söylüyor).
+3. Güvenlik başlıkları `netlify.toml` ve `_headers` üzerinden otomatik uygulanır.
+4. Alan adını **Domain settings** bölümünden bağla.
 
 ## Vercel
 
-1. Vercel hesabı açın.
-2. "New Project" → projeyi yükleyin.
-3. Framework seçmeden (Other) ilerleyin.
-4. Build adımı yok; direkt yayınlanır.
+1. **New Project** → repoyu seç.
+2. Framework: **Other**, build komutu yok.
+3. Başlıklar `vercel.json` üzerinden uygulanır.
 
 ## Cloudflare Pages
 
-1. Cloudflare Pages → Create a project
-2. "Direct upload" ile klasörü yükleyin.
-3. Build komutu gerekmez.
+1. **Create a project** → repoyu bağla ya da **Direct upload** ile klasörü yükle.
+2. Build komutu yok, çıktı klasörü `/`.
+3. Başlıklar `_headers` dosyasından okunur.
 
-## Güvenlik Notu
+## Apache / paylaşımlı hosting
 
-- Bu proje backend kullanmadığı için sunucu tarafı güvenlik kontrolleri (rate-limit, WAF vb.) platform tarafında kalır.
-- Tarayıcı tarafında yaptığım hardening ayarları (CSP / güvenli link açma / formda çerez tutmama vb.) projede mevcuttur.
+Dosyaları kök dizine yükle; `.htaccess` güvenlik başlıklarını ve özel 404 sayfasını ayarlar (`mod_headers` gerekli).
 
+## Yayından sonra kontrol listesi
+
+- İletişim sayfasından bir test brief'i gönder. FormSubmit ilk seferde `info.cankaroglu@gmail.com` adresine aktivasyon e-postası yollar; onaylayınca sonraki gönderimler doğrudan gelir.
+- Eski siteyi ziyaret etmiş bir tarayıcıda sayfayı bir kez yenile: yeni `service-worker.js` eski önbellekleri silip kendini kaldırır ve sayfa yeni sürümle açılır.
+- `portfolio-details.html?slug=translator-clone` gibi eski adresler yeni proje sayfalarına, `service-details.html?service=webapp` gibi adresler hizmetler sayfasındaki ilgili bölüme gider.

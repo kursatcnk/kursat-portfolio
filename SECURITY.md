@@ -1,19 +1,16 @@
-# Security & Privacy (Statik Site)
+# Güvenlik ve gizlilik
 
-Bu proje statik (backend’siz) bir portfolyo sitesidir. Sunucu tarafı doğrulama yapılmadığı için "tam güvenlik" mümkün değildir; ancak saldırı yüzeyini küçültmek ve gizlilik beklentisini karşılamak için aşağıdaki sertleştirmeler uygulanmıştır.
+Site statik ve backend'siz. Sunucu tarafı doğrulama olmadığı için bazı kontroller hosting katmanına kalıyor; tarayıcı tarafında saldırı yüzeyini küçültmek için aşağıdakiler uygulandı.
 
-## Uygulanan sertleştirmeler
-- **Security headers**: CSP, HSTS, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy, COOP/CORP.
-- **CSP (Content-Security-Policy)**: Script ve bağlantı hedefleri kısıtlandı.
-- **Clickjacking koruması**: iframe içinde çalıştırma engellendi.
-- **Çerez/kalıcı depolama yok**: Bu sitede form verileri cookie/localStorage/sessionStorage ile saklanmaz.
-- **Form gizliliği**: İletişim formu gönderiminden sonra otomatik sıfırlanır, BFCache senaryolarında yeniden doldurma azaltılır.
-- **External link hardening**: target=_blank linklerde noopener/noreferrer uygulanır.
+## Uygulananlar
 
-## Deploy notları
-- **Netlify / Cloudflare Pages**: `_headers` veya `netlify.toml` ile header’lar otomatik uygulanır.
-- **Vercel**: `vercel.json` header’ları uygular.
-- **Apache**: `.htaccess` ile header’lar uygulanabilir.
+- **Güvenlik başlıkları:** CSP, HSTS, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy, COOP/CORP (`_headers`, `netlify.toml`, `vercel.json`, `.htaccess`).
+- **CSP:** Script yalnızca kendi alan adından ve EmailJS SDK'sı için jsDelivr'dan; fontlar ve görseller yalnızca kendi alan adından. Ağ bağlantısı ve form gönderimi sadece EmailJS ve FormSubmit'e açık.
+- **Üçüncü taraf yok:** Fontlar siteyle birlikte geliyor; analitik, reklam ya da izleme betiği yok. Harita sayfaya gömülmüyor, yeni sekmede açılıyor.
+- **Depolama:** Tarayıcıda yalnızca tema tercihi (`kursat-theme`) saklanıyor. Form ve brief verisi saklanmıyor, cookie kullanılmıyor.
+- **Spam:** İletişim formunda bal küpü (honeypot) alanı var; FormSubmit tarafında ek koruma açılabilir.
+- **Dış bağlantılar:** Yeni sekmede `noopener noreferrer` ile açılıyor.
 
 ## Sınırlar
-- Backend olmadığı için rate-limit/WAF/doğrulama gibi kontroller hosting katmanında (örn. Cloudflare) yapılmalıdır.
+
+Rate-limit, WAF ve bot koruması hosting katmanında (örneğin Cloudflare) yapılmalı.
