@@ -72,13 +72,7 @@
   // Öne çıkan iş: tam ekran sahne. Kompozisyon projeye göre değişiyor.
   function sceneMediaHtml(p) {
     const s = p.scene || {};
-    if (s.art) {
-      const cards = (s.cards || []).map((src) => `<div class="kursat-scene-card"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"></div>`).join("");
-      return `
-        <div class="kursat-scene-art"><img src="${esc(s.art)}" alt="" loading="lazy" decoding="async"></div>
-        <div class="kursat-scene-cards">${cards}</div>`;
-    }
-    return (s.shots || []).map((src, i) => `<div class="kursat-scene-shot kursat-scene-shot--${i + 1}"><img src="${esc(src)}" alt="${i === 0 ? esc(p.title) + " arayüzü" : ""}" loading="lazy" decoding="async"></div>`).join("");
+    return (s.shots || []).map((src, i) => `<div class="kursat-scene-shot kursat-scene-shot--${i + 1}${s.phone && i === 1 ? " kursat-scene-shot--phone" : ""}"><img src="${esc(src)}" alt="${i === 0 ? esc(p.title) + " arayüzü" : ""}" loading="lazy" decoding="async"></div>`).join("");
   }
 
   function sceneHtml(p, index, total) {

@@ -318,16 +318,11 @@ main { display: block; }
 .kursat-scene--promptforge .kursat-scene-shot--1 { width: 52%; aspect-ratio: 16 / 10; right: -3%; top: 14%; transform: rotateY(-16deg); }
 .kursat-scene--promptforge .kursat-scene-shot--2 { width: 34%; aspect-ratio: 16 / 10; right: 9%; top: 52%; transform: rotateY(-12deg) translateZ(80px); }
 .kursat-scene--cards-rumble { --glow: 255, 77, 26; }
-.kursat-scene--cards-rumble .kursat-scene-art { position: absolute; inset: 0 0 0 30%; }
-.kursat-scene--cards-rumble .kursat-scene-art img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 35%); mask-image: linear-gradient(90deg, transparent, #000 35%); }
-.kursat-scene--cards-rumble .kursat-scene-cards { position: absolute; right: 8%; top: 50%; width: 32%; height: 62%; transform: translateY(-50%); }
-.kursat-scene-card { position: absolute; top: 0; left: 50%; width: 48%; aspect-ratio: 2 / 3; border-radius: 14px; overflow: hidden; box-shadow: 0 40px 80px -24px rgba(0,0,0,.95); transition: transform 1s var(--kursat-ease); }
-.kursat-scene-card img { width: 100%; height: 100%; object-fit: cover; }
-.kursat-scene-card:nth-child(1) { transform: translateX(-112%) translateY(8%) rotate(-10deg); }
-.kursat-scene-card:nth-child(2) { transform: translateX(-50%); z-index: 2; }
-.kursat-scene-card:nth-child(3) { transform: translateX(12%) translateY(8%) rotate(10deg); }
-.kursat-scene--cards-rumble:hover .kursat-scene-card:nth-child(1) { transform: translateX(-124%) translateY(10%) rotate(-14deg); }
-.kursat-scene--cards-rumble:hover .kursat-scene-card:nth-child(3) { transform: translateX(24%) translateY(10%) rotate(14deg); }
+.kursat-scene--cards-rumble .kursat-scene-media { perspective: 1800px; }
+.kursat-scene--cards-rumble .kursat-scene-shot--1 { width: 54%; aspect-ratio: 16 / 10; right: -4%; top: 13%; transform: rotateY(-16deg); }
+.kursat-scene--cards-rumble .kursat-scene-shot--2 { width: 13.5%; aspect-ratio: 780 / 1688; right: 7%; top: 36%; transform: rotateY(-10deg) translateZ(90px); }
+.kursat-scene-shot--phone { border-radius: 30px; border: 6px solid #1c1c1f; box-shadow: 0 50px 90px -24px rgba(0,0,0,.95), 0 0 0 1px rgba(255,255,255,.1); }
+.kursat-scene-shot--phone img { border-radius: 24px; }
 .kursat-scene--gorev-takip { --glow: 64, 140, 255; }
 .kursat-scene--gorev-takip .kursat-scene-shot { background: transparent; }
 .kursat-scene--gorev-takip .kursat-scene-shot img { object-fit: contain; }
@@ -717,9 +712,8 @@ a.kursat-index-row:hover svg, .kursat-post-row:hover svg { transform: translate(
   .kursat-scene-top { top: 18px; right: 18px; }
   .kursat-scene--promptforge .kursat-scene-shot--1 { width: 88%; right: -10%; top: 16%; }
   .kursat-scene--promptforge .kursat-scene-shot--2 { width: 62%; right: 34%; top: 46%; }
-  .kursat-scene--cards-rumble .kursat-scene-art { inset: 0; }
-  .kursat-scene--cards-rumble .kursat-scene-art img { -webkit-mask-image: none; mask-image: none; }
-  .kursat-scene--cards-rumble .kursat-scene-cards { right: 50%; width: 70%; height: 70%; transform: translate(50%, -46%); }
+  .kursat-scene--cards-rumble .kursat-scene-shot--1 { width: 88%; right: -12%; top: 16%; }
+  .kursat-scene--cards-rumble .kursat-scene-shot--2 { width: 30%; right: 8%; top: 30%; }
   .kursat-scene--gorev-takip .kursat-scene-shot--1 { width: 70%; right: 22%; top: 14%; }
   .kursat-scene--gorev-takip .kursat-scene-shot--2 { width: 46%; right: 4%; top: 40%; }
   .kursat-index-row { grid-template-columns: 52px minmax(0, 1fr) 24px; row-gap: 2px; padding: 18px 16px; }

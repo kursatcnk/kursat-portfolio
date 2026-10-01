@@ -48,7 +48,7 @@ window.KURSAT_PROJECTS = [
     featured: true,
     title: "OnPixel — Cards Rumble",
     sceneTitle: "Cards Rumble",
-    scene: { art: "assets/media/work/cards-rumble/art/fire-presence.webp", cards: ["assets/media/work/cards-rumble/art/card-ice.webp", "assets/media/work/cards-rumble/art/card-fire.webp", "assets/media/work/cards-rumble/art/card-poison.webp"] },
+    scene: { shots: ["assets/media/work/cards-rumble/home-lg.webp", "assets/media/work/cards-rumble/home-mobile.webp"], phone: true },
     headline: "Kuralları anlatmak yerine oynatmak.",
     summary: "Kendi bağımsız oyun stüdyom OnPixel'in ilk oyunu için resmi site: oyunun kurallarını anlatan, tarayıcıda denenebilen bir vitrin.",
     year: "2026",
