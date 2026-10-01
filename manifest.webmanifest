@@ -4,8 +4,8 @@
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f1ede6",
-  "theme_color": "#f1ede6",
+  "background_color": "#f4f4f2",
+  "theme_color": "#f4f4f2",
   "description": "Kürşatcan Çankaroğlu: ürünü düşünen, kodu yazan yazılım geliştirici. Seçili işler, hizmetler ve iletişim.",
   "lang": "tr",
   "icons": [

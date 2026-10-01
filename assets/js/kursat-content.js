@@ -84,24 +84,28 @@
   function sceneHtml(p, index, total) {
     const no = String(index + 1).padStart(2, "0");
     const github = p.links && p.links.github
-      ? `<a class="kursat-link" href="${esc(p.links.github)}">GitHub ${K.icons.arrow}</a>` : "";
+      ? `<a class="kursat-link" href="${esc(p.links.github)}">GitHub</a>` : "";
     return `
-      <article class="kursat-scene kursat-scene--${esc(p.slug)}" data-kursat-cursor="İncele">
+      <article class="kursat-scene kursat-scene--${esc(p.slug)}" data-kursat-tone="night">
         <div class="kursat-scene-inner">
           <div class="kursat-scene-media" aria-hidden="true">${sceneMediaHtml(p)}</div>
           <div class="kursat-scene-shade"></div>
           <div class="kursat-scene-top"><span class="kursat-label">${no} / ${String(total).padStart(2, "0")}</span><span class="kursat-label">${esc(p.type)} · ${esc(p.year)}</span></div>
-          <div class="kursat-container kursat-scene-content">
-            <h3><a href="${caseUrl(p.slug)}">${esc(p.sceneTitle || p.title)}</a></h3>
-            <p class="kursat-scene-tagline">${esc(p.headline || "")}</p>
-            <p class="kursat-scene-summary">${esc(p.summary)}</p>
-            <div class="kursat-scene-meta">
-              <div><span class="kursat-label">Rol</span><strong>${esc(p.role || "")}</strong></div>
-              <div><span class="kursat-label">Teknoloji</span><strong>${esc(p.stack.slice(0, 2).join(" · "))}</strong></div>
+          <div class="kursat-scene-content">
+            <div>
+              <h3><a href="${caseUrl(p.slug)}">${esc(p.sceneTitle || p.title)}</a></h3>
+              <p class="kursat-scene-tagline">${esc(p.headline || "")}</p>
             </div>
-            <div class="kursat-scene-cta">
-              <a class="kursat-button" href="${caseUrl(p.slug)}">Vaka çalışması ${K.icons.arrow}</a>
-              ${github}
+            <div>
+              <p class="kursat-scene-summary">${esc(p.summary)}</p>
+              <div class="kursat-scene-meta">
+                <div><span class="kursat-label">Rol</span><strong>${esc(p.role || "")}</strong></div>
+                <div><span class="kursat-label">Teknoloji</span><strong>${esc(p.stack.slice(0, 2).join(" · "))}</strong></div>
+              </div>
+              <div class="kursat-scene-cta">
+                <a class="kursat-button" href="${caseUrl(p.slug)}">Vaka çalışması ${K.icons.arrow}</a>
+                ${github}
+              </div>
             </div>
           </div>
         </div>

@@ -10,8 +10,8 @@ Framework ve hazır tema kullanmadan; HTML, tek bir CSS dosyası ve birkaç kü�
 
 - **Gerçek ekranlar.** PromptForge, OnPixel / Cards Rumble ve ESN Görev Takip vaka çalışmalarındaki görseller, demo verisiyle çalışan gerçek sürümlerden alındı.
 - **Brief stüdyosu.** İletişim sayfasında ziyaretçi proje türünü, ihtiyaçları ve öncelik sırasını seçiyor; sayfa netlik puanı, yol haritası, riskler ve hazır bir e-posta taslağı çıkarıyor. Gönderim backend gerektirmiyor.
-- **Lüks, sinematik dil.** Krem zemin ve ince Cormorant başlıklar; kaydırdıkça çerçeveden tam ekrana açılan ürün vitrini, bir öncekinin üzerine kayan tam ekran iş sahneleri, oturumda bir kez görünen açılış sayacı ve zarif imleç. Hareketler, hareket azaltma tercihine uyuyor.
-- **Krem (açık) tema varsayılan**, koyu tema isteğe bağlı ve hatırlanıyor.
+- **Modern, sade dil.** Açık gri zemin, Switzer ile sıkı ve büyük başlıklar, cam efektli yüzen menü. Kaydırdıkça açılan ürün vitrini ve bir öncekinin üzerine kayan iş sahneleri; hareketler, hareket azaltma tercihine uyuyor.
+- **Açık tema varsayılan**, koyu tema isteğe bağlı ve hatırlanıyor.
 - **Hafif.** Fontlar siteyle birlikte geliyor, üçüncü taraf istek yok (iletişim sayfasındaki isteğe bağlı EmailJS hariç). Görseller WebP.
 - **Sıkı CSP** ve güvenlik başlıkları (`_headers`, `netlify.toml`, `vercel.json`, `.htaccess`).
 
@@ -39,7 +39,7 @@ assets/js/kursat-projects.js     proje verisi
 assets/js/kursat-posts.js        yazı verisi
 assets/js/kursat-certificates.js sertifika verisi
 assets/media/                    ekran görüntüleri, portre, marka görselleri
-assets/fonts/                    Cormorant Garamond, Geist, Geist Mono (OFL)
+assets/fonts/                    Switzer (FFL), Geist Mono (OFL)
 ```
 
 Tüm sınıf, ID, data özniteliği ve dosya adları `kursat-` önekiyle yazıldı.
@@ -75,4 +75,4 @@ ya da VS Code'da Live Server. Dosyayı doğrudan çift tıklayarak açınca da �
 
 ## Lisans
 
-Kod ve içerik Kürşatcan Çankaroğlu'na aittir. Fontlar SIL Open Font License 1.1 ile dağıtılır (`assets/fonts/LICENSE-*.txt`).
+Kod ve içerik Kürşatcan Çankaroğlu'na aittir. Switzer, Fontshare Free Font License ile; Geist Mono, SIL Open Font License 1.1 ile dağıtılır (`assets/fonts/LICENSE-*.txt`).

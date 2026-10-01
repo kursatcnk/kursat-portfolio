@@ -184,34 +184,6 @@
     document.querySelectorAll("[data-kursat-year]").forEach((el) => { el.textContent = String(new Date().getFullYear()); });
   }
 
-  // --- açılış: oturumda bir kez, 0'dan 100'e sayaç; sonra perde yukarı kalkar ---
-  function initLoader(done) {
-    const loader = document.querySelector(".kursat-loader");
-    if (!loader) { done(); return; }
-    let seen = false;
-    try { seen = sessionStorage.getItem("kursat-loaded") === "1"; } catch (_) { /* yok say */ }
-    if (seen || reducedMotion()) { loader.classList.add("is-skipped"); done(); return; }
-    try { sessionStorage.setItem("kursat-loaded", "1"); } catch (_) { /* yok say */ }
-
-    const count = loader.querySelector("[data-kursat-loader-count]");
-    const bar = loader.querySelector(".kursat-loader-bar i");
-    const start = performance.now();
-    const duration = 1500;
-    const ease = (t) => 1 - Math.pow(1 - t, 3);
-    document.body.style.overflow = "hidden";
-    const step = (now) => {
-      const t = Math.min(1, (now - start) / duration);
-      const v = Math.round(ease(t) * 100);
-      if (count) count.textContent = String(v).padStart(3, "0");
-      if (bar) bar.style.setProperty("--_w", v + "%");
-      if (t < 1) { requestAnimationFrame(step); return; }
-      loader.classList.add("is-done");
-      document.body.style.overflow = "";
-      window.setTimeout(done, 350);
-    };
-    requestAnimationFrame(step);
-  }
-
   // --- kaydırma ilerlemesi: vitrin ve sahneler CSS değişkenleriyle hareket ediyor ---
   function initScrollScenes() {
     const showreels = [...document.querySelectorAll("[data-kursat-showreel]")];
@@ -226,8 +198,7 @@
       showreels.forEach((el) => {
         if (!desktop()) { el.style.removeProperty("--p"); return; }
         const r = el.getBoundingClientRect();
-        const total = r.height - vh;
-        const p = Math.min(1, Math.max(0, -r.top / Math.max(1, total * 0.75)));
+        const p = Math.min(1, Math.max(0, (vh - r.top) / vh));
         el.style.setProperty("--p", p.toFixed(4));
       });
       scenes.forEach((scene, i) => {
@@ -235,8 +206,9 @@
         const next = scenes[i + 1];
         if (!inner) return;
         if (!desktop() || !next) { scene.style.setProperty("--cover", "0"); return; }
-        const top = next.getBoundingClientRect().top;
-        const cover = Math.min(1, Math.max(0, 1 - top / vh));
+        const stick = parseFloat(getComputedStyle(scene).top) || 0;
+        const top = next.getBoundingClientRect().top - stick;
+        const cover = Math.min(1, Math.max(0, 1 - top / (vh - stick)));
         scene.style.setProperty("--cover", cover.toFixed(4));
       });
     };
@@ -246,32 +218,6 @@
     update();
   }
 
-  // --- imleç: küçük bronz nokta; işlerin üzerinde "İncele" etiketine büyüyor ---
-  function initCursor() {
-    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches || reducedMotion()) return;
-    const cursor = document.createElement("div");
-    cursor.className = "kursat-cursor";
-    cursor.setAttribute("aria-hidden", "true");
-    cursor.innerHTML = "<span></span>";
-    document.body.appendChild(cursor);
-    const label = cursor.querySelector("span");
-    let x = -100, y = -100, cx = -100, cy = -100;
-    window.addEventListener("pointermove", (e) => {
-      x = e.clientX; y = e.clientY;
-      cursor.classList.add("is-visible");
-      const target = e.target.closest("[data-kursat-cursor]");
-      cursor.classList.toggle("is-label", !!target);
-      if (target) label.textContent = target.getAttribute("data-kursat-cursor");
-    }, { passive: true });
-    document.addEventListener("pointerleave", () => cursor.classList.remove("is-visible"));
-    const loop = () => {
-      cx += (x - cx) * 0.18;
-      cy += (y - cy) * 0.18;
-      cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
-      requestAnimationFrame(loop);
-    };
-    loop();
-  }
 
   // Dışarıya açtıklarım: içerik betikleri bunları kullanıyor
   window.Kursat = { icons, escapeHtml, toast, copyText, observeReveals, hardenLinks, reducedMotion };
@@ -285,15 +231,12 @@
     initYear();
     removeLegacyWorker();
     hardenLinks();
-    initCursor();
-    // Açılış perdesi kalkınca başlık satır satır yükselsin ve geçişler başlasın
-    initLoader(() => {
-      window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
-        document.body.classList.add("is-loaded");
-        revealsReady = true;
-        observeReveals();
-        initScrollScenes(); // sahneler içerik betiğiyle çiziliyor, onlardan sonra bağlan
-      }));
-    });
+    // İlk boyamadan sonra geçişleri başlat
+    window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
+      document.body.classList.add("is-loaded");
+      revealsReady = true;
+      observeReveals();
+      initScrollScenes(); // sahneler içerik betiğiyle çiziliyor, onlardan sonra bağlan
+    }));
   });
 })();
