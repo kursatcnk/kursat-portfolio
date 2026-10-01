@@ -69,6 +69,45 @@
       </article>`;
   }
 
+  // Öne çıkan iş: tam ekran sahne. Kompozisyon projeye göre değişiyor.
+  function sceneMediaHtml(p) {
+    const s = p.scene || {};
+    if (s.art) {
+      const cards = (s.cards || []).map((src) => `<div class="kursat-scene-card"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"></div>`).join("");
+      return `
+        <div class="kursat-scene-art"><img src="${esc(s.art)}" alt="" loading="lazy" decoding="async"></div>
+        <div class="kursat-scene-cards">${cards}</div>`;
+    }
+    return (s.shots || []).map((src, i) => `<div class="kursat-scene-shot kursat-scene-shot--${i + 1}"><img src="${esc(src)}" alt="${i === 0 ? esc(p.title) + " arayüzü" : ""}" loading="lazy" decoding="async"></div>`).join("");
+  }
+
+  function sceneHtml(p, index, total) {
+    const no = String(index + 1).padStart(2, "0");
+    const github = p.links && p.links.github
+      ? `<a class="kursat-link" href="${esc(p.links.github)}">GitHub ${K.icons.arrow}</a>` : "";
+    return `
+      <article class="kursat-scene kursat-scene--${esc(p.slug)}" data-kursat-cursor="İncele">
+        <div class="kursat-scene-inner">
+          <div class="kursat-scene-media" aria-hidden="true">${sceneMediaHtml(p)}</div>
+          <div class="kursat-scene-shade"></div>
+          <div class="kursat-scene-top"><span class="kursat-label">${no} / ${String(total).padStart(2, "0")}</span><span class="kursat-label">${esc(p.type)} · ${esc(p.year)}</span></div>
+          <div class="kursat-container kursat-scene-content">
+            <h3><a href="${caseUrl(p.slug)}">${esc(p.sceneTitle || p.title)}</a></h3>
+            <p class="kursat-scene-tagline">${esc(p.headline || "")}</p>
+            <p class="kursat-scene-summary">${esc(p.summary)}</p>
+            <div class="kursat-scene-meta">
+              <div><span class="kursat-label">Rol</span><strong>${esc(p.role || "")}</strong></div>
+              <div><span class="kursat-label">Teknoloji</span><strong>${esc(p.stack.slice(0, 2).join(" · "))}</strong></div>
+            </div>
+            <div class="kursat-scene-cta">
+              <a class="kursat-button" href="${caseUrl(p.slug)}">Vaka çalışması ${K.icons.arrow}</a>
+              ${github}
+            </div>
+          </div>
+        </div>
+      </article>`;
+  }
+
   function indexRowHtml(p) {
     if (p.items) {
       const items = p.items.map(([name, provider]) => `<div><strong>${esc(name)}</strong><span>${esc(provider)}</span></div>`).join("");
@@ -97,6 +136,10 @@
   function renderWork() {
     document.querySelectorAll("[data-kursat-cases]").forEach((el) => {
       el.innerHTML = projects.filter((p) => p.featured).map(caseHtml).join("");
+    });
+    document.querySelectorAll("[data-kursat-scenes]").forEach((el) => {
+      const featured = projects.filter((p) => p.featured);
+      el.innerHTML = featured.map((p, i) => sceneHtml(p, i, featured.length)).join("");
     });
     document.querySelectorAll("[data-kursat-index]").forEach((el) => {
       const rows = projects.filter((p) => !p.featured).map(indexRowHtml).join("");
@@ -173,7 +216,7 @@
       if (p.gallery) {
         const figs = p.gallery.map((g) => `
           <figure class="${g.wide ? "is-wide" : ""}">
-            <div class="kursat-gallery-frame${g.pad ? " is-pad" : ""}" style="--_stage:${esc(p.stage)}"><img src="${esc(g.src)}" alt="${esc(g.caption)}" loading="lazy" decoding="async"></div>
+            <div class="kursat-gallery-frame kursat-unveil${g.pad ? " is-pad" : ""}" style="--_stage:${esc(p.stage)}"><img src="${esc(g.src)}" alt="${esc(g.caption)}" loading="lazy" decoding="async"></div>
             <figcaption>${esc(g.caption)}</figcaption>
           </figure>`).join("");
         body += `
@@ -192,7 +235,7 @@
     const next = projects[(index + 1) % projects.length];
     const hero = p.featured ? `
       <div class="kursat-container kursat-cs-hero">
-        <div class="kursat-case kursat-case--${esc(p.slug)}"><div class="kursat-case-stage">${stageHtml(p, { eager: true })}</div></div>
+        <div class="kursat-case kursat-case--${esc(p.slug)}"><div class="kursat-case-stage kursat-unveil">${stageHtml(p, { eager: true })}</div></div>
       </div>` : "";
 
     host.innerHTML = `

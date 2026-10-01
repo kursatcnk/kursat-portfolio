@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr" data-theme="dark">
+<html lang="tr" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 <title>Kürşatcan Çankaroğlu — Yazılım geliştirici</title>
 <meta name="description" content="Kürşatcan Çankaroğlu: C#/.NET ve web ile fikirden canlıya ürünler geliştiren, ürün tarafını da bilen yazılım geliştirici. PromptForge, OnPixel ve daha fazlası.">
 <meta name="author" content="Kürşatcan Çankaroğlu">
-<meta name="theme-color" content="#0c0c0b">
+<meta name="theme-color" content="#f1ede6">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="Kürşatcan Çankaroğlu — Yazılım geliştirici">
@@ -17,6 +17,7 @@
 <link rel="icon" href="assets/media/brand/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/media/brand/apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="assets/fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script src="assets/js/kursat-theme.js"></script>
 <link rel="stylesheet" href="assets/css/kursat.css">
@@ -29,12 +30,23 @@
 <body>
 <a class="kursat-skip" href="#kursat-main">İçeriğe geç</a>
 
+<div class="kursat-loader" aria-hidden="true">
+  <div class="kursat-loader-top">
+    <span class="kursat-label kursat-label--ink">Kürşatcan Çankaroğlu</span>
+    <span class="kursat-label">Portfolyo · MMXXVI</span>
+  </div>
+  <div>
+    <div class="kursat-loader-count" data-kursat-loader-count>000</div>
+    <div class="kursat-loader-bar"><i></i></div>
+  </div>
+</div>
+
 <!-- kursat:header -->
 <header class="kursat-header">
   <div class="kursat-container kursat-header-inner">
     <a class="kursat-brand" href="index.html" aria-label="Kürşatcan Çankaroğlu, ana sayfa">
       <span class="kursat-brand-mark" aria-hidden="true">KÇ</span>
-      <span>Kürşatcan <span class="kursat-brand-surname">Çankaroğlu</span> <span class="kursat-brand-role">· Yazılım geliştirici</span></span>
+      <span>Kürşatcan <span class="kursat-brand-surname">Çankaroğlu</span> <span class="kursat-brand-role">Yazılım geliştirici</span></span>
     </a>
     <nav class="kursat-nav" aria-label="Ana menü">
       <a href="portfolio.html">İşler</a>
@@ -46,12 +58,12 @@
     <div class="kursat-header-tools">
       <span class="kursat-clock" data-kursat-clock></span>
       <button class="kursat-icon-button kursat-theme-toggle" type="button" data-kursat-theme-toggle aria-label="Temayı değiştir">
-        <svg class="kursat-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
-        <svg class="kursat-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+        <svg class="kursat-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="kursat-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
       </button>
       <a class="kursat-button kursat-button--small" href="contact.html">Proje başlat</a>
       <button class="kursat-icon-button kursat-menu-button" type="button" data-kursat-menu aria-expanded="false" aria-controls="kursat-drawer" aria-label="Menüyü aç">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
       </button>
     </div>
   </div>
@@ -82,65 +94,93 @@
     <div class="kursat-container">
       <div class="kursat-hero-meta">
         <span class="kursat-label kursat-label--ink"><span class="kursat-dot" aria-hidden="true"></span>Yeni projelere ve iş görüşmelerine açığım</span>
-        <span class="kursat-label">İstanbul · Uzaktan / hibrit</span>
+        <span class="kursat-label">İstanbul · 41°01′ K · 28°58′ D</span>
       </div>
       <div class="kursat-grid kursat-hero-body">
         <h1 class="kursat-display kursat-hero-title">
           <span class="kursat-split-line"><span>Ürünü düşünen,</span></span>
-          <span class="kursat-split-line"><span style="--_delay:.08s"><span class="kursat-serif">kodu yazan</span></span></span>
-          <span class="kursat-split-line"><span style="--_delay:.16s">geliştirici.</span></span>
+          <span class="kursat-split-line"><span style="--_delay:.1s"><span class="kursat-serif">kodu yazan</span></span></span>
+          <span class="kursat-split-line"><span style="--_delay:.2s">geliştirici.</span></span>
         </h1>
-        <div class="kursat-hero-copy kursat-reveal" style="--_delay:.3s">
-          <p class="kursat-lead">ESN Sistem Yazılım'da teknik ürün sahibiyim. Kendi stüdyom OnPixel'de ve bağımsız projelerde C#/.NET ve web ile fikirden canlıya ürünler geliştiriyorum: SaaS uygulamaları, masaüstü araçlar ve hızlı, özenli web siteleri.</p>
+        <div class="kursat-hero-copy kursat-reveal" style="--_delay:.35s">
+          <p class="kursat-lead">ESN Sistem Yazılım'da teknik ürün sahibiyim. Kendi stüdyom OnPixel'de ve bağımsız projelerde C#/.NET ve web ile fikirden canlıya ürünler geliştiriyorum.</p>
           <div class="kursat-hero-actions">
             <a class="kursat-button" href="#isler">İşleri incele
-              <svg class="kursat-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-            <a class="kursat-button kursat-button--ghost" href="contact.html">Proje başlat</a>
+              <svg class="kursat-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            <a class="kursat-link" href="contact.html">Proje başlat</a>
           </div>
         </div>
-        <div class="kursat-hero-portrait kursat-reveal" style="--_delay:.4s">
-          <figure class="kursat-portrait">
-            <img src="assets/media/portrait.webp" width="640" height="800" alt="Kürşatcan Çankaroğlu" fetchpriority="high">
-            <figcaption><span>Kürşatcan Çankaroğlu</span><span>İstanbul</span></figcaption>
-          </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vitrin: kaydırdıkça çerçeveden tam ekrana açılıyor -->
+  <section class="kursat-showreel" data-kursat-showreel aria-label="Ürün vitrini">
+    <div class="kursat-showreel-sticky">
+      <div class="kursat-showreel-frame">
+        <div class="kursat-showreel-stage" aria-hidden="true">
+          <div class="kursat-screen kursat-screen--c"><img src="assets/media/work/gorev-takip/main.webp" alt="" decoding="async"></div>
+          <div class="kursat-screen kursat-screen--b"><img src="assets/media/work/cards-rumble/home-lg.webp" alt="" decoding="async"></div>
+          <div class="kursat-screen kursat-screen--a"><img src="assets/media/work/promptforge/landing-lg.webp" alt="" decoding="async"></div>
+        </div>
+        <div class="kursat-showreel-caption">
+          <div>
+            <span class="kursat-label">Seçili işler · 2026</span>
+            <strong>PromptForge, Cards Rumble <em>ve</em> Görev Takip</strong>
+          </div>
+          <span class="kursat-label">Kaydırın ↓</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="kursat-facts kursat-reveal">
-        <div class="kursat-grid">
-          <div class="kursat-fact"><strong>2015</strong><span>İlk satır kod; o günden beri web ve .NET</span></div>
-          <div class="kursat-fact"><strong>Teknik ürün sahibi</strong><span>ESN Sistem Yazılım, 2025'ten beri</span></div>
-          <div class="kursat-fact"><strong><span data-kursat-count="certificates">14</span> sertifika</strong><span>BTK Akademi, doğrulanabilir ID'lerle</span></div>
-          <div class="kursat-fact"><strong>İngilizce C1</strong><span>Dokümantasyon ve teknik görüşme</span></div>
+  <!-- Kısaca -->
+  <section class="kursat-section">
+    <div class="kursat-container kursat-grid kursat-intro">
+      <span class="kursat-label kursat-intro-label">(I) Kısaca</span>
+      <div class="kursat-intro-text">
+        <p class="kursat-statement kursat-reveal">Kodun yanında <em>ürünü</em> de görürüm. Destekte gerçek kullanıcının nerede takıldığını, ürün tarafında neyin önce yapılması gerektiğini öğrendim; yazdığım her satırda önce <em>doğru problemi</em>, sonra sade bir çözümü ararım.</p>
+        <div class="kursat-cta-row kursat-reveal">
+          <a class="kursat-link" href="about.html">Hikâyemin tamamı</a>
+          <a class="kursat-link kursat-link--muted" href="assets/docs/Kursatcan_Cankaroglu_CV.pdf" download>CV · PDF</a>
         </div>
+      </div>
+      <figure class="kursat-portrait kursat-intro-portrait kursat-reveal" style="--_delay:.15s">
+        <div class="kursat-portrait-frame"><img src="assets/media/portrait.webp" width="640" height="800" alt="Kürşatcan Çankaroğlu" loading="lazy"></div>
+        <figcaption><span class="kursat-label">Kürşatcan Çankaroğlu</span><span class="kursat-label">İstanbul</span></figcaption>
+      </figure>
+      <div class="kursat-facts kursat-reveal">
+        <div class="kursat-fact"><strong>2015</strong><span>İlk satır kod · web ve .NET</span></div>
+        <div class="kursat-fact"><strong>ESN</strong><span>Teknik ürün sahibi · 2025'ten beri</span></div>
+        <div class="kursat-fact"><strong><span data-kursat-count="certificates">14</span></strong><span>Doğrulanabilir BTK sertifikası</span></div>
+        <div class="kursat-fact"><strong>C1</strong><span>İngilizce · teknik görüşme</span></div>
       </div>
     </div>
   </section>
 
   <!-- Seçili işler -->
-  <section class="kursat-section kursat-section--line" id="isler">
-    <div class="kursat-container">
-      <div class="kursat-grid kursat-section-head">
-        <span class="kursat-label">(01) Seçili işler</span>
+  <section id="isler" data-kursat-tone="night">
+    <div class="kursat-section kursat-container" style="padding-bottom:clamp(64px,8vw,120px)">
+      <div class="kursat-grid kursat-section-head" style="margin-bottom:0">
+        <span class="kursat-label">(II) Seçili işler</span>
         <div class="kursat-section-head-title">
           <h2 class="kursat-h2 kursat-reveal">Gerçek ekranlar, <span class="kursat-serif">çalışan</span> ürünler.</h2>
-          <p class="kursat-reveal">Son dönemde geliştirdiğim üç ürün. Görseller, demo verisiyle çalışan gerçek sürümlerden alındı.</p>
+          <p class="kursat-reveal">Son dönemde geliştirdiğim üç ürün. Görseller, demo verisiyle çalışan gerçek sürümlerden.</p>
         </div>
-        <a class="kursat-section-head-aside kursat-link" href="portfolio.html">Tüm işler
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="kursat-section-head-aside kursat-link" href="portfolio.html">Tüm işler</a>
       </div>
-      <div class="kursat-cases" data-kursat-cases></div>
     </div>
+    <div class="kursat-scenes" data-kursat-scenes></div>
   </section>
 
   <!-- Arşiv -->
-  <section class="kursat-section kursat-section--tight">
+  <section class="kursat-section">
     <div class="kursat-container">
       <div class="kursat-grid kursat-section-head">
-        <span class="kursat-label">(02) Arşiv</span>
+        <span class="kursat-label">(III) Arşiv</span>
         <div class="kursat-section-head-title">
-          <h2 class="kursat-h2 kursat-reveal">Daha önceki işler</h2>
-          <p class="kursat-reveal">Müşteri siteleri, MVC uygulamaları ve yapay zekâ entegrasyonları. Detay için satıra tıklayın.</p>
+          <h2 class="kursat-h2 kursat-reveal">Daha önceki <span class="kursat-serif">işler</span></h2>
+          <p class="kursat-reveal">Müşteri siteleri, MVC uygulamaları ve yapay zekâ entegrasyonları.</p>
         </div>
       </div>
       <div class="kursat-index kursat-reveal" data-kursat-index></div>
@@ -151,7 +191,7 @@
   <section class="kursat-section kursat-section--line">
     <div class="kursat-container">
       <div class="kursat-grid kursat-section-head">
-        <span class="kursat-label">(03) Birlikte çalışalım</span>
+        <span class="kursat-label">(IV) Birlikte çalışalım</span>
         <div class="kursat-section-head-title">
           <h2 class="kursat-h2 kursat-reveal">Fikrinizi yayına <span class="kursat-serif">hazır</span> bir ürüne çeviriyorum.</h2>
           <p class="kursat-reveal">Freelance olarak işletmelerle ve ekiplerle çalışıyorum. Kapsamı birlikte netleştiriyor, gereksiz sayfa ve özellik olmadan ölçülebilir bir sonuç hedefliyoruz.</p>
@@ -161,7 +201,7 @@
       <div class="kursat-services">
         <article class="kursat-service kursat-reveal">
           <span class="kursat-service-no">01</span>
-          <h3>Kurumsal site &amp; landing page</h3>
+          <h3>Kurumsal site &amp; <span class="kursat-serif">landing</span></h3>
           <div>
             <p>Markanızı net anlatan, mobilde kusursuz görünen ve hızlı açılan siteler. Ziyaretçi ne yapacağını ilk ekranda anlar: teklif ister, randevu alır, yazar.</p>
             <ul><li class="kursat-tag">Tasarım</li><li class="kursat-tag">Hız</li><li class="kursat-tag">Temel SEO</li></ul>
@@ -169,7 +209,7 @@
         </article>
         <article class="kursat-service kursat-reveal">
           <span class="kursat-service-no">02</span>
-          <h3>Web uygulaması &amp; yönetim paneli</h3>
+          <h3>Web uygulaması &amp; <span class="kursat-serif">panel</span></h3>
           <div>
             <p>Kullanıcı rolleri, raporlar ve iş akışınıza özel ekranlar. ASP.NET Core ile bakımı kolay, büyümeye hazır bir mimari.</p>
             <ul><li class="kursat-tag">ASP.NET Core</li><li class="kursat-tag">SQL Server</li><li class="kursat-tag">Yetkilendirme</li></ul>
@@ -177,7 +217,7 @@
         </article>
         <article class="kursat-service kursat-reveal">
           <span class="kursat-service-no">03</span>
-          <h3>API &amp; entegrasyon</h3>
+          <h3>API &amp; <span class="kursat-serif">entegrasyon</span></h3>
           <div>
             <p>Ödeme, CRM, e-posta, WhatsApp ve yapay zekâ servislerini sisteminize güvenle bağlarım; zaman aşımı, tekrar deneme ve kayıtlarla birlikte.</p>
             <ul><li class="kursat-tag">REST</li><li class="kursat-tag">Otomasyon</li><li class="kursat-tag">AI API</li></ul>
@@ -185,7 +225,7 @@
         </article>
         <article class="kursat-service kursat-reveal">
           <span class="kursat-service-no">04</span>
-          <h3>Performans, bakım &amp; iyileştirme</h3>
+          <h3>Performans &amp; <span class="kursat-serif">bakım</span></h3>
           <div>
             <p>Mevcut sitenizi devralırım: hız, güvenlik ve içerik düzenini toparlar, düzenli bakımla sorunsuz çalışmasını sağlarım.</p>
             <ul><li class="kursat-tag">Core Web Vitals</li><li class="kursat-tag">Güvenlik</li><li class="kursat-tag">Bakım</li></ul>
@@ -194,42 +234,36 @@
       </div>
 
       <div class="kursat-process kursat-reveal" aria-label="Çalışma süreci">
-        <div class="kursat-step"><span class="kursat-label">01</span><strong>Keşif</strong><span>Kapsam ve hedef</span></div>
-        <div class="kursat-step"><span class="kursat-label">02</span><strong>Tasarım</strong><span>Akış ve arayüz</span></div>
-        <div class="kursat-step"><span class="kursat-label">03</span><strong>Geliştirme</strong><span>Temiz, okunur kod</span></div>
-        <div class="kursat-step"><span class="kursat-label">04</span><strong>Test</strong><span>Mobil ve tarayıcı</span></div>
-        <div class="kursat-step"><span class="kursat-label">05</span><strong>Yayın</strong><span>Kurulum ve kontrol</span></div>
-        <div class="kursat-step"><span class="kursat-label">06</span><strong>Bakım</strong><span>İzleme ve iyileştirme</span></div>
+        <div class="kursat-step"><span class="kursat-label">i.</span><strong>Keşif</strong><span>Kapsam ve hedef</span></div>
+        <div class="kursat-step"><span class="kursat-label">ii.</span><strong>Tasarım</strong><span>Akış ve arayüz</span></div>
+        <div class="kursat-step"><span class="kursat-label">iii.</span><strong>Geliştirme</strong><span>Temiz, okunur kod</span></div>
+        <div class="kursat-step"><span class="kursat-label">iv.</span><strong>Test</strong><span>Mobil ve tarayıcı</span></div>
+        <div class="kursat-step"><span class="kursat-label">v.</span><strong>Yayın</strong><span>Kurulum ve kontrol</span></div>
+        <div class="kursat-step"><span class="kursat-label">vi.</span><strong>Bakım</strong><span>İzleme ve iyileştirme</span></div>
       </div>
 
-      <div class="kursat-cta-row kursat-reveal" style="margin-top:56px">
-        <a class="kursat-button kursat-button--accent" href="contact.html">60 saniyede brief oluştur
-          <svg class="kursat-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <div class="kursat-cta-row kursat-reveal" style="margin-top:64px">
+        <a class="kursat-button" href="contact.html">60 saniyede brief oluştur
+          <svg class="kursat-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         <a class="kursat-link kursat-link--muted" href="service.html">Hizmetler ve paketler</a>
       </div>
     </div>
   </section>
 
-  <!-- Hakkımda -->
+  <!-- Deneyim -->
   <section class="kursat-section kursat-section--line">
-    <div class="kursat-container">
-      <div class="kursat-grid kursat-about">
-        <span class="kursat-label kursat-about-label">(04) Hakkımda</span>
-        <div class="kursat-about-copy">
-          <h2 class="kursat-h2 kursat-reveal">Kodun yanında <span class="kursat-serif">ürünü</span> de görürüm.</h2>
-          <div class="kursat-prose kursat-reveal">
-            <p>2015'te web geliştirmeyle başladım; zamanla C#/.NET ve PHP ile dinamik projelere geçtim. Siemens'te veri analizi stajı yaptım, ESN Sistem Yazılım'da önce yazılım destek uzmanı, sonra teknik ürün sahibi oldum.</p>
-            <p>Destekte gerçek kullanıcının nerede takıldığını, ürün tarafında neyin önce yapılması gerektiğini öğrendim. Kod yazarken bu ikisini birlikte düşünüyorum: önce doğru problem, sonra temiz çözüm.</p>
-          </div>
-          <ol class="kursat-timeline kursat-reveal" style="margin-top:36px">
-            <li><time>07/2025 — Bugün</time><div><strong>Teknik Ürün Sahibi</strong><em>ESN Sistem Yazılım · İstanbul</em></div></li>
-            <li><time>10/2023 — 06/2025</time><div><strong>Yazılım Destek Uzmanı</strong><em>ESN Sistem Yazılım · İstanbul</em></div></li>
-            <li><time>10/2017 — 06/2018</time><div><strong>Veri Analisti Stajyeri</strong><em>Siemens · İstanbul</em></div></li>
-          </ol>
-          <div class="kursat-cta-row kursat-reveal">
-            <a class="kursat-button kursat-button--ghost" href="about.html">Hakkımda daha fazlası</a>
-            <a class="kursat-link kursat-link--muted" href="assets/docs/Kursatcan_Cankaroglu_CV.pdf" download>CV'yi indir (PDF)</a>
-          </div>
+    <div class="kursat-container kursat-grid kursat-about">
+      <span class="kursat-label kursat-about-label">(V) Deneyim</span>
+      <div class="kursat-about-copy">
+        <h2 class="kursat-h2 kursat-reveal" style="margin-bottom:48px">Destekten <span class="kursat-serif">ürüne</span>, üründen koda.</h2>
+        <ol class="kursat-timeline kursat-reveal">
+          <li><time>07/2025 — Bugün</time><div><strong>Teknik Ürün Sahibi</strong><em>ESN Sistem Yazılım · İstanbul</em></div></li>
+          <li><time>10/2023 — 06/2025</time><div><strong>Yazılım Destek Uzmanı</strong><em>ESN Sistem Yazılım · İstanbul</em></div></li>
+          <li><time>10/2017 — 06/2018</time><div><strong>Veri Analisti Stajyeri</strong><em>Siemens · İstanbul</em></div></li>
+        </ol>
+        <div class="kursat-cta-row kursat-reveal">
+          <a class="kursat-button kursat-button--ghost" href="about.html">Hakkımda daha fazlası</a>
+          <a class="kursat-link kursat-link--muted" href="certificates.html">Sertifikalar</a>
         </div>
       </div>
     </div>
@@ -239,22 +273,21 @@
   <section class="kursat-section kursat-section--line">
     <div class="kursat-container">
       <div class="kursat-grid kursat-section-head">
-        <span class="kursat-label">(05) Yazılar</span>
+        <span class="kursat-label">(VI) Yazılar</span>
         <div class="kursat-section-head-title">
-          <h2 class="kursat-h2 kursat-reveal">Mimari, performans ve süreç üzerine notlar</h2>
+          <h2 class="kursat-h2 kursat-reveal">Mimari, performans ve <span class="kursat-serif">süreç</span> üzerine</h2>
         </div>
-        <a class="kursat-section-head-aside kursat-link" href="news.html">Tüm yazılar
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="kursat-section-head-aside kursat-link" href="news.html">Tüm yazılar</a>
       </div>
       <div class="kursat-posts kursat-reveal" data-kursat-latest-posts="4"></div>
     </div>
   </section>
 
   <!-- İletişim -->
-  <section class="kursat-cta">
+  <section class="kursat-cta" data-kursat-tone="night">
     <div class="kursat-container">
-      <span class="kursat-label">(06) İletişim</span>
-      <h2 class="kursat-h1 kursat-cta-title kursat-reveal">Bir sonraki işi <span class="kursat-serif">birlikte</span> yapalım.</h2>
+      <span class="kursat-label">(VII) İletişim</span>
+      <h2 class="kursat-display kursat-cta-title kursat-reveal">Bir sonraki işi <span class="kursat-serif">birlikte</span> yapalım.</h2>
       <a class="kursat-cta-mail kursat-reveal" href="mailto:info.cankaroglu@gmail.com">info.cankaroglu@gmail.com</a>
       <div class="kursat-cta-row kursat-reveal">
         <a class="kursat-button" href="contact.html">Brief oluştur</a>
@@ -268,7 +301,7 @@
 </main>
 
 <!-- kursat:footer -->
-<footer class="kursat-footer">
+<footer class="kursat-footer" data-kursat-tone="night">
   <div class="kursat-container">
     <div class="kursat-grid kursat-footer-grid">
       <div class="kursat-footer-col">
@@ -293,7 +326,7 @@
         <a href="faq.html">Sık sorulanlar</a>
       </div>
     </div>
-    <p class="kursat-footer-word" aria-hidden="true">Kürşatcan</p>
+    <p class="kursat-footer-word" aria-hidden="true">Kürşatcan <em>Ç.</em></p>
   </div>
   <div class="kursat-container">
     <div class="kursat-footer-base kursat-label">

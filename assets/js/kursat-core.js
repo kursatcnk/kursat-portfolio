@@ -62,7 +62,7 @@
       button.addEventListener("click", () => {
         const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
         root.setAttribute("data-theme", next);
-        try { localStorage.setItem("kursat-theme", next); } catch (_) { /* yok say */ }
+        try { localStorage.setItem("kursat-theme-v2", next); } catch (_) { /* yok say */ }
         button.setAttribute("aria-label", next === "light" ? "Koyu temaya geç" : "Açık temaya geç");
       });
     });
@@ -74,9 +74,18 @@
     if (!header) return;
     let lastY = window.scrollY;
     let ticking = false;
+    const nights = () => document.querySelectorAll('[data-kursat-tone="night"]');
     const update = () => {
       const y = window.scrollY;
       header.classList.toggle("is-scrolled", y > 8);
+      // Menünün altındaki bölüm koyuysa menü de açık renge dönsün
+      const probe = header.offsetHeight / 2;
+      let onNight = false;
+      nights().forEach((s) => {
+        const r = s.getBoundingClientRect();
+        if (r.top <= probe && r.bottom >= probe) onNight = true;
+      });
+      header.classList.toggle("is-night", onNight);
       const drawerOpen = document.body.classList.contains("kursat-drawer-open");
       header.classList.toggle("is-hidden", !drawerOpen && y > 400 && y > lastY + 4);
       if (y < lastY - 4 || y < 400) header.classList.remove("is-hidden");
@@ -123,8 +132,10 @@
 
   // --- kaydırınca beliren öğeler ---
   let revealObserver = null;
+  let revealsReady = false; // açılış perdesi kalkana kadar bekle
   function observeReveals(scope) {
-    const els = (scope || document).querySelectorAll(".kursat-reveal:not(.is-in)");
+    if (!revealsReady) return;
+    const els = (scope || document).querySelectorAll(".kursat-reveal:not(.is-in), .kursat-unveil:not(.is-in)");
     if (!els.length) return;
     if (reducedMotion() || !("IntersectionObserver" in window)) {
       els.forEach((el) => el.classList.add("is-in"));
@@ -173,6 +184,95 @@
     document.querySelectorAll("[data-kursat-year]").forEach((el) => { el.textContent = String(new Date().getFullYear()); });
   }
 
+  // --- açılış: oturumda bir kez, 0'dan 100'e sayaç; sonra perde yukarı kalkar ---
+  function initLoader(done) {
+    const loader = document.querySelector(".kursat-loader");
+    if (!loader) { done(); return; }
+    let seen = false;
+    try { seen = sessionStorage.getItem("kursat-loaded") === "1"; } catch (_) { /* yok say */ }
+    if (seen || reducedMotion()) { loader.classList.add("is-skipped"); done(); return; }
+    try { sessionStorage.setItem("kursat-loaded", "1"); } catch (_) { /* yok say */ }
+
+    const count = loader.querySelector("[data-kursat-loader-count]");
+    const bar = loader.querySelector(".kursat-loader-bar i");
+    const start = performance.now();
+    const duration = 1500;
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    document.body.style.overflow = "hidden";
+    const step = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      const v = Math.round(ease(t) * 100);
+      if (count) count.textContent = String(v).padStart(3, "0");
+      if (bar) bar.style.setProperty("--_w", v + "%");
+      if (t < 1) { requestAnimationFrame(step); return; }
+      loader.classList.add("is-done");
+      document.body.style.overflow = "";
+      window.setTimeout(done, 350);
+    };
+    requestAnimationFrame(step);
+  }
+
+  // --- kaydırma ilerlemesi: vitrin ve sahneler CSS değişkenleriyle hareket ediyor ---
+  function initScrollScenes() {
+    const showreels = [...document.querySelectorAll("[data-kursat-showreel]")];
+    const scenes = [...document.querySelectorAll(".kursat-scene")];
+    if (!showreels.length && !scenes.length) return;
+    const desktop = () => window.matchMedia("(min-width: 901px)").matches && !reducedMotion();
+    let ticking = false;
+
+    const update = () => {
+      ticking = false;
+      const vh = window.innerHeight;
+      showreels.forEach((el) => {
+        if (!desktop()) { el.style.removeProperty("--p"); return; }
+        const r = el.getBoundingClientRect();
+        const total = r.height - vh;
+        const p = Math.min(1, Math.max(0, -r.top / Math.max(1, total * 0.75)));
+        el.style.setProperty("--p", p.toFixed(4));
+      });
+      scenes.forEach((scene, i) => {
+        const inner = scene.querySelector(".kursat-scene-inner");
+        const next = scenes[i + 1];
+        if (!inner) return;
+        if (!desktop() || !next) { scene.style.setProperty("--cover", "0"); return; }
+        const top = next.getBoundingClientRect().top;
+        const cover = Math.min(1, Math.max(0, 1 - top / vh));
+        scene.style.setProperty("--cover", cover.toFixed(4));
+      });
+    };
+    const request = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+    window.addEventListener("scroll", request, { passive: true });
+    window.addEventListener("resize", request);
+    update();
+  }
+
+  // --- imleç: küçük bronz nokta; işlerin üzerinde "İncele" etiketine büyüyor ---
+  function initCursor() {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches || reducedMotion()) return;
+    const cursor = document.createElement("div");
+    cursor.className = "kursat-cursor";
+    cursor.setAttribute("aria-hidden", "true");
+    cursor.innerHTML = "<span></span>";
+    document.body.appendChild(cursor);
+    const label = cursor.querySelector("span");
+    let x = -100, y = -100, cx = -100, cy = -100;
+    window.addEventListener("pointermove", (e) => {
+      x = e.clientX; y = e.clientY;
+      cursor.classList.add("is-visible");
+      const target = e.target.closest("[data-kursat-cursor]");
+      cursor.classList.toggle("is-label", !!target);
+      if (target) label.textContent = target.getAttribute("data-kursat-cursor");
+    }, { passive: true });
+    document.addEventListener("pointerleave", () => cursor.classList.remove("is-visible"));
+    const loop = () => {
+      cx += (x - cx) * 0.18;
+      cy += (y - cy) * 0.18;
+      cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+      requestAnimationFrame(loop);
+    };
+    loop();
+  }
+
   // Dışarıya açtıklarım: içerik betikleri bunları kullanıyor
   window.Kursat = { icons, escapeHtml, toast, copyText, observeReveals, hardenLinks, reducedMotion };
 
@@ -185,8 +285,15 @@
     initYear();
     removeLegacyWorker();
     hardenLinks();
-    observeReveals();
-    // hero başlığı satır satır yükselsin
-    window.requestAnimationFrame(() => window.requestAnimationFrame(() => document.body.classList.add("is-loaded")));
+    initCursor();
+    // Açılış perdesi kalkınca başlık satır satır yükselsin ve geçişler başlasın
+    initLoader(() => {
+      window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
+        document.body.classList.add("is-loaded");
+        revealsReady = true;
+        observeReveals();
+        initScrollScenes(); // sahneler içerik betiğiyle çiziliyor, onlardan sonra bağlan
+      }));
+    });
   });
 })();
