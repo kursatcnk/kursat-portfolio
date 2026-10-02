@@ -1,0 +1,20 @@
+Copyright (c) 2026 Kürşatcan Çankaroğlu. All rights reserved.
+
+This repository is public so the site can be reviewed, not as an open-source
+template. Unless stated otherwise below, the code (HTML, CSS, JavaScript) and
+all content (text, articles, CV, portrait, project screenshots, brand images)
+may not be copied, modified or redistributed without written permission.
+
+Third-party files keep their own licenses:
+
+- assets/fonts/switzer-variable.woff2
+  Switzer by Indian Type Foundry, ITF Free Font License (FFL)
+  (assets/fonts/LICENSE-switzer.txt)
+
+- assets/fonts/geist-mono-*.woff2
+  Geist Mono, The Geist Project Authors, SIL Open Font License 1.1
+  (assets/fonts/LICENSE-geist.txt)
+
+Project screenshots under assets/media/work show software written by the
+author; the third-party names and logos that may appear in them belong to
+their respective owners.

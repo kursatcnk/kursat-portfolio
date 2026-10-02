@@ -75,4 +75,4 @@ ya da VS Code'da Live Server. Dosyayı doğrudan çift tıklayarak açınca da �
 
 ## Lisans
 
-Kod ve içerik Kürşatcan Çankaroğlu'na aittir. Switzer, Fontshare Free Font License ile; Geist Mono, SIL Open Font License 1.1 ile dağıtılır (`assets/fonts/LICENSE-*.txt`).
+Kod ve içerik (metinler, yazılar, CV, portre, proje ekran görüntüleri) Kürşatcan Çankaroğlu'na aittir, tüm hakları saklıdır; depo inceleme için açık, açık kaynak şablon değildir. Fontlar kendi lisanslarıyla dağıtılır: Switzer, ITF Free Font License (FFL); Geist Mono, SIL Open Font License 1.1 (`assets/fonts/LICENSE-*.txt`). Ayrıntılar [LICENSE](LICENSE) dosyasında.
