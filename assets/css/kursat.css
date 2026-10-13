@@ -242,8 +242,7 @@ main { display: block; }
 .kursat-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
 .kursat-screen--a { z-index: 3; width: min(62vw, 980px); aspect-ratio: 16 / 10; transform: translate(-50%, -50%) rotateX(calc(18deg - var(--p) * 18deg)) translateY(calc(30px - var(--p) * 30px)); }
 .kursat-screen--b { z-index: 2; width: min(34vw, 540px); aspect-ratio: 16 / 10; transform: translate(-50%, -50%) translate3d(calc(min(34vw, 540px) + var(--p) * 4vw), 10%, -300px) rotateY(-28deg); opacity: .85; }
-.kursat-screen--c { z-index: 2; width: min(24vw, 380px); aspect-ratio: 926 / 813; background: transparent; transform: translate(-50%, -50%) translate3d(calc(-1 * min(42vw, 640px) - var(--p) * 4vw), 8%, -300px) rotateY(28deg); opacity: .85; }
-.kursat-screen--c img { object-fit: contain; }
+.kursat-screen--c { z-index: 2; width: min(34vw, 540px); aspect-ratio: 16 / 10; transform: translate(-50%, -50%) translate3d(calc(-1 * min(34vw, 540px) - var(--p) * 4vw), 10%, -300px) rotateY(28deg); opacity: .85; }
 .kursat-badge {
   position: absolute; z-index: 4; display: inline-flex; align-items: center; gap: 10px; height: 44px; padding: 0 18px 0 14px; border-radius: 999px;
   background: rgba(30, 30, 32, .62); border: 1px solid rgba(255, 255, 255, .12);
@@ -326,8 +325,8 @@ main { display: block; }
 .kursat-scene--gorev-takip { --glow: 64, 140, 255; }
 .kursat-scene--gorev-takip .kursat-scene-shot { background: transparent; }
 .kursat-scene--gorev-takip .kursat-scene-shot img { object-fit: contain; }
-.kursat-scene--gorev-takip .kursat-scene-shot--1 { width: 38%; aspect-ratio: 926 / 813; right: 16%; top: 14%; }
-.kursat-scene--gorev-takip .kursat-scene-shot--2 { width: 23%; aspect-ratio: 480 / 446; right: 5%; top: 46%; border-radius: 18px; }
+.kursat-scene--gorev-takip .kursat-scene-shot--1 { width: 38%; aspect-ratio: 1820 / 1548; right: 16%; top: 14%; }
+.kursat-scene--gorev-takip .kursat-scene-shot--2 { width: 23%; aspect-ratio: 888 / 820; right: 5%; top: 46%; border-radius: 18px; }
 .kursat-scene--cv-tailor { --glow: 217, 84, 30; }
 .kursat-scene--cv-tailor .kursat-scene-media { perspective: 1800px; }
 .kursat-scene--cv-tailor .kursat-scene-shot--1 { width: 54%; aspect-ratio: 16 / 10; right: -4%; top: 13%; transform: rotateY(-16deg); }
@@ -348,8 +347,8 @@ main { display: block; }
 .kursat-case--gorev-takip { --_stage: #0b0b0c; --_glow: 64, 140, 255; }
 .kursat-case--gorev-takip .kursat-case-shot { background: transparent; }
 .kursat-case--gorev-takip .kursat-case-shot img { object-fit: contain; }
-.kursat-case--gorev-takip .kursat-case-shot--main { left: 12%; top: 8%; width: 48%; aspect-ratio: 926 / 813; }
-.kursat-case--gorev-takip .kursat-case-shot--side { right: 10%; top: 30%; width: 30%; aspect-ratio: 480 / 446; border-radius: 18px; }
+.kursat-case--gorev-takip .kursat-case-shot--main { left: 12%; top: 8%; width: 48%; aspect-ratio: 1820 / 1548; }
+.kursat-case--gorev-takip .kursat-case-shot--side { right: 10%; top: 30%; width: 30%; aspect-ratio: 888 / 820; border-radius: 18px; }
 .kursat-case--cv-tailor { --_stage: #0b0b0c; --_glow: 217, 84, 30; }
 .kursat-case--cv-tailor .kursat-case-shot--main { left: 7%; top: 9%; width: 66%; aspect-ratio: 16 / 10; }
 .kursat-case--cv-tailor .kursat-case-shot--side { right: 6%; top: 36%; width: 46%; aspect-ratio: 16 / 10; }
