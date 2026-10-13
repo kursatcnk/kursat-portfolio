@@ -36,10 +36,11 @@ window.KURSAT_PROJECTS = [
     ],
     gallery: [
       { src: "assets/media/work/cv-tailor/match-lg.webp", caption: "Hedef ekranı: gereksinimler ve kasadaki kanıtlar.", wide: true },
-      { src: "assets/media/work/cv-tailor/cv-lg.webp", caption: "Prova sırasında CV'nin tam boy önizlemesi." },
+      { src: "assets/media/work/cv-tailor/cv-page-lg.webp", caption: "Çıktı: tek sütunlu, ATS dostu PDF; iletişim bilgileri tıklanabilir." },
       { src: "assets/media/work/cv-tailor/vault-lg.webp", caption: "Kariyer kasası ve sağlık kontrolü." },
       { src: "assets/media/work/cv-tailor/questions-lg.webp", caption: "Eksik kalan gereksinimler için sorular.", wide: true },
-      { src: "assets/media/work/cv-tailor/landing-lg.webp", caption: "Tanıtım sayfası.", wide: true },
+      { src: "assets/media/work/cv-tailor/review-dark-lg.webp", caption: "Prova ekranı, koyu tema: önce/sonra karnesi ve canlı önizleme.", wide: true },
+      { src: "assets/media/work/cv-tailor/landing-lg.webp", caption: "Tanıtım sayfası." },
       { src: "assets/media/work/cv-tailor/review-mobile.webp", caption: "Telefonda prova ekranı.", pad: true }
     ]
   },
