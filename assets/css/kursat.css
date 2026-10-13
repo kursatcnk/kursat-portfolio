@@ -322,11 +322,11 @@ main { display: block; }
 .kursat-scene--cards-rumble .kursat-scene-shot--2 { width: 13.5%; aspect-ratio: 780 / 1688; right: 7%; top: 36%; transform: rotateY(-10deg) translateZ(90px); }
 .kursat-scene-shot--phone { border-radius: 30px; border: 6px solid #1c1c1f; box-shadow: 0 50px 90px -24px rgba(0,0,0,.95), 0 0 0 1px rgba(255,255,255,.1); }
 .kursat-scene-shot--phone img { border-radius: 24px; }
-.kursat-scene--gorev-takip { --glow: 64, 140, 255; }
-.kursat-scene--gorev-takip .kursat-scene-shot { background: transparent; }
-.kursat-scene--gorev-takip .kursat-scene-shot img { object-fit: contain; }
-.kursat-scene--gorev-takip .kursat-scene-shot--1 { width: 38%; aspect-ratio: 1820 / 1548; right: 16%; top: 14%; }
-.kursat-scene--gorev-takip .kursat-scene-shot--2 { width: 23%; aspect-ratio: 888 / 820; right: 5%; top: 46%; border-radius: 18px; }
+.kursat-scene--work-tracker { --glow: 64, 140, 255; }
+.kursat-scene--work-tracker .kursat-scene-shot { background: transparent; }
+.kursat-scene--work-tracker .kursat-scene-shot img { object-fit: contain; }
+.kursat-scene--work-tracker .kursat-scene-shot--1 { width: 38%; aspect-ratio: 1820 / 1548; right: 16%; top: 14%; }
+.kursat-scene--work-tracker .kursat-scene-shot--2 { width: 23%; aspect-ratio: 888 / 820; right: 5%; top: 46%; border-radius: 18px; }
 .kursat-scene--cv-tailor { --glow: 217, 84, 30; }
 .kursat-scene--cv-tailor .kursat-scene-media { perspective: 1800px; }
 .kursat-scene--cv-tailor .kursat-scene-shot--1 { width: 54%; aspect-ratio: 16 / 10; right: -4%; top: 13%; transform: rotateY(-16deg); }
@@ -344,11 +344,11 @@ main { display: block; }
 .kursat-case--cards-rumble { --_stage: #0b0b0c; --_glow: 255, 77, 26; }
 .kursat-case--cards-rumble .kursat-case-shot--main { left: 7%; top: 10%; width: 68%; aspect-ratio: 16 / 10; }
 .kursat-case--cards-rumble .kursat-case-shot--side { right: 8%; top: 16%; width: 18%; aspect-ratio: 390 / 844; border-radius: 24px; box-shadow: 0 40px 80px -24px rgba(0,0,0,.8), 0 0 0 5px #111, 0 0 0 6px rgba(255,255,255,.14); }
-.kursat-case--gorev-takip { --_stage: #0b0b0c; --_glow: 64, 140, 255; }
-.kursat-case--gorev-takip .kursat-case-shot { background: transparent; }
-.kursat-case--gorev-takip .kursat-case-shot img { object-fit: contain; }
-.kursat-case--gorev-takip .kursat-case-shot--main { left: 12%; top: 8%; width: 48%; aspect-ratio: 1820 / 1548; }
-.kursat-case--gorev-takip .kursat-case-shot--side { right: 10%; top: 30%; width: 30%; aspect-ratio: 888 / 820; border-radius: 18px; }
+.kursat-case--work-tracker { --_stage: #0b0b0c; --_glow: 64, 140, 255; }
+.kursat-case--work-tracker .kursat-case-shot { background: transparent; }
+.kursat-case--work-tracker .kursat-case-shot img { object-fit: contain; }
+.kursat-case--work-tracker .kursat-case-shot--main { left: 12%; top: 8%; width: 48%; aspect-ratio: 1820 / 1548; }
+.kursat-case--work-tracker .kursat-case-shot--side { right: 10%; top: 30%; width: 30%; aspect-ratio: 888 / 820; border-radius: 18px; }
 .kursat-case--cv-tailor { --_stage: #0b0b0c; --_glow: 217, 84, 30; }
 .kursat-case--cv-tailor .kursat-case-shot--main { left: 7%; top: 9%; width: 66%; aspect-ratio: 16 / 10; }
 .kursat-case--cv-tailor .kursat-case-shot--side { right: 6%; top: 36%; width: 46%; aspect-ratio: 16 / 10; }
@@ -750,8 +750,8 @@ a.kursat-index-row:hover svg, .kursat-post-row:hover svg { transform: translate(
   .kursat-scene--promptforge .kursat-scene-shot--2 { width: 62%; right: 34%; top: 46%; }
   .kursat-scene--cards-rumble .kursat-scene-shot--1 { width: 88%; right: -12%; top: 16%; }
   .kursat-scene--cards-rumble .kursat-scene-shot--2 { width: 30%; right: 8%; top: 30%; }
-  .kursat-scene--gorev-takip .kursat-scene-shot--1 { width: 70%; right: 22%; top: 14%; }
-  .kursat-scene--gorev-takip .kursat-scene-shot--2 { width: 46%; right: 4%; top: 40%; }
+  .kursat-scene--work-tracker .kursat-scene-shot--1 { width: 70%; right: 22%; top: 14%; }
+  .kursat-scene--work-tracker .kursat-scene-shot--2 { width: 46%; right: 4%; top: 40%; }
   .kursat-scene--cv-tailor .kursat-scene-shot--1 { width: 88%; right: -12%; top: 16%; }
   .kursat-scene--cv-tailor .kursat-scene-shot--2 { width: 30%; right: 8%; top: 30%; }
   .kursat-index-row { grid-template-columns: 52px minmax(0, 1fr) 24px; row-gap: 2px; padding: 18px 16px; }

@@ -126,11 +126,11 @@ window.KURSAT_PROJECTS = [
     ]
   },
   {
-    slug: "gorev-takip",
+    slug: "work-tracker",
     featured: true,
-    title: "ESN Görev Takip",
-    sceneTitle: "Görev Takip",
-    scene: { shots: ["assets/media/work/gorev-takip/main.webp", "assets/media/work/gorev-takip/alarm.webp"] },
+    title: "WorkTracker",
+    sceneTitle: "WorkTracker",
+    scene: { shots: ["assets/media/work/work-tracker/main.webp", "assets/media/work/work-tracker/alarm.webp"] },
     headline: "“Şu gün tekrar yazarım” notları için küçük bir uygulama.",
     summary: "Müşteri takibinde geri dönüş notlarının kaybolmaması için geliştirdiğim bir masaüstü uygulaması. Kurulum istemiyor, USB'den çalışıyor; zamanı gelince ekrana sesli bir hatırlatma çıkarıyor.",
     year: "2026",
@@ -139,10 +139,10 @@ window.KURSAT_PROJECTS = [
     stack: [".NET 10", "WPF", "JSON depolama", "Tek dosya yayın"],
     links: { github: "https://github.com/kursatcnk/work-tracker" },
     stage: "#15191f",
-    cover: { main: "assets/media/work/gorev-takip/main.webp", side: "assets/media/work/gorev-takip/alarm.webp" },
+    cover: { main: "assets/media/work/work-tracker/main.webp", side: "assets/media/work/work-tracker/alarm.webp" },
     intro: [
       "Müşteri yazışmalarının yoğun olduğu işlerde en kolay kaybolan şey “şu gün tekrar dönmem lazım” notları oluyor. Hazır araçlar ya bu iş için fazla ağır kalıyor ya da kurulum ve hesap istiyor.",
-      "ESN Görev Takip çift tıkla açılan, saatin yanındaki simgeye inip arka planda bekleyen küçük bir uygulama. Zamanı gelince ekranın en önüne sesli bir uyarı çıkarıyor; tüm veriler exe'nin yanındaki tek bir dosyada, USB ile birlikte taşınıyor."
+      "WorkTracker çift tıkla açılan, saatin yanındaki simgeye inip arka planda bekleyen küçük bir uygulama. Zamanı gelince ekranın en önüne sesli bir uyarı çıkarıyor; tüm veriler exe'nin yanındaki tek bir dosyada, USB ile birlikte taşınıyor."
     ],
     features: [
       { title: "Hatırlatıcı", text: "Sesli ve yanıp sönen uyarı; 10 dk, 30 dk, 1 saat ya da yarın 09:00 olarak ertelenebiliyor. Program kapalıyken kaçırılanlar açılışta gösteriliyor." },
@@ -158,9 +158,9 @@ window.KURSAT_PROJECTS = [
       { title: "Tek örnek", text: "Uygulama ikinci kez açılırsa yeni pencere açmak yerine mevcut pencereyi öne getiriyor." }
     ],
     gallery: [
-      { src: "assets/media/work/gorev-takip/main.webp", caption: "Ana liste: öncelik şeritleri, aşama ilerlemesi ve müşteri etiketleri.", pad: true, wide: true },
-      { src: "assets/media/work/gorev-takip/alarm.webp", caption: "Kaçırılan hatırlatma uyarısı ve erteleme seçenekleri.", pad: true },
-      { src: "assets/media/work/gorev-takip/stages.webp", caption: "Aşamalar penceresi.", pad: true }
+      { src: "assets/media/work/work-tracker/main.webp", caption: "Ana liste: öncelik şeritleri, aşama ilerlemesi ve müşteri etiketleri.", pad: true, wide: true },
+      { src: "assets/media/work/work-tracker/alarm.webp", caption: "Kaçırılan hatırlatma uyarısı ve erteleme seçenekleri.", pad: true },
+      { src: "assets/media/work/work-tracker/stages.webp", caption: "Aşamalar penceresi.", pad: true }
     ]
   },
 

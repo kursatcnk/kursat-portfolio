@@ -8,7 +8,7 @@ Framework ve hazır tema kullanmadan; HTML, tek bir CSS dosyası ve birkaç kü�
 
 ## Öne çıkanlar
 
-- **Gerçek ekranlar.** CV Tailor, PromptForge, OnPixel / Cards Rumble ve ESN Görev Takip vaka çalışmalarındaki görseller, demo verisiyle çalışan gerçek sürümlerden alındı.
+- **Gerçek ekranlar.** CV Tailor, PromptForge, OnPixel / Cards Rumble ve WorkTracker vaka çalışmalarındaki görseller, demo verisiyle çalışan gerçek sürümlerden alındı.
 - **Brief stüdyosu.** İletişim sayfasında ziyaretçi proje türünü, ihtiyaçları ve öncelik sırasını seçiyor; sayfa netlik puanı, yol haritası, riskler ve hazır bir e-posta taslağı çıkarıyor. Gönderim backend gerektirmiyor.
 - **Modern, sade dil.** Açık gri zemin, Switzer ile sıkı ve büyük başlıklar, cam efektli yüzen menü. Kaydırdıkça açılan ürün vitrini ve bir öncekinin üzerine kayan iş sahneleri; hareketler, hareket azaltma tercihine uyuyor.
 - **Açık tema varsayılan**, koyu tema isteğe bağlı ve hatırlanıyor.
