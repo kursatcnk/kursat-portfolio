@@ -328,6 +328,10 @@ main { display: block; }
 .kursat-scene--gorev-takip .kursat-scene-shot img { object-fit: contain; }
 .kursat-scene--gorev-takip .kursat-scene-shot--1 { width: 38%; aspect-ratio: 926 / 813; right: 16%; top: 14%; }
 .kursat-scene--gorev-takip .kursat-scene-shot--2 { width: 23%; aspect-ratio: 480 / 446; right: 5%; top: 46%; border-radius: 18px; }
+.kursat-scene--cv-tailor { --glow: 217, 84, 30; }
+.kursat-scene--cv-tailor .kursat-scene-media { perspective: 1800px; }
+.kursat-scene--cv-tailor .kursat-scene-shot--1 { width: 54%; aspect-ratio: 16 / 10; right: -4%; top: 13%; transform: rotateY(-16deg); }
+.kursat-scene--cv-tailor .kursat-scene-shot--2 { width: 13.5%; aspect-ratio: 780 / 1688; right: 7%; top: 36%; transform: rotateY(-10deg) translateZ(90px); }
 
 /* Vaka çalışması sahne kartı */
 .kursat-case { display: block; }
@@ -346,6 +350,9 @@ main { display: block; }
 .kursat-case--gorev-takip .kursat-case-shot img { object-fit: contain; }
 .kursat-case--gorev-takip .kursat-case-shot--main { left: 12%; top: 8%; width: 48%; aspect-ratio: 926 / 813; }
 .kursat-case--gorev-takip .kursat-case-shot--side { right: 10%; top: 30%; width: 30%; aspect-ratio: 480 / 446; border-radius: 18px; }
+.kursat-case--cv-tailor { --_stage: #0b0b0c; --_glow: 217, 84, 30; }
+.kursat-case--cv-tailor .kursat-case-shot--main { left: 7%; top: 9%; width: 66%; aspect-ratio: 16 / 10; }
+.kursat-case--cv-tailor .kursat-case-shot--side { right: 6%; top: 36%; width: 46%; aspect-ratio: 16 / 10; }
 
 /* 12 Liste satırları — arşiv ve yazılar */
 .kursat-index, .kursat-posts { display: flex; flex-direction: column; gap: 4px; }
@@ -738,7 +745,7 @@ a.kursat-index-row:hover svg, .kursat-post-row:hover svg { transform: translate(
   .kursat-scene-inner { position: relative; transform: none; filter: none; display: flex; flex-direction: column; }
   .kursat-scene-media { position: relative; height: 46svh; min-height: 320px; flex: none; }
   .kursat-scene-shade { background: linear-gradient(0deg, var(--kursat-night) 0%, rgba(11,11,12,0) 40%); }
-  .kursat-scene-content { height: auto; padding-top: 0 !important; }
+  .kursat-scene-content { height: auto; gap: 20px; padding-top: 0 !important; }
   .kursat-scene-top { top: 18px; right: 18px; }
   .kursat-scene--promptforge .kursat-scene-shot--1 { width: 88%; right: -10%; top: 16%; }
   .kursat-scene--promptforge .kursat-scene-shot--2 { width: 62%; right: 34%; top: 46%; }
@@ -746,6 +753,8 @@ a.kursat-index-row:hover svg, .kursat-post-row:hover svg { transform: translate(
   .kursat-scene--cards-rumble .kursat-scene-shot--2 { width: 30%; right: 8%; top: 30%; }
   .kursat-scene--gorev-takip .kursat-scene-shot--1 { width: 70%; right: 22%; top: 14%; }
   .kursat-scene--gorev-takip .kursat-scene-shot--2 { width: 46%; right: 4%; top: 40%; }
+  .kursat-scene--cv-tailor .kursat-scene-shot--1 { width: 88%; right: -12%; top: 16%; }
+  .kursat-scene--cv-tailor .kursat-scene-shot--2 { width: 30%; right: 8%; top: 30%; }
   .kursat-index-row { grid-template-columns: 52px minmax(0, 1fr) 24px; row-gap: 2px; padding: 18px 16px; }
   .kursat-index-row > span:not(.kursat-index-year) { grid-column: 2; }
   .kursat-index-row svg { grid-column: 3; grid-row: 1; }

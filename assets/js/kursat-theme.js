@@ -6,7 +6,9 @@
   if (theme !== "light" && theme !== "dark") theme = "light";
   document.documentElement.setAttribute("data-theme", theme);
   document.documentElement.classList.add("kursat-js");
-  // Sayfa geçişleri: tarayıcı View Transitions desteklemiyorsa çekirdek betikteki yedek devreye girer
+  // Sayfa geçişleri: tarayıcı View Transitions desteklemiyorsa ya da site dosyadan (file://) açılmışsa
+  // çekirdek betikteki yedek devreye girer; Chrome dosya adreslerinde sayfalar arası geçişi çalıştırmıyor
   var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!calm && !("CSSViewTransitionRule" in window)) document.documentElement.classList.add("kursat-pt");
+  var native = "CSSViewTransitionRule" in window && location.protocol !== "file:";
+  if (!calm && !native) document.documentElement.classList.add("kursat-pt");
 })();

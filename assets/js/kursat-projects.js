@@ -15,7 +15,7 @@ window.KURSAT_PROJECTS = [
     stack: ["ASP.NET Core 10", "EF Core 10", "SQL Server", "QuestPDF · OpenXML · PdfPig", "Claude · OpenAI · Gemini · DeepSeek", "Vanilla JS", "xUnit · GitHub Actions"],
     links: { github: "https://github.com/kursatcnk/cv-tailor" },
     stage: "#ddd3c8",
-    cover: { main: "assets/media/work/cv-tailor/review-lg.webp", side: "assets/media/work/cv-tailor/review-dark-lg.webp" },
+    cover: { main: "assets/media/work/cv-tailor/landing-lg.webp", side: "assets/media/work/cv-tailor/review-dark-lg.webp" },
     intro: [
       "Herkes her ilana aynı CV'yi gönderiyor; ilanın aradığı kelimeler CV'de geçmeyince başvuru, bir insan okumadan elenebiliyor. CV'yi yapay zekâya yeniden yazdırmak da kolay, ama sonuç çoğu zaman yapılmamış işler ve uydurulmuş rakamlarla dolu oluyor.",
       "CV Tailor ilanın istediklerini adayın gerçek deneyimleriyle eşleştiriyor, eksik kalanları adaya soruyor, maddeleri ilana göre yeniden yazıyor ve her değişikliğin nedenini yanına yazıyor. Yazılan her madde kaynağıyla karşılaştırılıyor; kaynakta olmayan bir rakam, teknoloji ya da iddia aday onaylamadan CV'ye girmiyor."
@@ -35,13 +35,12 @@ window.KURSAT_PROJECTS = [
       { title: "Testler", text: "200'ü aşkın test. API testleri uygulamayı gerçek SQL Server (LocalDB) ile ayağa kaldırıp oturum, CSRF, kullanıcı izolasyonu ve eşzamanlı kota kilidini uçtan uca deniyor." }
     ],
     gallery: [
-      { src: "assets/media/work/cv-tailor/match-lg.webp", caption: "Hedef ekranı: gereksinimler ve kasadaki kanıtlar.", wide: true },
-      { src: "assets/media/work/cv-tailor/cv-page-lg.webp", caption: "Çıktı: tek sütunlu, ATS dostu PDF; iletişim bilgileri tıklanabilir." },
+      { src: "assets/media/work/cv-tailor/review-lg.webp", caption: "Prova ekranı: önce/sonra karnesi, her maddenin nedeni ve canlı önizleme.", wide: true },
       { src: "assets/media/work/cv-tailor/vault-lg.webp", caption: "Kariyer kasası ve sağlık kontrolü." },
-      { src: "assets/media/work/cv-tailor/questions-lg.webp", caption: "Eksik kalan gereksinimler için sorular.", wide: true },
-      { src: "assets/media/work/cv-tailor/review-dark-lg.webp", caption: "Prova ekranı, koyu tema: önce/sonra karnesi ve canlı önizleme.", wide: true },
-      { src: "assets/media/work/cv-tailor/landing-lg.webp", caption: "Tanıtım sayfası." },
-      { src: "assets/media/work/cv-tailor/review-mobile.webp", caption: "Telefonda prova ekranı.", pad: true }
+      { src: "assets/media/work/cv-tailor/questions-lg.webp", caption: "Eksik kalan gereksinimler için sorular." },
+      { src: "assets/media/work/cv-tailor/cv-page-lg.webp", caption: "Çıktı: tek sütunlu, ATS dostu PDF; iletişim bilgileri tıklanabilir.", wide: true, pad: true },
+      { src: "assets/media/work/cv-tailor/match-lg.webp", caption: "Hedef ekranı: gereksinimler ve kasadaki kanıtlar.", wide: true },
+      { src: "assets/media/work/cv-tailor/review-mobile.webp", caption: "Telefonda prova ekranı.", wide: true, pad: true }
     ]
   },
   {
