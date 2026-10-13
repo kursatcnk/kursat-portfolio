@@ -2,6 +2,48 @@
 // featured: true olanlar büyük vaka çalışması olarak, diğerleri arşiv listesinde görünür.
 window.KURSAT_PROJECTS = [
   {
+    slug: "cv-tailor",
+    featured: true,
+    title: "CV Tailor",
+    sceneTitle: "CV Tailor",
+    scene: { shots: ["assets/media/work/cv-tailor/review-lg.webp", "assets/media/work/cv-tailor/review-mobile.webp"], phone: true },
+    headline: "CV'yi ilana göre, uydurmadan yeniden yazan bir çalışma alanı.",
+    summary: "CV'yi başvurulan ilana göre yeniden yazıyor, her değişikliğin nedenini anlatıyor ve kaynağı olmayan hiçbir iddianın CV'ye girmesine izin vermiyor.",
+    year: "2026",
+    type: "Web uygulaması",
+    role: "Ürün, tasarım ve full-stack geliştirme",
+    stack: ["ASP.NET Core 10", "EF Core 10", "SQL Server", "QuestPDF · OpenXML · PdfPig", "Claude · OpenAI · Gemini · DeepSeek", "Vanilla JS", "xUnit · GitHub Actions"],
+    links: { github: "https://github.com/kursatcnk/cv-tailor" },
+    stage: "#ddd3c8",
+    cover: { main: "assets/media/work/cv-tailor/review-lg.webp", side: "assets/media/work/cv-tailor/review-dark-lg.webp" },
+    intro: [
+      "Herkes her ilana aynı CV'yi gönderiyor; ilanın aradığı kelimeler CV'de geçmeyince başvuru, bir insan okumadan elenebiliyor. CV'yi yapay zekâya yeniden yazdırmak da kolay, ama sonuç çoğu zaman yapılmamış işler ve uydurulmuş rakamlarla dolu oluyor.",
+      "CV Tailor ilanın istediklerini adayın gerçek deneyimleriyle eşleştiriyor, eksik kalanları adaya soruyor, maddeleri ilana göre yeniden yazıyor ve her değişikliğin nedenini yanına yazıyor. Yazılan her madde kaynağıyla karşılaştırılıyor; kaynakta olmayan bir rakam, teknoloji ya da iddia aday onaylamadan CV'ye girmiyor."
+    ],
+    features: [
+      { title: "Gereksinim–kanıt eşleştirmesi", text: "İlandaki her gereksinimin karşısında adayın kasasındaki kanıt ve gücü: güçlü, zayıf, yok. Eş anlamlılar sözlüğü, Türkçe ekler ve deneyim süresi hesabıyla; AI kullanmadan." },
+      { title: "Sorular", text: "Eksik ya da zayıf kalan noktalar ve rakamsız maddeler için kısa sorular. Aday \"yok\" derse o konuda madde yazılmıyor." },
+      { title: "Prova ekranı", text: "Her madde önce/sonra yan yana, nedeni ve ilan kelimeleri işaretli. Kabul, ret, düzenleme ya da başka bir yazım; CV'nin son hâli yanda canlı önizlemede." },
+      { title: "ATS testi", text: "İndirilecek PDF ve Word dosyası bir işe alım sistemi gibi geri okunuyor; ad, iletişim, bölüm başlıkları ve her madde tek tek aranıyor." },
+      { title: "Sağlık kontrolü ve koç", text: "Ters tarihler, açıklanmamış boşluklar, klişeler ve \"görev aldım\" gibi zayıf ifadeler; madde yazılırken anlık geri bildirim." },
+      { title: "Ön yazı ve önce/sonra karnesi", text: "Onaylanan CV'den ön yazı ve yüklenen CV ile yeni CV'nin aynı ölçülerle karşılaştırması." }
+    ],
+    engineering: [
+      { title: "Uydurma koruması", text: "AI'ın yazdığı her madde dayandığı kayıtları göstermek zorunda. Kod; kaynakta olmayan rakamı, teknolojiyi, şirket adını ve büyütülmüş rolü yakalıyor. Kurgusal vakalardan oluşan bir değerlendirme seti bu oranları CI'da ölçüyor." },
+      { title: "Kişisel veri", text: "Ad, e-posta, telefon, linkler, TC kimlik no ve IBAN metin AI'a gitmeden maskeleniyor, cevapta geri konuyor. Kullanıcı bütün verisini tek dosya olarak indirebiliyor (KVKK)." },
+      { title: "CV okuma", text: "İki sütunlu PDF'ler okuma sırasına göre çözülüyor, kaybolan bitişik harfler işaretleniyor; yüklenen dosyada ATS'leri zorlayan tablo, metin kutusu ve üst bilgi uyarılıyor." },
+      { title: "Testler", text: "200'ü aşkın test. API testleri uygulamayı gerçek SQL Server (LocalDB) ile ayağa kaldırıp oturum, CSRF, kullanıcı izolasyonu ve eşzamanlı kota kilidini uçtan uca deniyor." }
+    ],
+    gallery: [
+      { src: "assets/media/work/cv-tailor/match-lg.webp", caption: "Hedef ekranı: gereksinimler ve kasadaki kanıtlar.", wide: true },
+      { src: "assets/media/work/cv-tailor/cv-lg.webp", caption: "Prova sırasında CV'nin tam boy önizlemesi." },
+      { src: "assets/media/work/cv-tailor/vault-lg.webp", caption: "Kariyer kasası ve sağlık kontrolü." },
+      { src: "assets/media/work/cv-tailor/questions-lg.webp", caption: "Eksik kalan gereksinimler için sorular.", wide: true },
+      { src: "assets/media/work/cv-tailor/landing-lg.webp", caption: "Tanıtım sayfası.", wide: true },
+      { src: "assets/media/work/cv-tailor/review-mobile.webp", caption: "Telefonda prova ekranı.", pad: true }
+    ]
+  },
+  {
     slug: "promptforge",
     featured: true,
     title: "PromptForge",
