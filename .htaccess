@@ -20,6 +20,13 @@
   </IfModule>
 </Files>
 
+# JS ve CSS her açılışta sunucuya sorulsun; değişmediyse 304 döner, değiştiyse yenisi gelir
+<FilesMatch "\.(js|css)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache"
+  </IfModule>
+</FilesMatch>
+
 # Service Worker & Manifest should not be aggressively cached
 <Files "service-worker.js">
   <IfModule mod_headers.c>

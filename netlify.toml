@@ -20,6 +20,16 @@
     Cache-Control = "no-store"
 
 [[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
   for = "/service-worker.js"
   [headers.values]
     Cache-Control = "no-cache"
