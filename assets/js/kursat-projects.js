@@ -2,6 +2,48 @@
 // featured: true olanlar büyük vaka çalışması olarak, diğerleri arşiv listesinde görünür.
 window.KURSAT_PROJECTS = [
   {
+    slug: "manga-lens",
+    featured: true,
+    title: "Manga Lens",
+    sceneTitle: "Manga Lens",
+    scene: { shots: ["assets/media/work/manga-lens/translated-lg.webp", "assets/media/work/manga-lens/scan-lg.webp"] },
+    headline: "Manga sayfasını okuduğun yerde Türkçeye çeviren bir Chrome eklentisi.",
+    summary: "Tek tıkla ekranı tarıyor, konuşma balonlarını buluyor ve çevirileri sayfayı yenilemeden, balonun şekline taşmadan yerine yazıyor.",
+    year: "2026",
+    type: "Chrome eklentisi",
+    role: "Ürün, tasarım ve geliştirme",
+    stack: ["TypeScript", "Chrome Extension (MV3)", "Canvas · Shadow DOM", "Claude · Gemini", "esbuild", "Vitest · GitHub Actions"],
+    links: { github: "https://github.com/kursatcnk/manga-lens" },
+    stage: "#d6d3e0",
+    cover: { main: "assets/media/work/manga-lens/translated-lg.webp", side: "assets/media/work/manga-lens/scan-lg.webp" },
+    intro: [
+      "Türkçe manga çevirileri çoğu seride yarıda kalmış durumda. Sayfayı yapay zekâya kopyalayıp çeviri istemek mümkün ama okurken her sayfada bunu yapmak okumayı bitiriyor; çıkan metin de balonlardan ayrı bir yerde duruyor.",
+      "Manga Lens okunan sayfanın üstünde çalışıyor. Sağdaki logoya basınca ekran taranıyor, yazı alanları mavi ile işaretleniyor ve çeviriler hazır oldukça balonların içine tek tek yerleşiyor. Orijinal yazı balonun kendi rengiyle siliniyor, Türkçe metin balonun şekline göre diziliyor."
+    ],
+    features: [
+      { title: "Tek tıkla tarama", text: "Ekran görüntüsünden balonlar ve anlatım kutuları bulunuyor; canvas'a çizen ya da resmi parçalara bölen okuyucularda da aynı şekilde çalışıyor." },
+      { title: "Balon balon çeviri", text: "Her balon ayrı istekte paralel gidiyor, cevap satır satır aktıkça balonlar doluyor. Claude ya da Gemini, kullanıcının kendi anahtarıyla." },
+      { title: "Taşmayan yerleşim", text: "Balonun içi satır satır ölçülüyor, her satır o yükseklikteki gerçek genişliğe göre diziliyor. Uzun kelimeler Türkçe hece kurallarına göre bölünüyor." },
+      { title: "Seri sözlüğü", text: "Karakter isimleri ve hitaplar seri başına saklanıyor, model yeni isimleri kendisi ekliyor; önceki sayfanın son satırları bağlam olarak gidiyor." },
+      { title: "Balon düğmeleri", text: "Çevrilen balonun üstünde yeniden çevir, elle düzelt ve orijinali göster. Elle yapılan düzeltme bir dahakine önbellekten geliyor." },
+      { title: "Otomatik mod", text: "Sayfa çevrilince ya da webtoon kaydırılınca yeni balonlar kendiliğinden çevriliyor, önceden çevrilenler yerinde kalıyor." }
+    ],
+    engineering: [
+      { title: "Balon tespiti", text: "Kapalı beyaz alanlar bulunup içlerindeki koyu parçalara bakılıyor; yazı birçok küçük harf, göz bebeği ise tek, yuvarlak ve dolu bir leke. Resim ters çevrilip siyah balonlardaki beyaz yazılar da aranıyor." },
+      { title: "Kaymayan katman", text: "Çeviriler sayfanın içindeki ayrı bir katmanda ve altlarındaki resme bağlı; sayfa kaydığında tarayıcı onları resimle aynı karede taşıyor." },
+      { title: "Hız ve maliyet", text: "Balon başına paralel istek, düşünmesi kapatılmış hızlı modeller ve görüntüye göre önbellek. Ayarlarda aylık token ve tahmini ücret görünüyor." },
+      { title: "Testler", text: "Tespit, Türkçe heceleme, yerleşim ve akış ayrıştırma için Vitest testleri; eklenti API'lerini taklit eden bir test sayfası ve GitHub Actions." }
+    ],
+    gallery: [
+      { src: "assets/media/work/manga-lens/translated-lg.webp", caption: "Çevrilmiş sayfa: orijinal yazı silinmiş, Türkçe metin balonun şeklinde.", wide: true },
+      { src: "assets/media/work/manga-lens/scan-lg.webp", caption: "Tarama: bulunan yazı alanları mavi ile işaretleniyor." },
+      { src: "assets/media/work/manga-lens/original-lg.webp", caption: "Aynı sayfanın orijinali." },
+      { src: "assets/media/work/manga-lens/dark-bubble-lg.webp", caption: "Siyah balonda beyaz yazı ve yamuk balonlar.", wide: true },
+      { src: "assets/media/work/manga-lens/glossary-lg.webp", caption: "Seri sözlüğü: isimler her bölümde aynı kalıyor." },
+      { src: "assets/media/work/manga-lens/actions-lg.webp", caption: "Balon düğmeleri: yeniden çevir, düzelt, orijinali göster." }
+    ]
+  },
+  {
     slug: "cv-tailor",
     featured: true,
     title: "CV Tailor",

@@ -331,6 +331,10 @@ main { display: block; }
 .kursat-scene--cv-tailor .kursat-scene-media { perspective: 1800px; }
 .kursat-scene--cv-tailor .kursat-scene-shot--1 { width: 54%; aspect-ratio: 16 / 10; right: -4%; top: 13%; transform: rotateY(-16deg); }
 .kursat-scene--cv-tailor .kursat-scene-shot--2 { width: 13.5%; aspect-ratio: 780 / 1688; right: 7%; top: 36%; transform: rotateY(-10deg) translateZ(90px); }
+.kursat-scene--manga-lens { --glow: 120, 110, 255; }
+.kursat-scene--manga-lens .kursat-scene-media { perspective: 1800px; }
+.kursat-scene--manga-lens .kursat-scene-shot--1 { width: 52%; aspect-ratio: 16 / 10; right: -3%; top: 14%; transform: rotateY(-16deg); }
+.kursat-scene--manga-lens .kursat-scene-shot--2 { width: 34%; aspect-ratio: 16 / 10; right: 9%; top: 52%; transform: rotateY(-12deg) translateZ(80px); }
 
 /* Vaka çalışması sahne kartı */
 .kursat-case { display: block; }
@@ -352,6 +356,9 @@ main { display: block; }
 .kursat-case--cv-tailor { --_stage: #0b0b0c; --_glow: 217, 84, 30; }
 .kursat-case--cv-tailor .kursat-case-shot--main { left: 7%; top: 9%; width: 66%; aspect-ratio: 16 / 10; }
 .kursat-case--cv-tailor .kursat-case-shot--side { right: 6%; top: 36%; width: 46%; aspect-ratio: 16 / 10; }
+.kursat-case--manga-lens { --_stage: #0b0b0c; --_glow: 120, 110, 255; }
+.kursat-case--manga-lens .kursat-case-shot--main { left: 7%; top: 9%; width: 66%; aspect-ratio: 16 / 10; }
+.kursat-case--manga-lens .kursat-case-shot--side { right: 6%; top: 36%; width: 46%; aspect-ratio: 16 / 10; }
 
 /* 12 Liste satırları — arşiv ve yazılar */
 .kursat-index, .kursat-posts { display: flex; flex-direction: column; gap: 4px; }
@@ -754,6 +761,8 @@ a.kursat-index-row:hover svg, .kursat-post-row:hover svg { transform: translate(
   .kursat-scene--work-tracker .kursat-scene-shot--2 { width: 46%; right: 4%; top: 40%; }
   .kursat-scene--cv-tailor .kursat-scene-shot--1 { width: 88%; right: -12%; top: 16%; }
   .kursat-scene--cv-tailor .kursat-scene-shot--2 { width: 30%; right: 8%; top: 30%; }
+  .kursat-scene--manga-lens .kursat-scene-shot--1 { width: 88%; right: -10%; top: 16%; }
+  .kursat-scene--manga-lens .kursat-scene-shot--2 { width: 62%; right: 34%; top: 46%; }
   .kursat-index-row { grid-template-columns: 52px minmax(0, 1fr) 24px; row-gap: 2px; padding: 18px 16px; }
   .kursat-index-row > span:not(.kursat-index-year) { grid-column: 2; }
   .kursat-index-row svg { grid-column: 3; grid-row: 1; }
