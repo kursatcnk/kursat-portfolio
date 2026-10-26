@@ -226,6 +226,7 @@
       }
     } else {
       body += block("Özet", intro);
+      if (p.features) body += block("Neler yapıyor", listHtml(p.features));
       if (p.highlights) body += block("İçinde neler var", `<ul class="kursat-cs-list">${p.highlights.map((h) => `<li><span>${esc(h)}</span></li>`).join("")}</ul>`);
       if (p.items) body += block("Entegrasyonlar", `<ul class="kursat-cs-list">${p.items.map(([n, s]) => `<li><strong>${esc(n)}</strong><span>${esc(s)}</span></li>`).join("")}</ul>`);
     }

@@ -2,6 +2,46 @@
 // featured: true olanlar büyük vaka çalışması olarak, diğerleri arşiv listesinde görünür.
 window.KURSAT_PROJECTS = [
   {
+    slug: "fitmatrix",
+    featured: true,
+    title: "FitMatrix",
+    sceneTitle: "FitMatrix",
+    scene: { shots: ["assets/media/work/fitmatrix/editor-lg.webp", "assets/media/work/fitmatrix/measure-lg.webp"] },
+    headline: "Masa kurulumunu satın almadan önce gerçek ölçüleriyle 3D'de kuran bir planlayıcı.",
+    summary: "Monitörü, klavyeyi, kasayı ve hoparlörü üreticinin verdiği ölçülerle masaya yerleştiriyor; çakışmaları, masa sınırını ve kullanıcının boyuna göre ergonomiyi santimetre santimetre kontrol ediyor.",
+    year: "2026",
+    type: "Web uygulaması · 3D",
+    role: "Ürün, tasarım ve full-stack geliştirme",
+    stack: ["React · TypeScript", "React Three Fiber", "ASP.NET Core 10", "SQL Server", "Docker", "xUnit · Playwright · GitHub Actions"],
+    links: { github: "https://github.com/kursatcnk/FitMatrix", live: "https://kursatcnk.github.io/FitMatrix/" },
+    stage: "#ddd8cc",
+    cover: { main: "assets/media/work/fitmatrix/editor-lg.webp", side: "assets/media/work/fitmatrix/measure-lg.webp" },
+    intro: [
+      "Yeni bir monitör ya da masa alırken asıl soru sığıp sığmayacağı: iki ekran yan yana masaya oturuyor mu, hoparlörler kenardan taşıyor mu, ekranın üst kenarı göz hizasında kalıyor mu? Ürün sayfalarındaki ölçüleri kâğıda dökmek hem uzun sürüyor hem de çoğu zaman bir şey gözden kaçıyor.",
+      "FitMatrix masayı gerçek santimetrelerle 3D sahneye kuruyor. 1.400'ü aşkın ürünlük katalogdan ekipman seçiliyor, masaya sürükleniyor; uygulama çakışmaları ve masa sınırını anında yakalıyor, kullanıcının boyuna göre oturarak ya da ayakta ergonomi puanı veriyor. Canlı demo kurulum istemeden tarayıcıda açılıyor."
+    ],
+    features: [
+      { title: "Gerçek ölçülü katalog", text: "1.400'ü aşkın ürün; ölçüler üreticilerin kendi sayfalarından, kaynak bağlantısı ve kontrol tarihiyle. Ürün adı, model kodu ya da GTIN ile yeni ürün aranıp ölçüsü doğrulanınca kataloğa ekleniyor." },
+      { title: "Çakışma ve masa sınırı", text: "Döndürülmüş ürünlerin temas alanı da hesaba katılıyor; iki ürün üst üste bindiğinde ya da masadan taştığında yerleşim kırmızıya dönüyor." },
+      { title: "Ergonomi puanı", text: "Masa yüksekliği, ekran üst kenarının göz hizası, görüş mesafesi ve klavye konumu kullanıcının boyuna göre, oturarak ya da ayakta ayrı ayrı puanlanıyor." },
+      { title: "Göz hizası ve ölçü çizgileri", text: "Kamera masaya oturan kişinin gözüne alınabiliyor; seçili ürünün masa kenarlarına uzaklığı santimetre olarak sahnede görünüyor." },
+      { title: "Monitör montajı ve oda", text: "Masa standı ya da VESA kolu, yatay/dikey ekran ve eğim; isteğe bağlı duvarlarla masanın odaya sığıp sığmadığı ve sandalye payı." },
+      { title: "Paylaş ve dışa aktar", text: "Düzen tek bağlantıyla paylaşılıyor, veri sunucuya gitmiyor. Malzeme listesi CSV, sahne PNG olarak iniyor; priz planı gereken grup prizi öneriyor." }
+    ],
+    engineering: [
+      { title: "Santimetre tabanlı sahne", text: "Bir sahne birimi bir santimetre. Masa ve ürün ölçüleri değiştikçe 3D geometri, temas alanı kontrolü ve SQL kaydı birlikte güncelleniyor." },
+      { title: "Ölçü çıkarımı", text: "JSON-LD, üretici teknik tabloları, PDF föyler ve sitemap'lerden ölçü okunuyor; mm/cm/inç ve W×H×D gibi farklı yazımlar tanınıyor, sonuçlar SQL Server'da önbelleğe alınıyor." },
+      { title: "Sunucusuz demo", text: "Katalog anlık görüntüsü derleme sırasında JSON'a çevriliyor; demo GitHub Pages'te sunucu olmadan çalışıyor. Tam sürüm tek docker compose komutuyla SQL Server ve API ile açılıyor." },
+      { title: "Testler", text: "API ve katalog için xUnit, arayüz için birim testleri ve editörü uçtan uca deneyen Playwright testleri; hepsi GitHub Actions'ta." }
+    ],
+    gallery: [
+      { src: "assets/media/work/fitmatrix/measure-lg.webp", caption: "Seçili monitörün masa kenarlarına uzaklığı ve yerleşim kontrolü.", wide: true },
+      { src: "assets/media/work/fitmatrix/top-lg.webp", caption: "Üstten görünüm ve priz planı." },
+      { src: "assets/media/work/fitmatrix/eye-lg.webp", caption: "Göz hizasından bakış." },
+      { src: "assets/media/work/fitmatrix/editor-lg.webp", caption: "Editör: katalog, 3D masa ve ergonomi kontrolü.", wide: true }
+    ]
+  },
+  {
     slug: "manga-lens",
     featured: true,
     title: "Manga Lens",
@@ -86,9 +126,101 @@ window.KURSAT_PROJECTS = [
     ]
   },
   {
-    slug: "promptforge",
+    slug: "friday",
     featured: true,
+    title: "Friday",
+    sceneTitle: "Friday",
+    scene: { shots: ["assets/media/work/friday/chat.webp", "assets/media/work/friday/hud-speaking.webp"] },
+    headline: "Seni sürekli dinlemeyen, tamamen bilgisayarında çalışan Türkçe sesli asistan.",
+    summary: "Kısayola basınca mikrofonu açıyor, susunca kapatıyor. Konuşmayı tanıma, anlama ve cevabı seslendirme internete çıkmadan yerelde yapılıyor; dil modeli 18 araçla gerçek iş görüyor.",
+    year: "2026",
+    type: "Masaüstü uygulama",
+    role: "Tasarım ve geliştirme",
+    stack: ["C# · .NET", "WPF", "Whisper.net", "Ollama · Gemma 4", "Piper TTS"],
+    links: { github: "https://github.com/kursatcnk/Friday" },
+    stage: "#14161c",
+    cover: { main: "assets/media/work/friday/chat.webp", side: "assets/media/work/friday/hud-speaking.webp" },
+    intro: [
+      "Sesli asistanların çoğu \"Hey ...\" sözcüğünü yakalamak için mikrofonu sürekli açık tutuyor ve konuşmayı buluta gönderiyor. Türkçe desteği de çoğu zaman yarım kalıyor.",
+      "Friday tersini yapıyor: mikrofon yalnızca kısayola basınca açılıyor, ses bellekten dışarı çıkmıyor. Whisper konuşmayı yazıya döküyor, Gemma 4 ne istendiğini anlayıp gerekli aracı çağırıyor, Piper cevabı Türkçe okuyor. API anahtarı, abonelik ya da internet gerekmiyor."
+    ],
+    features: [
+      { title: "Ekranı görme", text: "\"Bu hata ne?\" denince aktif pencerenin görüntüsü alınıp Gemma 4'ün görme yeteneğiyle yerelde yorumlanıyor; görüntü diske yazılmıyor." },
+      { title: "Pano işlemleri", text: "Kopyalanan metni özetleme, çevirme, yazım düzeltme ya da resmileştirme; sonuç panoya geri konuyor." },
+      { title: "Kalıcı hafıza", text: "\"Unutma, muayene 20 Kasım'da\" gibi notlar haftalar sonra hatırlanıyor, sabah brifinginde okunuyor; panelden görülüp silinebiliyor." },
+      { title: "Dosya ve sistem", text: "Windows Arama diziniyle dosya bulma, \"bilgisayar neden yavaş?\" sorusuna işlemci, bellek ve disk ölçümüyle cevap, çalan müziği okuma ve kontrol." },
+      { title: "Gizlilik defteri", text: "Mikrofonun ne zaman ve ne kadar açık kaldığı, neyin bilgisayarda kalıp neyin dışarı çıktığı zaman çizelgesinde görünüyor." },
+      { title: "Rutinler ve kesme", text: "\"Çalışma modunu aç\" ile uygulamalar açılıyor; Friday konuşurken kısayola basınca susup dinlemeye geçiyor." }
+    ],
+    engineering: [
+      { title: "Yerel boru hattı", text: "Kısayol → 16 kHz ses (yalnızca bellekte) → Whisper Large v3 Turbo, GPU'da ~0,3 sn → Gemma 4 ve araç çağırma → cümle cümle Piper seslendirme." },
+      { title: "Araç çağırma", text: "Dil modeline 18 araç JSON şemasıyla veriliyor; model metin yerine araç çağrısı üretiyor, Friday aracı çalıştırıp sonucu geri veriyor. Silme, kapatma ve komut çalıştırma bilerek yok." },
+      { title: "Ekran kartı belleği", text: "8 GB'lık kartta boştayken 0 GB, konuşurken ~4 GB. Görme modülü yalnızca gerektiğinde yükleniyor, 5 dakika boşta kalınca modeller GPU'dan çıkıyor." },
+      { title: "Hızlı uyanma", text: "Kısayola basınca modeller yüklenmeye başlıyor ve kullanıcı konuşurken hazır oluyor; ilk ses soru bittikten yaklaşık 2 saniye sonra geliyor." }
+    ],
+    gallery: [
+      { src: "assets/media/work/friday/chat.webp", caption: "Sohbet paneli: pano düzeltme, hafıza ve sistem soruları.", wide: true, pad: true },
+      { src: "assets/media/work/friday/hud-speaking.webp", caption: "Konuşurken açılan kapsül.", pad: true },
+      { src: "assets/media/work/friday/hud-thinking.webp", caption: "Düşünürken.", pad: true },
+      { src: "assets/media/work/friday/privacy.webp", caption: "Gizlilik defteri: mikrofonun açık kaldığı her an.", wide: true, pad: true }
+    ]
+  },
+  {
+    slug: "bilgec",
+    featured: true,
+    title: "BilGeç",
+    sceneTitle: "BilGeç",
+    scene: { shots: ["assets/media/work/bilgec/home.webp", "assets/media/work/bilgec/answer.webp"], phone: true },
+    headline: "Sosyal medyada kaydırmaya kısa bir bilgi molası veren Android uygulaması.",
+    summary: "Seçilen uygulamalardaki toplam süreyi cihazda sayıyor; süre dolunca açık uygulamanın üstünde dört şıklı bir genel kültür sorusu açıyor. Hesap, reklam ve internet yok.",
+    year: "2026",
+    type: "Android uygulaması",
+    role: "Ürün, tasarım ve geliştirme",
+    stack: ["Kotlin", "Jetpack Compose", "Room", "Kullanım erişimi · ön plan servisi", "Node.js veri aracı"],
+    links: { github: "https://github.com/kursatcnk/bilgec" },
+    stage: "#e9dfd8",
+    cover: { main: "assets/media/work/bilgec/home.webp", side: "assets/media/work/bilgec/answer.webp" },
+    intro: [
+      "Ekran süresi uygulamaları genelde bir sınır koyup uygulamayı kilitliyor; çoğu kişi de birkaç gün sonra bu kilidi kapatıyor. Ben kaydırmayı yasaklamak yerine araya küçük ve işe yarar bir şey koymak istedim.",
+      "BilGeç, Instagram, TikTok, YouTube gibi seçilen uygulamalardaki aktif süreyi birlikte sayıyor. Ayarlanan süre dolunca uygulamanın üstünde kısa bir soru açılıyor; cevaplanınca sayaç sıfırlanıyor ve kullanıcı kaldığı yere dönüyor. Sorular ve istatistikler yalnızca cihazda."
+    ],
+    features: [
+      { title: "Ortak sayaç", text: "Instagram, TikTok, X, YouTube, Facebook, Reddit ve Snapchat için tek sayaç; 15, 30, 45 ya da 60 dakikalık aralıklar ve bir saat ya da gün sonuna kadar duraklatma." },
+      { title: "3.114 çevrimdışı soru", text: "Bayraklar, coğrafya, temel bilim, tarih, sanat, doğa, spor ve günlük bilgi; sekiz kategori ayrı ayrı açılıp kapatılabiliyor." },
+      { title: "Akıllı tekrar", text: "Görülmemiş bilgiler öne alınıyor, yanlış cevaplar ayrı tekrar ekranında yeniden soruluyor; sorular favorilere eklenebiliyor." },
+      { title: "Hızlı tur", text: "Sayacı beklemeden 5 soruluk tur, tur puanı ve en iyi skor." },
+      { title: "Hedef ve rozetler", text: "Günlük hedef, son yedi günün grafiği, günlük seri; ilk cevap, üç günlük seri ve haftada 25 soru için mini rozetler." },
+      { title: "Tema ve geri yükleme", text: "Açık, koyu ve sistem teması; telefon yeniden başlayınca takip servisi kendiliğinden geri geliyor." }
+    ],
+    engineering: [
+      { title: "Cihazda takip", text: "Süre Android'in kullanım istatistiklerinden okunuyor; hiçbir veri cihazdan çıkmıyor, uygulamanın internet izni yok." },
+      { title: "Soru veritabanı", text: "Sorular açık lisanslı ülke ve periyodik tablo verilerinden bir Node.js aracıyla üretilip Room veritabanı olarak uygulamaya gömülüyor." },
+      { title: "Tekrar önleme", text: "Her soru bir bilgi anahtarına bağlı; aynı bilgiyi soran farklı cümleler de tekrar sayılıyor ve görülmemiş bilgiler önce geliyor." },
+      { title: "Testler", text: "Birim testleri, lint ve debug derlemesi tek Gradle komutuyla çalışıyor." }
+    ],
+    gallery: [
+      { src: "assets/media/work/bilgec/home.webp", caption: "Ana ekran: koruma, sıradaki mola ve hızlı tur.", pad: true },
+      { src: "assets/media/work/bilgec/question.webp", caption: "Hızlı turda bir soru.", pad: true },
+      { src: "assets/media/work/bilgec/answer.webp", caption: "Cevaptan sonra kısa açıklama.", pad: true }
+    ]
+  },
+  {
+    slug: "linguaflow",
+    title: "LinguaFlow",
+    subtitle: "Cihazda canlı altyazı ve çeviri",
+    summary: "Windows'ta çalan her konuşmayı duyduğu anda yazıya döküp seçilen dile çeviren, her zaman üstte duran altyazı şeridi.",
+    year: "2026",
+    type: "Masaüstü uygulama",
+    stack: ["C# · .NET 10", "WPF", "Whisper.net", "Silero VAD", "Bergamot"],
+    links: { github: "https://github.com/kursatcnk/LinguaFlow" },
+    intro: ["Video, toplantı, yayın ya da oyunda çalan sesi sistemden yakalayıp Whisper ile GPU'da yazıya döküyor ve çeviriyor. Ses bilgisayardan hiç çıkmıyor; \"yalnızca cihazda\" modunda çeviri de Mozilla'nın yerel modelleriyle yapılıyor."],
+    highlights: ["Konuşma sürerken güncellenen anlık altyazı", "Arka plandaki şarkıyı ayıklayan ana konuşmacı filtresi", "Önceki cümleyle bağlamlı çeviri", "Cümle bittikten ~0,5 sn sonra kesin çeviri (RTX 3070)", "99 dilde otomatik dil algılama"]
+  },
+  {
+    slug: "promptforge",
+    featured: false,
     title: "PromptForge",
+    subtitle: "Modele göre prompt iyileştirme",
     sceneTitle: "PromptForge",
     scene: { shots: ["assets/media/work/promptforge/landing-lg.webp", "assets/media/work/promptforge/forge-dark-lg.webp"] },
     headline: "Prompt yazmayı kolaylaştıran bir çalışma alanı.",
@@ -129,8 +261,9 @@ window.KURSAT_PROJECTS = [
   },
   {
     slug: "cards-rumble",
-    featured: true,
+    featured: false,
     title: "OnPixel — Cards Rumble",
+    subtitle: "Oynanarak öğrenilen oyun sitesi",
     sceneTitle: "Cards Rumble",
     scene: { shots: ["assets/media/work/cards-rumble/home-lg.webp", "assets/media/work/cards-rumble/home-mobile.webp"], phone: true },
     headline: "Kuralları okutmak yerine oynatan bir oyun sitesi.",
@@ -169,8 +302,9 @@ window.KURSAT_PROJECTS = [
   },
   {
     slug: "work-tracker",
-    featured: true,
+    featured: false,
     title: "WorkTracker",
+    subtitle: "USB'den çalışan hatırlatıcılı görev takibi",
     sceneTitle: "WorkTracker",
     scene: { shots: ["assets/media/work/work-tracker/main.webp", "assets/media/work/work-tracker/alarm.webp"] },
     headline: "“Şu gün tekrar yazarım” notları için küçük bir uygulama.",
